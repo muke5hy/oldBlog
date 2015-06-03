@@ -37,5 +37,5 @@ DEFAULT_PAGINATION = 10
 THEME = "pelican-themes/blue-penguin"
 
 
-TATIC_PATHS = ['images', 'extra/CNAME']
+STATIC_PATHS = ['extra/CNAME']
 EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'},}
