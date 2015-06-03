@@ -35,3 +35,7 @@ DEFAULT_PAGINATION = 10
 #RELATIVE_URLS = True
 
 THEME = "pelican-themes/blue-penguin"
+
+
+EXTRA_PATH_METADATA = {'CNAME': {'path': 'CNAME'},}
+
