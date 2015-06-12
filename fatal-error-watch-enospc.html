@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="utf-8" />
+    <title>Learning the hard way! &middot; ! 'Fatal error : watch ENOSPC'</title>
+    <link rel="shortcut icon" type="image/png" href="/favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/theme/css/screen.css" type="text/css" />
+    <link rel="stylesheet" href="/theme/css/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="/theme/css/print.css" type="text/css" media="print" />
+    <meta name="generator" content="Pelican" />
+
+
+
+    <meta name="tags" contents="" />
+</head>
+<body>
+    <header>
+        <nav>
+                <li><a href="">Home</a></li>
+                <li><a href="/archives.html">Archives</a></li>
+        </nav>
+        <div class="header_box">
+            <h1><a href="">Learning the hard way!</a></h1>
+        </div>
+    </header>
+    <div id="wrapper">
+        <div id="content">
+            <h4 class="date">Nov 20, 2013</h4>
+            <article class="post">
+<h2 class="title">
+                    <a href="/fatal-error-watch-enospc.html" rel="bookmark" title="Permanent Link to &quot;! 'Fatal error : watch ENOSPC'&quot;">! 'Fatal error : watch ENOSPC'</a>
+                </h2>
+
+                <p>Recently while running nodemon for the first time  I got an error which states :- </p>
+<div class="highlight"><pre><span class="n">Error</span><span class="o">:</span> <span class="n">watch</span> <span class="n">ENOSPC</span>
+<span class="n">at</span> <span class="n">errnoException</span> <span class="o">(</span><span class="n">fs</span><span class="o">.</span><span class="na">js</span><span class="o">:</span><span class="mi">1019</span><span class="o">:</span><span class="mi">11</span><span class="o">)</span>
+<span class="n">at</span> <span class="n">FSWatcher</span><span class="o">.</span><span class="na">start</span> <span class="o">(</span><span class="n">fs</span><span class="o">.</span><span class="na">js</span><span class="o">:</span><span class="mi">1051</span><span class="o">:</span><span class="mi">11</span><span class="o">)</span>
+<span class="n">at</span> <span class="n">Object</span><span class="o">.</span><span class="na">fs</span><span class="o">.</span><span class="na">watch</span> <span class="o">(</span><span class="n">fs</span><span class="o">.</span><span class="na">js</span><span class="o">:</span><span class="mi">1076</span><span class="o">:</span><span class="mi">11</span><span class="o">)</span>
+<span class="n">at</span> <span class="n">Object</span><span class="o">.</span><span class="na">watchFileChecker</span><span class="o">.</span><span class="na">check</span> <span class="o">(/</span><span class="n">usr</span><span class="sr">/lib/node_modules/nodemon/</span><span class="n">nodemon</span><span class="o">.</span><span class="na">js</span><span class="o">:</span><span class="mi">160</span><span class="o">:</span><span class="mi">6</span><span class="o">)</span>
+<span class="n">at</span> <span class="n">ready</span> <span class="o">(/</span><span class="n">usr</span><span class="sr">/lib/node_modules/nodemon/</span><span class="n">nodemon</span><span class="o">.</span><span class="na">js</span><span class="o">:</span><span class="mi">49</span><span class="o">:</span><span class="mi">22</span><span class="o">)</span>
+<span class="n">at</span> <span class="sr">/usr/lib/node_modules/nodemon/</span><span class="n">nodemon</span><span class="o">.</span><span class="na">js</span><span class="o">:</span><span class="mi">63</span><span class="o">:</span><span class="mi">11</span>
+<span class="n">at</span> <span class="n">ChildProcess</span><span class="o">.</span><span class="na">exithandler</span> <span class="o">(</span><span class="n">child_process</span><span class="o">.</span><span class="na">js</span><span class="o">:</span><span class="mi">641</span><span class="o">:</span><span class="mi">7</span><span class="o">)</span>
+<span class="n">at</span> <span class="n">ChildProcess</span><span class="o">.</span><span class="na">EventEmitter</span><span class="o">.</span><span class="na">emit</span> <span class="o">(</span><span class="n">events</span><span class="o">.</span><span class="na">js</span><span class="o">:</span><span class="mi">98</span><span class="o">:</span><span class="mi">17</span><span class="o">)</span>
+<span class="n">at</span> <span class="n">maybeClose</span> <span class="o">(</span><span class="n">child_process</span><span class="o">.</span><span class="na">js</span><span class="o">:</span><span class="mi">735</span><span class="o">:</span><span class="mi">16</span><span class="o">)</span>
+<span class="n">at</span> <span class="n">Socket</span><span class="o">.&lt;</span><span class="n">anonymous</span><span class="o">&gt;</span> <span class="o">(</span><span class="n">child_process</span><span class="o">.</span><span class="na">js</span><span class="o">:</span><span class="mi">948</span><span class="o">:</span><span class="mi">11</span><span class="o">)</span>
+</pre></div>
+
+
+<p>Since Nodemon keeps a monitoring of all the files in your project, to restart the server if there is any change in files. </p>
+<p>Since its low for my project files I changed it to 524298 </p>
+<div class="highlight"><pre>echo fs.inotify.max_user_watches=524298 | sudo tee -a /etc/sysctl.conf &amp;&amp; sudo sysctl -p
+</pre></div>
+
+                <div class="clear"></div>
+                <div class="info">
+                    <a href="/fatal-error-watch-enospc.html">posted at 01:26</a>&nbsp;&middot;&nbsp;<a href="/category/.html" rel="tag"></a>&nbsp;&middot;&nbsp;<a href="/tag/.html" class="tags"></a>
+                </div>
+
+            </article>
+            <div class="clear"></div>
+            <div class="clear"></div>
+            <footer>
+                <p>
+                <a href="https://github.com/jody-frankowski/blue-penguin">Blue Penguin</a> Theme
+                &middot;
+                Powered by <a href="http://getpelican.com">Pelican</a>
+            </footer>
+        </div>
+        <div class="clear"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="utf-8" />
+    <title>Learning the hard way! &middot; Allowing ubuntu user to access www folder amazon aws</title>
+    <link rel="shortcut icon" type="image/png" href="/favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/theme/css/screen.css" type="text/css" />
+    <link rel="stylesheet" href="/theme/css/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="/theme/css/print.css" type="text/css" media="print" />
+    <meta name="generator" content="Pelican" />
+
+
+
+    <meta name="tags" contents="" />
+</head>
+<body>
+    <header>
+        <nav>
+                <li><a href="">Home</a></li>
+                <li><a href="/archives.html">Archives</a></li>
+        </nav>
+        <div class="header_box">
+            <h1><a href="">Learning the hard way!</a></h1>
+        </div>
+    </header>
+    <div id="wrapper">
+        <div id="content">
+            <h4 class="date">Dec 11, 2013</h4>
+            <article class="post">
+<h2 class="title">
+                    <a href="/allowing-ubuntu-user-to-access-www-folder-amazon-aws.html" rel="bookmark" title="Permanent Link to &quot;Allowing ubuntu user to access www folder amazon aws&quot;">Allowing ubuntu user to access www folder amazon aws</a>
+                </h2>
+
+                <p>sudo apt-get install apache2</p>
+<p>sudo a2enmod rewrite</p>
+<p>sudo apt-get install libapache2-mod-php5</p>
+<p>sudo /etc/init.d/apache2 restart</p>
+<p>sudo adduser ubuntu www-data
+sudo chown -R www-data:www-data /var/www
+sudo chmod -R g+rw /var/www</p>
+
+                <div class="clear"></div>
+                <div class="info">
+                    <a href="/allowing-ubuntu-user-to-access-www-folder-amazon-aws.html">posted at 23:53</a>&nbsp;&middot;&nbsp;<a href="/category/.html" rel="tag"></a>&nbsp;&middot;&nbsp;<a href="/tag/.html" class="tags"></a>
+                </div>
+
+            </article>
+            <div class="clear"></div>
+            <div class="clear"></div>
+            <footer>
+                <p>
+                <a href="https://github.com/jody-frankowski/blue-penguin">Blue Penguin</a> Theme
+                &middot;
+                Powered by <a href="http://getpelican.com">Pelican</a>
+            </footer>
+        </div>
+        <div class="clear"></div>
+    </div>
+</body>
+</html>

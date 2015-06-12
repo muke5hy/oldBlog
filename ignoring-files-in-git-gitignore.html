@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="utf-8" />
+    <title>Learning the hard way! &middot; Ignoring files in git (.gitignore)</title>
+    <link rel="shortcut icon" type="image/png" href="/favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/theme/css/screen.css" type="text/css" />
+    <link rel="stylesheet" href="/theme/css/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="/theme/css/print.css" type="text/css" media="print" />
+    <meta name="generator" content="Pelican" />
+
+
+
+    <meta name="tags" contents="" />
+</head>
+<body>
+    <header>
+        <nav>
+                <li><a href="">Home</a></li>
+                <li><a href="/archives.html">Archives</a></li>
+        </nav>
+        <div class="header_box">
+            <h1><a href="">Learning the hard way!</a></h1>
+        </div>
+    </header>
+    <div id="wrapper">
+        <div id="content">
+            <h4 class="date">Nov 09, 2013</h4>
+            <article class="post">
+<h2 class="title">
+                    <a href="/ignoring-files-in-git-gitignore.html" rel="bookmark" title="Permanent Link to &quot;Ignoring files in git (.gitignore)&quot;">Ignoring files in git (.gitignore)</a>
+                </h2>
+
+                <p><strong>Problem</strong>: You want to ignore few folders or files from your git repository</p>
+<p><strong>Solution</strong>: Add a .gitignore file in your root project folder(even you can add this to your spesific folder too).</p>
+<p>To ignore .htaccess in your repository, add .htaccess in your <strong>.gitignore</strong> file.</p>
+<div class="highlight"><pre><span class="na">.htaccess</span>
+</pre></div>
+
+
+<p>To ignore all uploaded files from upload folder but not the upload folder add</p>
+<div class="highlight"><pre>uploads/*
+</pre></div>
+
+
+<p>Suppose you have images folder in your upload directory and you want to add this to revision. your .gitignore file will look like </p>
+<div class="highlight"><pre><span class="sx">!uploads/images</span>
+<span class="n">uploads</span><span class="o">/</span><span class="n">images</span><span class="o">/*</span>
+</pre></div>
+
+
+<p>Second line in above code will ignore all the images file in images folder. </p>
+<p>To exclude index.html and .htaccess add folowing line </p>
+<div class="highlight"><pre><span class="sx">!uploads/images/index.html</span>
+<span class="sx">!uploads/images/.htaccess</span>
+</pre></div>
+
+
+<p>Now your .gitignore file will look like </p>
+<div class="highlight"><pre><span class="na">.htaccess</span>
+<span class="nf">uploads</span><span class="err">/</span><span class="p">*</span>
+<span class="err">!</span><span class="nf">uploads</span><span class="err">/</span><span class="no">images</span>
+<span class="nf">uploads</span><span class="err">/</span><span class="no">images</span><span class="err">/</span><span class="p">*</span>
+<span class="err">!</span><span class="nf">uploads</span><span class="err">/</span><span class="no">images</span><span class="err">/</span><span class="no">index.html</span>
+<span class="err">!</span><span class="nf">uploads</span><span class="err">/</span><span class="no">images</span><span class="err">/</span><span class="no">.htaccess</span>
+</pre></div>
+
+
+<p><strong>NOTE:</strong> If your file or folder is already indexes you have to remove them first </p>
+<div class="highlight"><pre>git rm -r --cached config/config.js # this this remove config file form git 
+git rm -r --cached . # this will remove all the index files and folder
+</pre></div>
+
+                <div class="clear"></div>
+                <div class="info">
+                    <a href="/ignoring-files-in-git-gitignore.html">posted at 12:32</a>&nbsp;&middot;&nbsp;<a href="/category/.html" rel="tag"></a>&nbsp;&middot;&nbsp;<a href="/tag/.html" class="tags"></a>
+                </div>
+
+            </article>
+            <div class="clear"></div>
+            <div class="clear"></div>
+            <footer>
+                <p>
+                <a href="https://github.com/jody-frankowski/blue-penguin">Blue Penguin</a> Theme
+                &middot;
+                Powered by <a href="http://getpelican.com">Pelican</a>
+            </footer>
+        </div>
+        <div class="clear"></div>
+    </div>
+</body>
+</html>

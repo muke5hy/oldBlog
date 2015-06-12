@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="utf-8" />
+    <title>Learning the hard way! &middot; Mount disk permanently  in linux. (auto-mount disk)</title>
+    <link rel="shortcut icon" type="image/png" href="/favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/theme/css/screen.css" type="text/css" />
+    <link rel="stylesheet" href="/theme/css/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="/theme/css/print.css" type="text/css" media="print" />
+    <meta name="generator" content="Pelican" />
+
+
+
+    <meta name="tags" contents="" />
+</head>
+<body>
+    <header>
+        <nav>
+                <li><a href="">Home</a></li>
+                <li><a href="/archives.html">Archives</a></li>
+        </nav>
+        <div class="header_box">
+            <h1><a href="">Learning the hard way!</a></h1>
+        </div>
+    </header>
+    <div id="wrapper">
+        <div id="content">
+            <h4 class="date">Nov 07, 2013</h4>
+            <article class="post">
+<h2 class="title">
+                    <a href="/mount-disk-permanently-in-linux-auto-mount-disk-2.html" rel="bookmark" title="Permanent Link to &quot;Mount disk permanently  in linux. (auto-mount disk)&quot;">Mount disk permanently  in linux. (auto-mount disk)</a>
+                </h2>
+
+                <p>To make the partition auto-mount.</p>
+<ol>
+<li>
+<p>Get your disk name </p>
+<div class="highlight"><pre>fdisk -l
+</pre></div>
+
+
+</li>
+<li>
+<p>Find out the UUID of /dev/sda3 by doing:</p>
+<div class="highlight"><pre>sudo blkid   
+sudo vim /etc/fstab
+</pre></div>
+
+
+</li>
+<li>
+<p>Now add add a line to the bottom of that file. It should look something like this (UUID will be different):</p>
+<div class="highlight"><pre>UUID=03ec5dd3-45c0-4f95-a363-61ff321a09ff /works ext4 defaults  0      2
+</pre></div>
+
+
+</li>
+</ol>
+
+                <div class="clear"></div>
+                <div class="info">
+                    <a href="/mount-disk-permanently-in-linux-auto-mount-disk-2.html">posted at 21:42</a>&nbsp;&middot;&nbsp;<a href="/category/.html" rel="tag"></a>&nbsp;&middot;&nbsp;<a href="/tag/.html" class="tags"></a>
+                </div>
+
+            </article>
+            <div class="clear"></div>
+            <div class="clear"></div>
+            <footer>
+                <p>
+                <a href="https://github.com/jody-frankowski/blue-penguin">Blue Penguin</a> Theme
+                &middot;
+                Powered by <a href="http://getpelican.com">Pelican</a>
+            </footer>
+        </div>
+        <div class="clear"></div>
+    </div>
+</body>
+</html>

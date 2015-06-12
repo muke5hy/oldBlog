@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="utf-8" />
+    <title>Learning the hard way! &middot; Installing virtualenv in ubuntu</title>
+    <link rel="shortcut icon" type="image/png" href="/favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/theme/css/screen.css" type="text/css" />
+    <link rel="stylesheet" href="/theme/css/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="/theme/css/print.css" type="text/css" media="print" />
+    <meta name="generator" content="Pelican" />
+
+
+
+    <meta name="tags" contents="" />
+</head>
+<body>
+    <header>
+        <nav>
+                <li><a href="">Home</a></li>
+                <li><a href="/archives.html">Archives</a></li>
+        </nav>
+        <div class="header_box">
+            <h1><a href="">Learning the hard way!</a></h1>
+        </div>
+    </header>
+    <div id="wrapper">
+        <div id="content">
+            <h4 class="date">Dec 01, 2013</h4>
+            <article class="post">
+<h2 class="title">
+                    <a href="/installing-virtualenv-in-ubuntu.html" rel="bookmark" title="Permanent Link to &quot;Installing virtualenv in ubuntu&quot;">Installing virtualenv in ubuntu</a>
+                </h2>
+
+                <p>Virtualenv is a tool to create isolated Python environments.</p>
+<p>There is multiple ways to install virtualenv I'm gonna use one of the esiest way to install it. </p>
+<p><strong>Installing via pip :</strong></p>
+<p>To install via pip you have to install pip </p>
+<div class="highlight"><pre>sudo apt-get install python-pip
+</pre></div>
+
+
+<p>check installed pip </p>
+<div class="highlight"><pre>which pip
+</pre></div>
+
+
+<p>Then install virtualenv </p>
+<div class="highlight"><pre>pip install virtualenv
+</pre></div>
+
+
+<p>Now check where virtualenv got isntalled</p>
+<div class="highlight"><pre>which virtualenv
+</pre></div>
+
+
+<p>to create a enviroment run following line</p>
+<div class="highlight"><pre>virtualenv ~/env/project --no-site-packages
+</pre></div>
+
+
+<p>env/project is a path where environment will get created. </p>
+<p>To activate environment </p>
+<div class="highlight"><pre>source ~/env/tweepy/bin/activate
+</pre></div>
+
+                <div class="clear"></div>
+                <div class="info">
+                    <a href="/installing-virtualenv-in-ubuntu.html">posted at 14:04</a>&nbsp;&middot;&nbsp;<a href="/category/.html" rel="tag"></a>&nbsp;&middot;&nbsp;<a href="/tag/.html" class="tags"></a>
+                </div>
+
+            </article>
+            <div class="clear"></div>
+            <div class="clear"></div>
+            <footer>
+                <p>
+                <a href="https://github.com/jody-frankowski/blue-penguin">Blue Penguin</a> Theme
+                &middot;
+                Powered by <a href="http://getpelican.com">Pelican</a>
+            </footer>
+        </div>
+        <div class="clear"></div>
+    </div>
+</body>
+</html>

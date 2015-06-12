@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="utf-8" />
+    <title>Learning the hard way! &middot; Execute linux command in background or Execute Commands After You Exit From a Shell Prompt</title>
+    <link rel="shortcut icon" type="image/png" href="/favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/theme/css/screen.css" type="text/css" />
+    <link rel="stylesheet" href="/theme/css/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="/theme/css/print.css" type="text/css" media="print" />
+    <meta name="generator" content="Pelican" />
+
+
+
+    <meta name="tags" contents="" />
+</head>
+<body>
+    <header>
+        <nav>
+                <li><a href="">Home</a></li>
+                <li><a href="/archives.html">Archives</a></li>
+        </nav>
+        <div class="header_box">
+            <h1><a href="">Learning the hard way!</a></h1>
+        </div>
+    </header>
+    <div id="wrapper">
+        <div id="content">
+            <h4 class="date">Dec 25, 2013</h4>
+            <article class="post">
+<h2 class="title">
+                    <a href="/.html" rel="bookmark" title="Permanent Link to &quot;Execute linux command in background or Execute Commands After You Exit From a Shell Prompt&quot;">Execute linux command in background or Execute Commands After You Exit From a Shell Prompt</a>
+                </h2>
+
+                <p>Problem: After running a command on remote server some time you need to close your terminal or pc or the command takes too much time to process and you cant wait for completion. </p>
+<p>for such problems you would want to run the command in background to do so we have <strong>nohup</strong>.</p>
+<p>From Man page it says </p>
+<div class="highlight"><pre>nohup - run a command immune to hangups, with output to a non-tty
+</pre></div>
+
+
+<p>You use nohup </p>
+<div class="highlight"><pre>nohup command-name &amp;
+</pre></div>
+
+
+<p>Please note <strong>&amp;</strong> it is required to run the command in background. 
+Example </p>
+<div class="highlight"><pre>nohup tar -cvz file.tar.gz folder1 folder2 &amp;
+</pre></div>
+
+
+<p>The above command will compress the folders in background and even if you close your local terminal the process will run in background. </p>
+
+                <div class="clear"></div>
+                <div class="info">
+                    <a href="/.html">posted at 17:22</a>&nbsp;&middot;&nbsp;<a href="/category/.html" rel="tag"></a>&nbsp;&middot;&nbsp;<a href="/tag/.html" class="tags"></a>
+                </div>
+
+            </article>
+            <div class="clear"></div>
+            <div class="clear"></div>
+            <footer>
+                <p>
+                <a href="https://github.com/jody-frankowski/blue-penguin">Blue Penguin</a> Theme
+                &middot;
+                Powered by <a href="http://getpelican.com">Pelican</a>
+            </footer>
+        </div>
+        <div class="clear"></div>
+    </div>
+</body>
+</html>
