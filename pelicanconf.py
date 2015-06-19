@@ -31,6 +31,12 @@ SOCIAL = (('You can add links in your config file', '#'),
 
 DEFAULT_PAGINATION = 10
 
+PAGINATION_PATTERNS = (
+     (1, '{name}/', '{name}/index.html'),
+     (2, '{name}/page/{number}/', '{name}/page/{number}/index.html'),
+)
+
+
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
 
@@ -39,3 +45,21 @@ THEME = "pelican-themes/blue-penguin"
 
 STATIC_PATHS = ['extra/CNAME']
 EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'},}
+
+PLUGIN_PATHS = ['pelican-plugins']
+PLUGINS = ['sitemap', 'gravatar']
+
+SITEMAP = {
+    'format': 'xml',
+    'priorities': {
+        'articles': 0.5,
+        'indexes': 0.5,
+        'pages': 0.5
+    },
+    'changefreqs': {
+        'articles': 'monthly',
+        'indexes': 'daily',
+        'pages': 'monthly'
+    }
+}
+
