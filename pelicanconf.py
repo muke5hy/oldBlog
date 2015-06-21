@@ -40,7 +40,7 @@ PAGINATION_PATTERNS = (
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
 
-THEME = "pelican-themes/blue-penguin"
+THEME = "pelican-themes/orange-penguin"
 
 
 STATIC_PATHS = ['extra/CNAME']
