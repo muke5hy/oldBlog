@@ -1,5 +1,12 @@
-
-Changing Mysql data directory require change to AppArmor
+Title: List behaviar in function as default parameter
+Date: 2015-06-20 12:00:58.000000000 +05:30
+Modified:
+Category: notes
+Tags: note,
+Slug: list-behaviar-in-function-as-default-parameter
+Authors: Mukesh
+Summary:
+Status: draft
 
 After a bit of googling and hair-pulling, I realized that if I just changed the datadir directive in my.cnf will cause mysql start to fail on Ubuntu. The other thing is to add permissions to apparmor for mysql to access the new data directories.
 
