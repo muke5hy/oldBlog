@@ -36,11 +36,13 @@ PAGINATION_PATTERNS = (
      (2, '{name}/page/{number}/', '{name}/page/{number}/index.html'),
 )
 
+TAG_URL = 'tag/{name}/index.html'
+CATEGORY_URL = 'category/{name}/index.html'
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
 
-THEME = "pelican-themes/orange-penguin"
+THEME = "pelican-themes/pure-single"
 
 
 STATIC_PATHS = ['extra/CNAME']
@@ -63,3 +65,13 @@ SITEMAP = {
     }
 }
 
+
+
+# Settings for theme pure-singl
+SOCIAL = (
+    ('github', 'https://github.com/ingenioustechie/'),
+    ('twitter-square', 'https://twitter.com/ingenioustechie'),
+)
+PROFILE_IMG_URL = "https://pbs.twimg.com/profile_images/616609810369368064/NPSrjbIh.jpg"
+DISQUS_SITENAME = 'ingenioustechie'
+DISQUS_ON_PAGES = True
