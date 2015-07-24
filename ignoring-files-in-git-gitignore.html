@@ -1,38 +1,61 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-      <meta charset="utf-8" />
-    <title>Learning the hard way! &middot; Ignoring files in git (.gitignore)</title>
-    <link rel="shortcut icon" type="image/png" href="/favicon.png">
-    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
-    <link rel="stylesheet" href="/theme/css/screen.css" type="text/css" />
-    <link rel="stylesheet" href="/theme/css/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="/theme/css/print.css" type="text/css" media="print" />
-    <meta name="generator" content="Pelican" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learning the hard way!, ">
 
 
+        <title>Ignoring files in git (.gitignore) // Learning the hard way! // </title>
 
-    <meta name="tags" contents="" />
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.3.0/pure-min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/theme/css/pure.css">
+    <link rel="stylesheet" href="/theme/css/pygments.css">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/fitvids/1.0.1/jquery.fitvids.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".content").fitVids();
+        });
+    </script>
 </head>
-<body>
-    <header>
-        <nav>
-                <li><a href="">Home</a></li>
-                <li><a href="/archives.html">Archives</a></li>
-        </nav>
-        <div class="header_box">
-            <h1><a href="">Learning the hard way!</a></h1>
-        </div>
-    </header>
-    <div id="wrapper">
-        <div id="content">
-            <h4 class="date">Nov 09, 2013</h4>
-            <article class="post">
-<h2 class="title">
-                    <a href="/ignoring-files-in-git-gitignore.html" rel="bookmark" title="Permanent Link to &quot;Ignoring files in git (.gitignore)&quot;">Ignoring files in git (.gitignore)</a>
-                </h2>
 
-                <p><strong>Problem</strong>: You want to ignore few folders or files from your git repository</p>
+<body>
+    <div class="pure-g-r" id="layout">
+        <div class="sidebar pure-u">
+            <div class="cover-img" style="background-image: url('')">
+                <div class="cover-body">
+                    <header class="header">
+                        <hgroup>
+                            <h1 class="brand-main"><a href="">Learning the hard way!</a></h1>
+                            <p class="tagline"></p>
+                                <p class="social">
+                                    <a href="#">
+                                        <i class="fa fa-You can add links in your config file fa-3x"></i>
+                                    </a>
+                                    <a href="#">
+                                        <i class="fa fa-Another social link fa-3x"></i>
+                                    </a>
+                                </p>
+                        </hgroup>
+                    </header>
+                </div>
+            </div>
+        </div>
+    <div class="pure-u">
+        <div class="content">
+            <section class="post">
+                <header class="post-header">
+                    <h1>Ignoring files in git (.gitignore)</h1>
+                        <p class="post-meta">
+                            // under                                 <a class="post-category" href="/tag/git.html">git</a>
+                        </p>
+                </header>
+            </section>
+            <p><strong>Problem</strong>: You want to ignore few folders or files from your git repository</p>
 <p><strong>Solution</strong>: Add a .gitignore file in your root project folder(even you can add this to your spesific folder too).</p>
 <p>To ignore .htaccess in your repository, add .htaccess in your <strong>.gitignore</strong> file.</p>
 <div class="highlight"><pre><span class="na">.htaccess</span>
@@ -71,23 +94,39 @@
 <div class="highlight"><pre>git rm -r --cached config/config.js # this this remove config file form git 
 git rm -r --cached . # this will remove all the index files and folder
 </pre></div>
-
-                <div class="clear"></div>
-                <div class="info">
-                    <a href="/ignoring-files-in-git-gitignore.html">posted at 12:32</a>&nbsp;&middot;&nbsp;<a href="/category/.html" rel="tag"></a>&nbsp;&middot;&nbsp;<a href="/tag/.html" class="tags"></a>
-                </div>
-
-            </article>
-            <div class="clear"></div>
-            <div class="clear"></div>
-            <footer>
-                <p>
-                <a href="https://github.com/jody-frankowski/blue-penguin">Blue Penguin</a> Theme
-                &middot;
-                Powered by <a href="http://getpelican.com">Pelican</a>
-            </footer>
-        </div>
-        <div class="clear"></div>
+            <a href="#" class="go-top">Go Top</a>
+<footer class="footer">
+    <p>&copy; Mukesh &ndash;
+        Built with <a href="https://github.com/PurePelicanTheme/pure-single">Pure Theme</a>
+        for <a href="http://blog.getpelican.com/">Pelican</a>
+    </p>
+</footer>        </div>
     </div>
+    </div>
+    <script>
+        var $top = $('.go-top');
+
+        // Show or hide the sticky footer button
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 200) {
+                $top.fadeIn(200);
+            } else {
+                $top.fadeOut(200);
+            }
+        });
+
+        // Animate the scroll to top
+        $top.click(function(event) {
+            event.preventDefault();
+            $('html, body').animate({scrollTop: 0}, 300);
+        })
+
+        // Makes sure that the href="#" attached to the <a> elements
+        // don't scroll you back up the page.
+        $('body').on('click', 'a[href="#"]', function(event) {
+            event.preventDefault();
+        });
+    </script>
+
 </body>
 </html>

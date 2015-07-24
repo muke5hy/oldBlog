@@ -1,38 +1,61 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-      <meta charset="utf-8" />
-    <title>Learning the hard way! &middot; ! 'Fatal error : watch ENOSPC'</title>
-    <link rel="shortcut icon" type="image/png" href="/favicon.png">
-    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
-    <link rel="stylesheet" href="/theme/css/screen.css" type="text/css" />
-    <link rel="stylesheet" href="/theme/css/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="/theme/css/print.css" type="text/css" media="print" />
-    <meta name="generator" content="Pelican" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learning the hard way!, ">
 
 
+        <title>! 'Fatal error : watch ENOSPC' // Learning the hard way! // </title>
 
-    <meta name="tags" contents="" />
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.3.0/pure-min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/theme/css/pure.css">
+    <link rel="stylesheet" href="/theme/css/pygments.css">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/fitvids/1.0.1/jquery.fitvids.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".content").fitVids();
+        });
+    </script>
 </head>
-<body>
-    <header>
-        <nav>
-                <li><a href="">Home</a></li>
-                <li><a href="/archives.html">Archives</a></li>
-        </nav>
-        <div class="header_box">
-            <h1><a href="">Learning the hard way!</a></h1>
-        </div>
-    </header>
-    <div id="wrapper">
-        <div id="content">
-            <h4 class="date">Nov 20, 2013</h4>
-            <article class="post">
-<h2 class="title">
-                    <a href="/fatal-error-watch-enospc.html" rel="bookmark" title="Permanent Link to &quot;! 'Fatal error : watch ENOSPC'&quot;">! 'Fatal error : watch ENOSPC'</a>
-                </h2>
 
-                <p>Recently while running nodemon for the first time  I got an error which states :- </p>
+<body>
+    <div class="pure-g-r" id="layout">
+        <div class="sidebar pure-u">
+            <div class="cover-img" style="background-image: url('')">
+                <div class="cover-body">
+                    <header class="header">
+                        <hgroup>
+                            <h1 class="brand-main"><a href="">Learning the hard way!</a></h1>
+                            <p class="tagline"></p>
+                                <p class="social">
+                                    <a href="#">
+                                        <i class="fa fa-You can add links in your config file fa-3x"></i>
+                                    </a>
+                                    <a href="#">
+                                        <i class="fa fa-Another social link fa-3x"></i>
+                                    </a>
+                                </p>
+                        </hgroup>
+                    </header>
+                </div>
+            </div>
+        </div>
+    <div class="pure-u">
+        <div class="content">
+            <section class="post">
+                <header class="post-header">
+                    <h1>! 'Fatal error : watch ENOSPC'</h1>
+                        <p class="post-meta">
+                            // under                                 <a class="post-category" href="/tag/unix.html">unix</a>
+                        </p>
+                </header>
+            </section>
+            <p>Recently while running nodemon for the first time  I got an error which states :- </p>
 <div class="highlight"><pre><span class="n">Error</span><span class="o">:</span> <span class="n">watch</span> <span class="n">ENOSPC</span>
 <span class="n">at</span> <span class="n">errnoException</span> <span class="o">(</span><span class="n">fs</span><span class="o">.</span><span class="na">js</span><span class="o">:</span><span class="mi">1019</span><span class="o">:</span><span class="mi">11</span><span class="o">)</span>
 <span class="n">at</span> <span class="n">FSWatcher</span><span class="o">.</span><span class="na">start</span> <span class="o">(</span><span class="n">fs</span><span class="o">.</span><span class="na">js</span><span class="o">:</span><span class="mi">1051</span><span class="o">:</span><span class="mi">11</span><span class="o">)</span>
@@ -51,23 +74,39 @@
 <p>Since its low for my project files I changed it to 524298 </p>
 <div class="highlight"><pre>echo fs.inotify.max_user_watches=524298 | sudo tee -a /etc/sysctl.conf &amp;&amp; sudo sysctl -p
 </pre></div>
-
-                <div class="clear"></div>
-                <div class="info">
-                    <a href="/fatal-error-watch-enospc.html">posted at 01:26</a>&nbsp;&middot;&nbsp;<a href="/category/.html" rel="tag"></a>&nbsp;&middot;&nbsp;<a href="/tag/.html" class="tags"></a>
-                </div>
-
-            </article>
-            <div class="clear"></div>
-            <div class="clear"></div>
-            <footer>
-                <p>
-                <a href="https://github.com/jody-frankowski/blue-penguin">Blue Penguin</a> Theme
-                &middot;
-                Powered by <a href="http://getpelican.com">Pelican</a>
-            </footer>
-        </div>
-        <div class="clear"></div>
+            <a href="#" class="go-top">Go Top</a>
+<footer class="footer">
+    <p>&copy; Mukesh &ndash;
+        Built with <a href="https://github.com/PurePelicanTheme/pure-single">Pure Theme</a>
+        for <a href="http://blog.getpelican.com/">Pelican</a>
+    </p>
+</footer>        </div>
     </div>
+    </div>
+    <script>
+        var $top = $('.go-top');
+
+        // Show or hide the sticky footer button
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 200) {
+                $top.fadeIn(200);
+            } else {
+                $top.fadeOut(200);
+            }
+        });
+
+        // Animate the scroll to top
+        $top.click(function(event) {
+            event.preventDefault();
+            $('html, body').animate({scrollTop: 0}, 300);
+        })
+
+        // Makes sure that the href="#" attached to the <a> elements
+        // don't scroll you back up the page.
+        $('body').on('click', 'a[href="#"]', function(event) {
+            event.preventDefault();
+        });
+    </script>
+
 </body>
 </html>

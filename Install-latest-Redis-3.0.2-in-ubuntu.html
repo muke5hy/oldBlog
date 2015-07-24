@@ -6,7 +6,7 @@
     <meta name="description" content="Learning the hard way!, ">
 
 
-        <title>This is my first post on Ghost // Learning the hard way! // </title>
+        <title>Install latest Redis (3.0.2) in ubuntu // Learning the hard way! // </title>
 
 
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.3.0/pure-min.css">
@@ -49,13 +49,42 @@
         <div class="content">
             <section class="post">
                 <header class="post-header">
-                    <h1>This is my first post on Ghost</h1>
+                    <h1>Install latest Redis (3.0.2) in ubuntu</h1>
                         <p class="post-meta">
-                            // under                         </p>
+                            // under                                 <a class="post-category" href="/tag/ubuntu.html">ubuntu</a>
+                                <a class="post-category" href="/tag/redis.html">redis</a>
+                        </p>
                 </header>
             </section>
-            <p>This blog is a my notepad, I'll keep on posting stuff for my refresnce, If any one finds them usefull  that would be my pleasure. </p>
-<p>Many a time I'll copy paste solution or tricks from other sources too. </p>
+            <div class="highlight"><pre>    Installing Redis
+</pre></div>
+
+
+<p>With all of the prerequisites and dependencies downloaded to the server, we can go ahead and begin to install redis from source:</p>
+<p>Download the latest stable release tarball from Redis.io.</p>
+<p>wget http://download.redis.io/releases/redis-stable.tar.gz</p>
+<p>Untar it and switch into that directory:</p>
+<p>tar xzf redis-stable.tar.gz</p>
+<p>cd redis-stable</p>
+<p>Proceed to with the make command:</p>
+<p>make</p>
+<p>Run the recommended make test:</p>
+<p>make test</p>
+<p>Finish up by running make install, which installs the program system-wide.</p>
+<p>sudo make install</p>
+<p>Once the program has been installed, Redis comes with a built in script that sets up Redis to run as a background daemon.</p>
+<p>To access the script move into the utils directory:</p>
+<p>cd utils</p>
+<p>From there, run the Ubuntu/Debian install script:</p>
+<p>sudo ./install_server.sh</p>
+<p>As the script runs, you can choose the default options by pressing enter. Once the script completes, the redis-server will be running in the background.</p>
+<p>You can start and stop redis with these commands (the number depends on the port you set during the installation. 6379 is the default port setting):</p>
+<p>sudo service redis_6379 start
+sudo service redis_6379 stop</p>
+<p>You can then access the redis database by typing the following command:</p>
+<p>redis-cli</p>
+<p>You now have Redis installed and running. The prompt will look like this:</p>
+<p>redis 127.0.0.1:6379&gt; </p>
             <a href="#" class="go-top">Go Top</a>
 <footer class="footer">
     <p>&copy; Mukesh &ndash;
