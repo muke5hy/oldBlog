@@ -1,10 +1,10 @@
-Title: Social Networking Abuse
+Title: Social Networking Abuse by RodinHood
 Date: 2015-10-09 10:30:12.000000000 +05:30
-Slug: socialocial-networking-abuse
+Slug: social-network-abuse-rodinhood
 Authors: Mukesh
 Modified: 
 Category: 
-Tags: ubuntu, redis
+Tags: twitter, social
 Summary: 
 
         Social Networking Abuse
