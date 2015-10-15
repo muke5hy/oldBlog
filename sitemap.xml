@@ -5,112 +5,112 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>/</loc>
-<lastmod>2015-10-09T21:17:10-00:00</lastmod>
+<lastmod>2015-10-15T15:12:05-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/archives.html</loc>
-<lastmod>2015-10-09T21:17:10-00:00</lastmod>
+<lastmod>2015-10-15T15:12:05-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tags.html</loc>
-<lastmod>2015-10-09T21:17:10-00:00</lastmod>
+<lastmod>2015-10-15T15:12:05-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/categories.html</loc>
-<lastmod>2015-10-09T21:17:10-00:00</lastmod>
+<lastmod>2015-10-15T15:12:05-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/social-network-abuse-rodinhood.html</loc>
-<lastmod>2015-10-09T00:00:00+02:00</lastmod>
+<lastmod>2015-10-15T00:00:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/Install-latest-Redis-3.0.2-in-ubuntu.html</loc>
-<lastmod>2015-10-09T00:00:00+02:00</lastmod>
+<lastmod>2015-10-15T00:00:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/work-on-remote-branch-in-git.html</loc>
-<lastmod>2015-10-09T00:00:00+02:00</lastmod>
+<lastmod>2015-10-15T00:00:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/ioerror-cannot-write-mode-p-as-jpeg-ioerror-decoder-jpeg-not-available.html</loc>
-<lastmod>2015-10-09T00:00:00+02:00</lastmod>
+<lastmod>2015-10-15T00:00:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/execute-linux-command-in-background-or-execute-commands-after-you-exit-from-a-shell-prompt.html</loc>
-<lastmod>2015-10-09T00:00:00+02:00</lastmod>
+<lastmod>2015-10-15T00:00:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/allowing-ubuntu-user-to-access-www-folder-amazon-aws.html</loc>
-<lastmod>2015-10-09T00:00:00+02:00</lastmod>
+<lastmod>2015-10-15T00:00:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/installing-virtualenv-in-ubuntu.html</loc>
-<lastmod>2015-10-09T00:00:00+02:00</lastmod>
+<lastmod>2015-10-15T00:00:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/fatal-error-watch-enospc.html</loc>
-<lastmod>2015-10-09T00:00:00+02:00</lastmod>
+<lastmod>2015-10-15T00:00:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/ignoring-files-in-git-gitignore.html</loc>
-<lastmod>2015-10-09T00:00:00+02:00</lastmod>
+<lastmod>2015-10-15T00:00:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/install-solr-on-ubuntu.html</loc>
-<lastmod>2015-10-09T00:00:00+02:00</lastmod>
+<lastmod>2015-10-15T00:00:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/mount-disk-permanently-in-linux-auto-mount-disk-2.html</loc>
-<lastmod>2015-10-09T00:00:00+02:00</lastmod>
+<lastmod>2015-10-15T00:00:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/delete-all-lines-from-vim-select-all-delete.html</loc>
-<lastmod>2015-10-09T00:00:00+02:00</lastmod>
+<lastmod>2015-10-15T00:00:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
