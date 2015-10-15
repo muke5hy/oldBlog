@@ -1,8 +1,8 @@
 Title: Work on remote branch in Git
 Date: 2014-01-28 12:00:58.000000000 +05:30
 Modified: 
-Category: Git
-Tags: Git, 
+Category: git
+Tags: git, 
 Slug: work-on-remote-branch-in-git
 Authors: Mukesh
 Summary: 

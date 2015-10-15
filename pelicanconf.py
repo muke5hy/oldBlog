@@ -43,6 +43,8 @@ CATEGORY_URL = 'category/{name}/index.html'
 #RELATIVE_URLS = True
 
 THEME = "pelican-themes/pure-single"
+THEME = "pelican-themes/medius"
+# THEME = "pelican-themes/pelican-mediumfox"
 
 
 STATIC_PATHS = ['extra/CNAME']
@@ -76,3 +78,11 @@ COVER_IMG_URL = "https://pbs.twimg.com/profile_banners/16581688/1428780057/web_r
 PROFILE_IMG_URL = "https://pbs.twimg.com/profile_images/616609810369368064/NPSrjbIh_bigger.jpg"
 DISQUS_SITENAME = 'ingenioustechie'
 DISQUS_ON_PAGES = True
+
+
+from functools import partial
+JINJA_FILTERS = {
+    'sort_by_article_count': partial(
+        sorted,
+        key=lambda tags: len(tags[1]),
+        reverse=True)} # reversed for descending order

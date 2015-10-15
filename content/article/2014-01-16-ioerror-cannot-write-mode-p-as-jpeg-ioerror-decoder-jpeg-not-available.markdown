@@ -2,7 +2,7 @@ Title: ! 'IOError: cannot write mode P as JPEG | IOError: decoder jpeg not avail
 Date: 2014-01-16 17:03:24.000000000 +05:30
 Modified: 
 Category: 
-Tags: Python
+Tags: python
 Slug: ioerror-cannot-write-mode-p-as-jpeg-ioerror-decoder-jpeg-not-available
 Authors: mukesh
 Summary: 

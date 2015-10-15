@@ -1,8 +1,8 @@
 Title: List behaviar in function as default parameter
 Date: 2015-06-10 12:00:58.000000000 +05:30
 Modified: 
-Category: Git
-Tags: Python,  
+Category: git
+Tags: python,  
 Slug: list-behaviar-in-function-as-default-parameter
 Authors: Mukesh
 Summary: 
