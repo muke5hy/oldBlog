@@ -79,10 +79,4 @@ PROFILE_IMG_URL = "https://pbs.twimg.com/profile_images/616609810369368064/NPSrj
 DISQUS_SITENAME = 'ingenioustechie'
 DISQUS_ON_PAGES = True
 
-
-from functools import partial
-JINJA_FILTERS = {
-    'sort_by_article_count': partial(
-        sorted,
-        key=lambda tags: len(tags[1]),
-        reverse=True)} # reversed for descending order
+DISPLAY_CATEGORIES_ON_MENU = False
