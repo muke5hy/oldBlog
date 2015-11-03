@@ -5,7 +5,7 @@ Authors: Mukesh
 Modified: 
 Category: 
 Tags: Django, DRF, Python
-Status: draft
+Status: 
 Summary: 
 
         Disabling PUT/POST/DELETE from BrowsableAPI of DRF
