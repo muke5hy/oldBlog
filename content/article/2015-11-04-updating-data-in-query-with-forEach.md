@@ -13,9 +13,9 @@ Summary:
 Since No-SQL does not have a structure or columns fixed when we store data into it, its very common or easy we insert unwanted keys into MongoDB. 
 While developing some of the project I faced this issue as well. 
 
-To resolve such situation we can manually update each document, if the task is very small we might just write one update query and remove the key or repalce the value. The problem with this is if there is conditional update we might have to write seperate query and update it. 
+To resolve such situation we can manually update each document, if the task is very small we might just write one update query and remove the key or replace the value. The problem with this is if there is conditional update we might have to write separate query and update it. 
 
-Since mongo uses V8 Javascript Engine we can use Javascript Langauge to write conditional queries. 
+Since MongoDB uses V8 Javascript Engine we can use Javascript Language to write conditional queries. 
 
 
 	db.product.find().forEach(function (unit){

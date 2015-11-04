@@ -14,11 +14,11 @@ Summary:
 Twitter is full of trolling, if you are on twitter/facebook or any other social platform you must have encountered it. 
 Wikipedia says 
 
-	In Internet slang, a troll (/ˈtroʊl/, /ˈtrɒl/) is a person who sows discord on the Internet by starting arguments or upsetting people, by posting inflammatory,[1] extraneous, or off-topic messages in an online community (such as a newsgroup, forum, chat room, or blog) with the deliberate intent of provoking readers into an emotional response[2] or of otherwise disrupting normal on-topic discussion,[3] often for their own amusement.
+	In Internet slang, a troll (/ˈtroʊl/, /ˈtrɒl/) is a person who sows discord on the Internet by starting arguments or upsetting people, by posting inflammatory ,[1] extraneous, or off-topic messages in an on line community (such as a newsgroup, forum, chat room, or blog) with the deliberate intent of provoking readers into an emotional response[2] or of otherwise disrupting normal on-topic discussion,[3] often for their own amusement.
 
 But what if a person really wants to know something and then other guy starts abusing? 
 
-Yesturday I was checking my timeline and I saw [@rodinhood][rodin_tweet] tweet. He must have intented pun here. But I was not able to understand at first.
+Yesterday I was checking my timeline and I saw [@rodinhood][rodin_tweet] tweet. He must have intented pun here. But I was not able to understand at first.
 
 ![Photo](https://www.diigo.com/file/image/parabrqzcrsscsrsrzbsepabqe/Original.jpg)
 
