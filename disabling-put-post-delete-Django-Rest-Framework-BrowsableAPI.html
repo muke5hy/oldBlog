@@ -58,7 +58,7 @@
 
 
 <p>If you are building a Rest Full Service in Django then you must be familiar with Django-Rest-Framework AKA DRF. DRF helps you to build API with very less code footprint. </p>
-<p>DRF has BrowsableAPI which gives a frontend to view API and do some test, by using this you can do GET/PUT/POST/DELETE etc in your browser. Hence you do not require script or POSTMAN/CURL to test. Although these feature is very usefull on development server but for the prodcution you really do not want the PUT/POST/DELETE actions. </p>
+<p>DRF has BrowsableAPI which gives a front-end to view API and do some test, by using this you can do GET/PUT/POST/DELETE etc in your browser. Hence you do not require script or POSTMAN/CURL to test. Although these feature is very useful on development server but for the production you really do not want the PUT/POST/DELETE actions. </p>
 <p>To disable these action we need to extend BrowsableAPIRenderer and change the <code>display_edit_forms</code> and <code>delete_form</code> to False. Lets create a file <code>BrowsableAPIRendererGet</code> some where in your project where you place common files or tools. I keep them in base.lib package, so create <code>base/lib/BrowsableAPIRenderer.py</code>.</p>
 <p><code>base/lib/BrowsableAPIRenderer.py</code></p>
 <div class="highlight"><pre><span class="kn">from</span> <span class="nn">rest_framework.renderers</span> <span class="kn">import</span> <span class="n">BrowsableAPIRenderer</span>
