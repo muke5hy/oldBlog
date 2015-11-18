@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <title>Installing and configuring ELK Stack</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="/theme/css/main.css" />
+</head>
+<body>
+
+    <div class="main-nav-container">
+
+        <div class="pure-g">
+            <div class="pure-u-1 pure-u-lg-2-3">
+                <div class="main-nav">
+                    <ul class="main-nav-list">
+                        <li class="main-nav-item"><a href="/" class="pure-menu-link">Learning the hard way!</a></li>
+
+                    </ul>
+                </div>
+             </div>
+
+             <div class="pure-u-1 pure-u-lg-1-3"></div>
+        </div>
+
+    </div>
+
+
+<div class="page-container">
+    <div class="entry-content">
+        <div class="post-meta pure-g">
+            <div class="pure-u-3-4 meta-data">
+                <a href="/category/article/index.html" class="category">article</a><br />
+
+                <a class="author" href="/author/mukesh.html">Mukesh</a>
+                &mdash; <abbr title="2015-11-18T00:10:12+05:30">Wed 18 November 2015</abbr>
+            </div>
+        </div>
+    </div>
+
+    <div class="article-header-container">
+        <div class="background-image-container">
+
+            <div class="background-image-small">
+                <div class="title-container">
+                    <h1>Installing and configuring ELK Stack</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="entry-content">
+        <p>https://www.digitalocean.com/community/tutorials/how-to-use-logstash-and-kibana-to-centralize-logs-on-centos-6  </p>
+<p>yum install elasticsearch-2.0.0.rpm</p>
+<h3>NOT starting on installation, please execute the following statements to configure elasticsearch service to start automatically using chkconfig</h3>
+<p>sudo chkconfig --add elasticsearch</p>
+<h3>You can start elasticsearch service by executing</h3>
+<p>sudo service elasticsearch start</p>
+<p>mkdir /data/elastic
+chown elasticsearch.elasticsearch /data/elastic</p>
+<p>Change network.host to localhost as kibana will use it from localhost   </p>
+<p>network.host: localhost</p>
+<p>path.data: /data/elastic</p>
+<p>Install Log Stash <br />
+yum install logstash-2.0.0-1.noarch.rpm</p>
+<p>Generate SSL Certificates</p>
+<p>vim /etc/pki/tls/openssl.cnf</p>
+<p>Find the [ v3_ca ] section in the file, and add this line under it (substituting in the Logstash Server's private IP address):</p>
+<p>subjectAltName = IP: &lt;  logstash_server_private_ip&gt;</p>
+<p>sudo groupadd -g 1005 kibana
+sudo useradd -u 1005 -g 1005 kibana</p>
+<p>sudo mkdir -p /opt/kibana</p>
+<p>cd /etc/init.d &amp;&amp; sudo curl -o kibana https://gist.githubusercontent.com/thisismitch/8b15ac909aed214ad04a/raw/fc5025c3fc499ad8262aff34ba7fde8c87ead7c0/kibana-4.x-init</p>
+<p>If you getting env: /etc/init.d/kibana: Permission denied
+chmod +x /etc/init.d/kibana /etc/default/kibana</p>
+<p>You can visit the http://192.168.0.1:5601/ </p>
+<p>We can use nginx for port forwarding, and use port 80</p>
+<p>Install Nginx 
+sudo yum -y install nginx httpd-tools</p>
+<p>Add htpassword 
+sudo htpasswd -c /etc/nginx/htpasswd.users kibanaadmin/ipinfra
+ipinfra@123</p>
+<p>Create 
+/etc/nginx/conf.d/kibana.conf
+    server {
+        listen 80;</p>
+<div class="highlight"><pre>    <span class="nt">server_name</span> <span class="nt">example</span><span class="nc">.com</span><span class="o">;</span>
+
+    <span class="nt">auth_basic</span> <span class="s2">&quot;Restricted Access&quot;</span><span class="o">;</span>
+    <span class="nt">auth_basic_user_file</span> <span class="o">/</span><span class="nt">etc</span><span class="o">/</span><span class="nt">nginx</span><span class="o">/</span><span class="nt">htpasswd</span><span class="nc">.users</span><span class="o">;</span>
+
+    <span class="nt">location</span> <span class="o">/</span> <span class="p">{</span>
+        <span class="n">proxy_pass</span> <span class="n">http</span><span class="o">://</span><span class="n">localhost</span><span class="o">:</span><span class="m">5601</span><span class="p">;</span>
+        <span class="n">proxy_http_version</span> <span class="m">1</span><span class="o">.</span><span class="m">1</span><span class="p">;</span>
+        <span class="n">proxy_set_header</span> <span class="n">Upgrade</span> <span class="err">$</span><span class="n">http_upgrade</span><span class="p">;</span>
+        <span class="n">proxy_set_header</span> <span class="n">Connection</span> <span class="s1">&#39;upgrade&#39;</span><span class="p">;</span>
+        <span class="n">proxy_set_header</span> <span class="n">Host</span> <span class="err">$</span><span class="n">host</span><span class="p">;</span>
+        <span class="n">proxy_cache_bypass</span> <span class="err">$</span><span class="n">http_upgrade</span><span class="p">;</span>        
+    <span class="p">}</span>
+<span class="err">}</span>
+</pre></div>
+
+
+<p>Installing and running forwarder</p>
+<p>wget https://download.elastic.co/logstash-forwarder/binaries/logstash-forwarder-0.4.0-1.x86_64.rpm</p>
+<p>cd /etc/init.d/; sudo curl -o logstash-forwarder http://logstashbook.com/code/4/logstash_forwarder_redhat_init
+sudo chmod +x logstash-forwarder</p>
+<p>Dependency 
+sudo curl -o /etc/sysconfig/logstash-forwarder http://logstashbook.com/code/4/logstash_forwarder_redhat_sysconfig</p>
+    </div>
+
+    <footer>
+        <div class="pure-g post-footer">
+            <div class="pure-u-1 pure-u-md-1-2">
+                <div class="pure-g poster-info">
+                    <div class="pure-u-3-4">
+                        <h3 class="author-name"><a href="/author/mukesh.html">Mukesh</a></h3>
+                        <p class="author-description">
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+
+
+    </footer>
+
+    <div class="entry-content">
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            var disqus_shortname = 'ingenioustechie';
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+    </div>
+
+</div>
+
+
+</body>
+</html>
