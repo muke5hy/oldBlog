@@ -5,28 +5,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>/</loc>
-<lastmod>2015-11-18T16:51:14-00:00</lastmod>
+<lastmod>2015-11-18T16:51:43-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/archives.html</loc>
-<lastmod>2015-11-18T16:51:14-00:00</lastmod>
+<lastmod>2015-11-18T16:51:43-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tags.html</loc>
-<lastmod>2015-11-18T16:51:14-00:00</lastmod>
+<lastmod>2015-11-18T16:51:43-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/categories.html</loc>
-<lastmod>2015-11-18T16:51:14-00:00</lastmod>
+<lastmod>2015-11-18T16:51:43-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -55,6 +55,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>/Install-latest-Redis-3.0.2-in-ubuntu.html</loc>
 <lastmod>2015-11-18T00:00:00+01:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>/installing-and-configuring-postgres-in-Ubuntu.html</loc>
+<lastmod>2015-02-23T00:22:12+05:30</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
