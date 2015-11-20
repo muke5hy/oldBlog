@@ -2,8 +2,8 @@ Title: Installing and configuring postgress in ubuntu
 Date: 2015-2-23 00:22:12.000000000 +05:30
 Slug: installing-and-configuring-postgres-in-Ubuntu
 Authors: Mukesh
-Summary: 
-Status: A note for postgres 
+Summary: A note for postgres  
+Status: 
 Tag: postgres 
 
 	sudo apt-get update
