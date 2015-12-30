@@ -5,63 +5,70 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>/</loc>
-<lastmod>2015-11-20T16:17:10-00:00</lastmod>
+<lastmod>2015-12-30T18:03:14-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/archives.html</loc>
-<lastmod>2015-11-20T16:17:10-00:00</lastmod>
+<lastmod>2015-12-30T18:03:14-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tags.html</loc>
-<lastmod>2015-11-20T16:17:10-00:00</lastmod>
+<lastmod>2015-12-30T18:03:14-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/categories.html</loc>
-<lastmod>2015-11-20T16:17:10-00:00</lastmod>
+<lastmod>2015-12-30T18:03:14-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
+<loc>/deleting-git-branch-from-local-and-origin.html</loc>
+<lastmod>2015-12-30T00:00:00+01:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>/optimization-of-mongo-query-making-ursor-iteration-fast.html</loc>
-<lastmod>2015-11-20T00:00:00+01:00</lastmod>
+<lastmod>2015-12-30T00:00:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/formating-string-date-to-isodate-or-object-date-in-mongodb.html</loc>
-<lastmod>2015-11-20T00:00:00+01:00</lastmod>
+<lastmod>2015-12-30T00:00:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/updating-data-in-query-with-forEach.html</loc>
-<lastmod>2015-11-20T00:00:00+01:00</lastmod>
+<lastmod>2015-12-30T00:00:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/disabling-put-post-delete-Django-Rest-Framework-BrowsableAPI.html</loc>
-<lastmod>2015-11-20T00:00:00+01:00</lastmod>
+<lastmod>2015-12-30T00:00:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/Install-latest-Redis-3.0.2-in-ubuntu.html</loc>
-<lastmod>2015-11-20T00:00:00+01:00</lastmod>
+<lastmod>2015-12-30T00:00:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -75,70 +82,70 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>/work-on-remote-branch-in-git.html</loc>
-<lastmod>2015-11-20T00:00:00+01:00</lastmod>
+<lastmod>2015-12-30T00:00:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/ioerror-cannot-write-mode-p-as-jpeg-ioerror-decoder-jpeg-not-available.html</loc>
-<lastmod>2015-11-20T00:00:00+01:00</lastmod>
+<lastmod>2015-12-30T00:00:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/execute-linux-command-in-background-or-execute-commands-after-you-exit-from-a-shell-prompt.html</loc>
-<lastmod>2015-11-20T00:00:00+01:00</lastmod>
+<lastmod>2015-12-30T00:00:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/allowing-ubuntu-user-to-access-www-folder-amazon-aws.html</loc>
-<lastmod>2015-11-20T00:00:00+01:00</lastmod>
+<lastmod>2015-12-30T00:00:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/installing-virtualenv-in-ubuntu.html</loc>
-<lastmod>2015-11-20T00:00:00+01:00</lastmod>
+<lastmod>2015-12-30T00:00:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/fatal-error-watch-enospc.html</loc>
-<lastmod>2015-11-20T00:00:00+01:00</lastmod>
+<lastmod>2015-12-30T00:00:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/ignoring-files-in-git-gitignore.html</loc>
-<lastmod>2015-11-20T00:00:00+01:00</lastmod>
+<lastmod>2015-12-30T00:00:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/install-solr-on-ubuntu.html</loc>
-<lastmod>2015-11-20T00:00:00+01:00</lastmod>
+<lastmod>2015-12-30T00:00:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/mount-disk-permanently-in-linux-auto-mount-disk-2.html</loc>
-<lastmod>2015-11-20T00:00:00+01:00</lastmod>
+<lastmod>2015-12-30T00:00:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/delete-all-lines-from-vim-select-all-delete.html</loc>
-<lastmod>2015-11-20T00:00:00+01:00</lastmod>
+<lastmod>2015-12-30T00:00:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>

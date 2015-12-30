@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <title>Optimization of Mongo query, making cursor iteration fast.</title>
+        <title>Deleting git branch from local and origin</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css" />
@@ -33,7 +33,7 @@
     <div class="entry-content">
         <div class="post-meta pure-g">
             <div class="pure-u-3-4 meta-data">
-                <a href="/category/optimization/index.html" class="category">optimization</a><br />
+                <a href="/category/Git/index.html" class="category">Git</a><br />
 
                 <a class="author" href="/author/mukesh.html">Mukesh</a>
                 &mdash; <abbr title="2015-11-20T13:36:12+05:30">Fri 20 November 2015</abbr>
@@ -46,37 +46,45 @@
 
             <div class="background-image-small">
                 <div class="title-container">
-                    <h1>Optimization of Mongo query, making cursor iteration fast.</h1>
+                    <h1>Deleting git branch from local and origin</h1>
                 </div>
             </div>
         </div>
     </div>
 
     <div class="entry-content">
-        <p>If you using a mongo, I'm sure you must have come across a situation where you want to do a iteration for .find() command in mongo. 
-Querying a Mongo collection for few records will give you faster results, but if you data is more than than 20K-30K or millions and you want to do iteration over it its hell lot of time. </p>
-<p>Lets take an example say you have 1 Million records in your users collection and about 98% users a active, to get the result you will do 
-  active_users = db.users.find({active:True})
-Your above query will get the cursor, now here comes the problem. Mongo does not fetches records in above query it just gets the cursor. To get all the records you need iterate over it. </p>
-<div class="highlight"><pre>temp = []
-for user in active_users:
-    if user.get(&#39;first_name&#39;):
-        temp.append(user.get(&#39;first_name&#39;))
+        <h2>How to delete git branch from local and remote</h2>
+<p>for long running projects and projects which has continuous changes gets many unused branch over the period of time, 
+and if you do not clean up your branches they keep on increasing some time more than 50+ or may be 100+</p>
+<p>When you checkout a branch from remote (origin), it makes a copy locally and points it to the remote Branch. When you want to delete a branch it becomes necessary to remove it from both places as well as from other machine too. </p>
+<p>If you want to delete a branch quickfix, first checkout to the branch other than the branch to be deleted.</p>
+<div class="highlight"><pre>git checkout other_than_branch_to_be_deleted
 </pre></div>
 
 
-<p>The above query will take about 12+ or around that to create temp list. 12 sec is too huge number for such an small task. (The seconds will differ depending on size of the documents you have in users collection)</p>
-<p>Under the hood pymongo in this case is not getting all the records at once in fact it does not gets the results when you do .find() query. Once you start iterating it fetches data from Mongodb in batches. </p>
-<p>By default it has 4MB of document size, Maximum of 16MB data mongo can fetch from DB. </p>
-<p>to optimize our query we can do </p>
-<p>active_users = db.users.find({active:True}).batch_size(2000)</p>
-<p>Now again iterate over the active_users and see the magic happen.</p>
+<p>Deleting the local branch:</p>
+<div class="highlight"><pre>git branch -D quickfix
+</pre></div>
+
+
+<p>Deleting the remote branch:</p>
+<div class="highlight"><pre>git push origin --delete quickfix
+</pre></div>
+
+
+<p>at this stage you have deleted branch from your local as well from remote. If you repository is being used on other machine you need to update their too.</p>
+<div class="highlight"><pre>git remote prune &lt;remote_name&gt;
+</pre></div>
+
+
+<p>If your <remote_name> is origin then </p>
+<div class="highlight"><pre>git remote prune origin
+</pre></div>
     </div>
 
     <footer>
         <div class="tags">
-            <a href="/tag/MongoDB/index.html">MongoDB</a>
-            <a href="/tag/Query Optimization/index.html">Query Optimization</a>
+            <a href="/tag/git/index.html">git</a>
         </div>
         <div class="pure-g post-footer">
             <div class="pure-u-1 pure-u-md-1-2">
