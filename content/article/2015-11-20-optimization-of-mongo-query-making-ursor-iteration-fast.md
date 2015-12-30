@@ -31,4 +31,4 @@ to optimize our query we can do
 
   active_users = db.users.find({active:True}).batch_size(2000)
 
-Now again iterate over the active_users and see the magic happen. 
+Now again iterate over the active_users and see the magic happen.
