@@ -4,245 +4,245 @@ xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitem
 xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
-<loc>/archives.html</loc>
-<lastmod>2016-01-09T17:06:17-00:00</lastmod>
+<loc>http://ingeioustechie.com/archives.html</loc>
+<lastmod>2016-01-09T17:22:07-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tags.html</loc>
-<lastmod>2016-01-09T17:06:17-00:00</lastmod>
+<loc>http://ingeioustechie.com/tags.html</loc>
+<lastmod>2016-01-09T17:22:07-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/categories.html</loc>
-<lastmod>2016-01-09T17:06:17-00:00</lastmod>
+<loc>http://ingeioustechie.com/categories.html</loc>
+<lastmod>2016-01-09T17:22:07-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/creating-logo-online.html</loc>
+<loc>http://ingeioustechie.com/creating-logo-online.html</loc>
 <lastmod>2016-01-09T00:00:00+01:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/deleting-git-branch-from-local-and-origin.html</loc>
+<loc>http://ingeioustechie.com/deleting-git-branch-from-local-and-origin.html</loc>
 <lastmod>2016-01-09T00:00:00+01:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/optimization-of-mongo-query-making-ursor-iteration-fast.html</loc>
+<loc>http://ingeioustechie.com/optimization-of-mongo-query-making-ursor-iteration-fast.html</loc>
 <lastmod>2016-01-09T00:00:00+01:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/formating-string-date-to-isodate-or-object-date-in-mongodb.html</loc>
+<loc>http://ingeioustechie.com/formating-string-date-to-isodate-or-object-date-in-mongodb.html</loc>
 <lastmod>2016-01-09T00:00:00+01:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/updating-data-in-query-with-forEach.html</loc>
+<loc>http://ingeioustechie.com/updating-data-in-query-with-forEach.html</loc>
 <lastmod>2016-01-09T00:00:00+01:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/disabling-put-post-delete-Django-Rest-Framework-BrowsableAPI.html</loc>
+<loc>http://ingeioustechie.com/disabling-put-post-delete-Django-Rest-Framework-BrowsableAPI.html</loc>
 <lastmod>2016-01-09T00:00:00+01:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/Install-latest-Redis-3.0.2-in-ubuntu.html</loc>
+<loc>http://ingeioustechie.com/Install-latest-Redis-3.0.2-in-ubuntu.html</loc>
 <lastmod>2016-01-09T00:00:00+01:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/installing-and-configuring-postgres-in-Ubuntu.html</loc>
+<loc>http://ingeioustechie.com/installing-and-configuring-postgres-in-Ubuntu.html</loc>
 <lastmod>2015-02-23T00:22:12+05:30</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/work-on-remote-branch-in-git.html</loc>
+<loc>http://ingeioustechie.com/work-on-remote-branch-in-git.html</loc>
 <lastmod>2016-01-09T00:00:00+01:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/ioerror-cannot-write-mode-p-as-jpeg-ioerror-decoder-jpeg-not-available.html</loc>
+<loc>http://ingeioustechie.com/ioerror-cannot-write-mode-p-as-jpeg-ioerror-decoder-jpeg-not-available.html</loc>
 <lastmod>2016-01-09T00:00:00+01:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/execute-linux-command-in-background-or-execute-commands-after-you-exit-from-a-shell-prompt.html</loc>
+<loc>http://ingeioustechie.com/execute-linux-command-in-background-or-execute-commands-after-you-exit-from-a-shell-prompt.html</loc>
 <lastmod>2016-01-09T00:00:00+01:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/allowing-ubuntu-user-to-access-www-folder-amazon-aws.html</loc>
+<loc>http://ingeioustechie.com/allowing-ubuntu-user-to-access-www-folder-amazon-aws.html</loc>
 <lastmod>2016-01-09T00:00:00+01:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/installing-virtualenv-in-ubuntu.html</loc>
+<loc>http://ingeioustechie.com/installing-virtualenv-in-ubuntu.html</loc>
 <lastmod>2016-01-09T00:00:00+01:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/fatal-error-watch-enospc.html</loc>
+<loc>http://ingeioustechie.com/fatal-error-watch-enospc.html</loc>
 <lastmod>2016-01-09T00:00:00+01:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/ignoring-files-in-git-gitignore.html</loc>
+<loc>http://ingeioustechie.com/ignoring-files-in-git-gitignore.html</loc>
 <lastmod>2016-01-09T00:00:00+01:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/install-solr-on-ubuntu.html</loc>
+<loc>http://ingeioustechie.com/install-solr-on-ubuntu.html</loc>
 <lastmod>2016-01-09T00:00:00+01:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/mount-disk-permanently-in-linux-auto-mount-disk-2.html</loc>
+<loc>http://ingeioustechie.com/mount-disk-permanently-in-linux-auto-mount-disk-2.html</loc>
 <lastmod>2016-01-09T00:00:00+01:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/delete-all-lines-from-vim-select-all-delete.html</loc>
+<loc>http://ingeioustechie.com/delete-all-lines-from-vim-select-all-delete.html</loc>
 <lastmod>2016-01-09T00:00:00+01:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/mongo-php-not-found-cli.html</loc>
+<loc>http://ingeioustechie.com/mongo-php-not-found-cli.html</loc>
 <lastmod>2013-11-05T13:45:28+05:30</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/My-10-favorite-sublime-shortcuts.html</loc>
+<loc>http://ingeioustechie.com/My-10-favorite-sublime-shortcuts.html</loc>
 <lastmod>2013-10-23T00:22:12+05:30</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/this-is-my-first-post-on-ghost.html</loc>
+<loc>http://ingeioustechie.com/this-is-my-first-post-on-ghost.html</loc>
 <lastmod>2013-10-23T00:22:12+05:30</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/howto-use-grep-command-in-linux-unix.html</loc>
+<loc>http://ingeioustechie.com/howto-use-grep-command-in-linux-unix.html</loc>
 <lastmod>2010-12-05T19:30:00+01:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/how-to-install-django-on-ubuntu-with-apache-and-php.html</loc>
+<loc>http://ingeioustechie.com/how-to-install-django-on-ubuntu-with-apache-and-php.html</loc>
 <lastmod>2010-04-23T18:35:00+02:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/company-policy.html</loc>
+<loc>http://ingeioustechie.com/company-policy.html</loc>
 <lastmod>2010-04-15T01:49:00+02:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/disabling-adobe-updater.html</loc>
+<loc>http://ingeioustechie.com/disabling-adobe-updater.html</loc>
 <lastmod>2009-08-08T16:44:00+02:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/googles-task-is-awesome.html</loc>
+<loc>http://ingeioustechie.com/googles-task-is-awesome.html</loc>
 <lastmod>2009-07-22T18:19:00+02:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/debugging-an-illegal-choice-has-been-detected-please-contact-the-site-administrator.html</loc>
+<loc>http://ingeioustechie.com/debugging-an-illegal-choice-has-been-detected-please-contact-the-site-administrator.html</loc>
 <lastmod>2009-06-13T21:18:00+02:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/xampp-mod_rewrite-clean-url-htaccess.html</loc>
+<loc>http://ingeioustechie.com/xampp-mod_rewrite-clean-url-htaccess.html</loc>
 <lastmod>2009-06-09T20:10:00+02:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/another-app-is-currently-holding-the-yum-lock-waiting-for-it-to-exit.html</loc>
+<loc>http://ingeioustechie.com/another-app-is-currently-holding-the-yum-lock-waiting-for-it-to-exit.html</loc>
 <lastmod>2009-05-03T18:48:00+02:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/free-songs-download-by-using-google.html</loc>
+<loc>http://ingeioustechie.com/free-songs-download-by-using-google.html</loc>
 <lastmod>2009-04-27T17:55:00+02:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/not-able-to-login-in-magento.html</loc>
+<loc>http://ingeioustechie.com/not-able-to-login-in-magento.html</loc>
 <lastmod>2009-03-25T19:38:00+01:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/multiple-image-resizecrop-codeigniter.html</loc>
+<loc>http://ingeioustechie.com/multiple-image-resizecrop-codeigniter.html</loc>
 <lastmod>2009-03-05T08:53:00+01:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
