@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Learning the hard way!</title><link href="http://ingeioustechie.com/" rel="alternate"></link><link href="http://ingeioustechie.com/feeds/category/notes.atom.xml" rel="self"></link><id>http://ingeioustechie.com/</id><updated>2015-02-23T00:22:12+05:30</updated><entry><title>Installing and configuring postgress in ubuntu</title><link href="http://ingeioustechie.com/installing-and-configuring-postgres-in-Ubuntu.html" rel="alternate"></link><updated>2015-02-23T00:22:12+05:30</updated><author><name>Mukesh</name></author><id>tag:ingeioustechie.com,2015-02-23:installing-and-configuring-postgres-in-Ubuntu.html</id><summary type="html">&lt;div class="highlight"&gt;&lt;pre&gt;sudo apt-get update
+sudo apt-get install postgresql postgresql-contrib
+
+sudo -i -u postgres
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;You can get a Postgres prompt immediately by typing:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;psql
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Exit out of the PostgreSQL prompt by typing:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;\q
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;We can create a new role (user_test) by typing:
+    createuser --interactive&lt;/p&gt;
+&lt;p&gt;You can create the appropriate database by simply calling this command as the postgres user:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;createdb db_test
+sudo -i -u user_test
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;create role myapp with createdb login password 'password';&lt;/p&gt;
+&lt;p&gt;you can login as postgres user, which is generally a super user, and he can be logged in if you are sudoer or root user. &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;sudo -u postgres psql
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Changing a password via postgres user&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;ALTER USER postgres PASSWORD &amp;#39;newPassword&amp;#39;;
+&lt;/pre&gt;&lt;/div&gt;</summary></entry></feed>

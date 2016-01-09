@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <title>XAMPP mod_rewrite , clean Url .htaccess</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="http://ingeioustechie.com/theme/css/main.css" />
+        <link href="http://ingeioustechie.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Learning the hard way! Full Atom Feed" />
+        <link href="http://ingeioustechie.com/feeds/category/apache-php-xampp.atom.xml" type="application/atom+xml" rel="alternate" title="Learning the hard way! Categories Atom Feed" />
+</head>
+<body>
+
+    <div class="main-nav-container">
+
+        <div class="pure-g">
+            <div class="pure-u-1 pure-u-lg-2-3">
+                <div class="main-nav">
+                    <ul class="main-nav-list">
+                        <li class="main-nav-item"><a href="http://ingeioustechie.com/" class="pure-menu-link">Learning the hard way!</a></li>
+
+                    </ul>
+                </div>
+             </div>
+
+             <div class="pure-u-1 pure-u-lg-1-3"></div>
+        </div>
+
+    </div>
+
+
+<div class="page-container">
+    <div class="entry-content">
+        <div class="post-meta pure-g">
+            <div class="pure-u-3-4 meta-data">
+                <a href="http://ingeioustechie.com/category/Apache, php, Xampp/index.html" class="category">Apache, php, Xampp</a><br />
+
+                <a class="author" href="http://ingeioustechie.com/author/mukesh.html">Mukesh</a>
+                &mdash; <abbr title="2009-06-09T20:10:00+02:00">Tue 09 June 2009</abbr>
+            </div>
+        </div>
+    </div>
+
+    <div class="article-header-container">
+        <div class="background-image-container">
+
+            <div class="background-image-small">
+                <div class="title-container">
+                    <h1>XAMPP mod_rewrite , clean Url .htaccess</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="entry-content">
+        <p>Today every sites requirement is to have a user friendly URLs which can
+be archived by .htaccess and apache. Since I'm running PHP I used XAMPP
+. A default Xampp installation is lacking the mod_rewrite
+functionality. So to make the mod_rewrite module working, we need to do
+some tweak in Apache's httpd.conf file.</p>
+<p>Since by default mod_rewrite module is not enabled by default so I did
+the following steps.</p>
+<p>To enable mod_rewrite in xampp first go to the directory of
+installation \apache\conf and edit httpd.conf. Find the line which
+contains<br />
+#LoadModule rewrite_module modules/mod_rewrite.so<br />
+uncomment this(just remove #, should be):</p>
+<p>LoadModule rewrite_module modules/mod_rewrite.so</p>
+<p>Also find AllowOverride None</p>
+<p>Should be:</p>
+<p>AllowOverride All</p>
+<p>I really think it appears 2 or 3 times on the configuration file.</p>
+<p>This setting is also required to get the clean_url module to function
+in drupal.</p>
+<p>now restart the server and you are done.</p>
+<p>Happy xampping!</p>
+    </div>
+
+    <footer>
+        <div class="tags">
+            <a href="http://ingeioustechie.com/tag/.htaccess/index.html">.htaccess</a>
+            <a href="http://ingeioustechie.com/tag/Apache/index.html">Apache</a>
+            <a href="http://ingeioustechie.com/tag/Xampp/index.html">Xampp</a>
+        </div>
+        <div class="pure-g post-footer">
+            <div class="pure-u-1 pure-u-md-1-2">
+                <div class="pure-g poster-info">
+                    <div class="pure-u-3-4">
+                        <h3 class="author-name"><a href="http://ingeioustechie.com/author/mukesh.html">Mukesh</a></h3>
+                        <p class="author-description">
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+
+
+    </footer>
+
+    <div class="entry-content">
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            var disqus_shortname = 'ingenioustechie';
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+    </div>
+
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Learning the hard way!</title><link href="http://ingeioustechie.com/" rel="alternate"></link><link href="http://ingeioustechie.com/feeds/tag/hacks.atom.xml" rel="self"></link><id>http://ingeioustechie.com/</id><updated>2016-01-09T00:00:00+01:00</updated><entry><title>Creating logo online</title><link href="http://ingeioustechie.com/creating-logo-online.html" rel="alternate"></link><updated>2016-01-09T00:00:00+01:00</updated><author><name>Mukesh</name></author><id>tag:ingeioustechie.com,2015-11-20:creating-logo-online.html</id><summary type="html">&lt;h2&gt;How to create logo online free&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Create logo on below site 
+https://www.graphicsprings.com/start-your-logo&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Get the SVG code &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Edit the svg code at below tool
+http://svg-edit.googlecode.com/svn/branches/stable/editor/svg-editor.html&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Now you can export as PNG also you can open the image on GIMP. &lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;</summary><category term="Hacks"></category></entry></feed>
