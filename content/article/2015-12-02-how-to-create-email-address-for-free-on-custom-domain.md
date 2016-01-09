@@ -1,3 +1,13 @@
+Title: How to create email address for free on custom domain 
+Date: 2015-12-02 13:36:12.000000000 +05:30
+Slug: how-to-create-email-address-for-free-on-custom-domain
+Authors: Mukesh
+Modified: 
+Category: Jugad
+Tags: Jugad, email, mailgun, cloudflare 
+Status: Draft
+Summary: 
+    Deleting branches from local origin. 
 
 
 After moving my DNS from Namecheap to CloudFlare I lost the ability to use Namecheap as a mail forwarder. For anyone not sure what that is, essentially it allows you to receive email at anyname@your-domain.com and have it automatically forwarded somewhere else (like your personal Gmail account).

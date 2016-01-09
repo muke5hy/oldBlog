@@ -7,7 +7,7 @@ Category: Git
 Tags: git
 Status: 
 Summary: 
-	Deleting branches from local origin. 
+	Deleting branches from local and remote. 
 
 ## How to delete git branch from local and remote
 

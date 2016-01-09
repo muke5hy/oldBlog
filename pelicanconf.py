@@ -47,8 +47,8 @@ THEME = "pelican-themes/medius"
 # THEME = "pelican-themes/pelican-mediumfox"
 
 
-STATIC_PATHS = ['extra/CNAME']
-EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'},}
+STATIC_PATHS = ['extra/CNAME_']
+EXTRA_PATH_METADATA = {'extra/CNAME_': {'path': 'CNAME_'},}
 
 PLUGIN_PATHS = ['pelican-plugins']
 PLUGINS = ['sitemap', 'gravatar']
@@ -61,7 +61,7 @@ SITEMAP = {
         'pages': 0.5
     },
     'changefreqs': {
-        'articles': 'monthly',
+        'articles': 'daily',
         'indexes': 'daily',
         'pages': 'monthly'
     }
