@@ -7,7 +7,6 @@ Category: Jugad
 Tags: Jugad, email, mailgun, cloudflare 
 Status: Draft
 Summary: 
-    Deleting branches from local origin. 
 
 
 After moving my DNS from Namecheap to CloudFlare I lost the ability to use Namecheap as a mail forwarder. For anyone not sure what that is, essentially it allows you to receive email at anyname@your-domain.com and have it automatically forwarded somewhere else (like your personal Gmail account).

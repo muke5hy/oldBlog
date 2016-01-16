@@ -14,6 +14,26 @@ https://redd.it/1knw7z
 
 1. Talk to me about the GIL. How does it impact concurrency in Python? What kinds of applications does it impact more than others?
 2. How does Python's garbage collection work?
+	Garbage collection has two type. 
+	1. ## Automatic Garbage Collection of Cycles:
+		Ptyhon schedules garbage collection based upon a threshold of object allocations and object deallocations. When the number of allocations minus the number of deallocations are greater than the threshold number, the garbage collector is run. One can inspect the threshold for new objects (objects in Python known as generation 0 objects) by loading the gc module and asking for garbage collection thresholds: 
+
+		```python	
+			import gc
+			print "Garbage collection thresholds: %r" % gc.get_threshold()
+
+		```
+		`Garbage collection thresholds: (700, 10, 10)`
+
+		Here we can see that the default threshold on the above system is 700. This means when the number of allocations vs. the number of deallocations is greater than 700 the automatic garbage collector will run. 
+		Automatic Garbage collection does not works if Device is running out of memory. In such a situation application should handle it manually 
+	2. ## Manual Garbage Collection 
+		The garbage collection can be invoked manually in the following way:
+		```python
+			import gc
+			gc.collect()
+		```
+		gc.collect() returns the number of objects it has collected and deallocated. You can print this information in the following way: 
 3. What is the difference between range and xrange? How has this changed over time?
 4. Here's a function. Optimize it for me.
 5. How do you iterate over a list and pull element indices at the same time?
@@ -39,3 +59,10 @@ https://redd.it/1knw7z
 24. What do we mean when we say that a certain Lambda expression forms a closure?
 25. What is the difference between list and tuple?
 26. What will be the output of the following code?
+
+###Few excersise before you go for interview
+
+1. You have list 100 words, sort them. 
+	* What if the list is in million
+	* How will you search/find a particular word. 
+2. 
