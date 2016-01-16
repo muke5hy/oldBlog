@@ -1,21 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Learning the hard way!</title><link href="http://ingenioustechie.com/" rel="alternate"></link><link href="http://ingenioustechie.com/feeds/all.atom.xml" rel="self"></link><id>http://ingenioustechie.com/</id><updated>2016-01-16T00:00:00+01:00</updated><entry><title>Creating logo online</title><link href="http://ingenioustechie.com/creating-logo-online.html" rel="alternate"></link><updated>2016-01-16T00:00:00+01:00</updated><author><name>Mukesh</name></author><id>tag:ingenioustechie.com,2015-11-20:creating-logo-online.html</id><summary type="html">&lt;h2&gt;How to create logo online free&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;Create logo on below site 
-https://www.graphicsprings.com/start-your-logo&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Get the SVG code &lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Edit the svg code at below tool
-http://svg-edit.googlecode.com/svn/branches/stable/editor/svg-editor.html&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Now you can export as PNG also you can open the image on GIMP. &lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;</summary><category term="Hacks"></category></entry><entry><title>Deleting git branch from local and origin</title><link href="http://ingenioustechie.com/deleting-git-branch-from-local-and-origin.html" rel="alternate"></link><updated>2016-01-16T00:00:00+01:00</updated><author><name>Mukesh</name></author><id>tag:ingenioustechie.com,2015-11-20:deleting-git-branch-from-local-and-origin.html</id><summary type="html">&lt;h2&gt;How to delete git branch from local and remote&lt;/h2&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Learning the hard way!</title><link href="http://ingenioustechie.com/" rel="alternate"></link><link href="http://ingenioustechie.com/feeds/all.atom.xml" rel="self"></link><id>http://ingenioustechie.com/</id><updated>2016-01-16T00:00:00+01:00</updated><entry><title>Deleting git branch from local and origin</title><link href="http://ingenioustechie.com/deleting-git-branch-from-local-and-origin.html" rel="alternate"></link><updated>2016-01-16T00:00:00+01:00</updated><author><name>Mukesh</name></author><id>tag:ingenioustechie.com,2015-11-20:deleting-git-branch-from-local-and-origin.html</id><summary type="html">&lt;h2&gt;How to delete git branch from local and remote&lt;/h2&gt;
 &lt;p&gt;for long running projects and projects which has continuous changes gets many unused branch over the period of time, 
 and if you do not clean up your branches they keep on increasing some time more than 50+ or may be 100+&lt;/p&gt;
 &lt;p&gt;When you checkout a branch from remote (origin), it makes a copy locally and points it to the remote Branch. When you want to delete a branch it becomes necessary to remove it from both places as well as from other machine too. &lt;/p&gt;

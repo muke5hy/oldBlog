@@ -1,21 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Learning the hard way!</title><link href="http://ingenioustechie.com/" rel="alternate"></link><link href="http://ingenioustechie.com/feeds/category/article.atom.xml" rel="self"></link><id>http://ingenioustechie.com/</id><updated>2016-01-16T00:00:00+01:00</updated><entry><title>Creating logo online</title><link href="http://ingenioustechie.com/creating-logo-online.html" rel="alternate"></link><updated>2016-01-16T00:00:00+01:00</updated><author><name>Mukesh</name></author><id>tag:ingenioustechie.com,2015-11-20:creating-logo-online.html</id><summary type="html">&lt;h2&gt;How to create logo online free&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;Create logo on below site 
-https://www.graphicsprings.com/start-your-logo&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Get the SVG code &lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Edit the svg code at below tool
-http://svg-edit.googlecode.com/svn/branches/stable/editor/svg-editor.html&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Now you can export as PNG also you can open the image on GIMP. &lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;</summary><category term="Hacks"></category></entry><entry><title>Formating String date to ISOdate or Object Date in MongoDB</title><link href="http://ingenioustechie.com/formating-string-date-to-isodate-or-object-date-in-mongodb.html" rel="alternate"></link><updated>2016-01-16T00:00:00+01:00</updated><author><name>Mukesh</name></author><id>tag:ingenioustechie.com,2015-11-05:formating-string-date-to-isodate-or-object-date-in-mongodb.html</id><summary type="html">&lt;p&gt;MongoDB stores the date in ISODate format which is nothing but a wrapper for the Date object of Javascript. If some how your database has stored to string date, you can convert them to ISO by running following query directly in mongo terminal&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Learning the hard way!</title><link href="http://ingenioustechie.com/" rel="alternate"></link><link href="http://ingenioustechie.com/feeds/category/article.atom.xml" rel="self"></link><id>http://ingenioustechie.com/</id><updated>2016-01-16T00:00:00+01:00</updated><entry><title>Formating String date to ISOdate or Object Date in MongoDB</title><link href="http://ingenioustechie.com/formating-string-date-to-isodate-or-object-date-in-mongodb.html" rel="alternate"></link><updated>2016-01-16T00:00:00+01:00</updated><author><name>Mukesh</name></author><id>tag:ingenioustechie.com,2015-11-05:formating-string-date-to-isodate-or-object-date-in-mongodb.html</id><summary type="html">&lt;p&gt;MongoDB stores the date in ISODate format which is nothing but a wrapper for the Date object of Javascript. If some how your database has stored to string date, you can convert them to ISO by running following query directly in mongo terminal&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nx"&gt;db&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;collection&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;find&lt;/span&gt;&lt;span class="p"&gt;({&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;date_updated&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="nx"&gt;$type&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;}})&lt;/span&gt;    
     &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;forEach&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;item&lt;/span&gt;&lt;span class="p"&gt;){&lt;/span&gt;
 
