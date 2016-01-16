@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Learning the hard way!</title><link href="http://ingeioustechie.com/" rel="alternate"></link><link href="http://ingeioustechie.com/feeds/tag/vim.atom.xml" rel="self"></link><id>http://ingeioustechie.com/</id><updated>2016-01-16T00:00:00+01:00</updated><entry><title>Delete all lines from vim (Select all delete)</title><link href="http://ingeioustechie.com/delete-all-lines-from-vim-select-all-delete.html" rel="alternate"></link><updated>2016-01-16T00:00:00+01:00</updated><author><name>Mukesh</name></author><id>tag:ingeioustechie.com,2013-11-07:delete-all-lines-from-vim-select-all-delete.html</id><summary type="html">&lt;p&gt;There are many ways to delete all the lines from a file in vim &lt;/p&gt;
+&lt;p&gt;My favorite is &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;:%d
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="vim"></category></entry></feed>

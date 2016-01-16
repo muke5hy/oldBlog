@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <title>mongo.php not Found (cli)</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="http://ingeioustechie.com/theme/css/main.css" />
+        <link href="http://ingeioustechie.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Learning the hard way! Full Atom Feed" />
+        <link href="http://ingeioustechie.com/feeds/category/article.atom.xml" type="application/atom+xml" rel="alternate" title="Learning the hard way! Categories Atom Feed" />
+</head>
+<body>
+
+    <div class="main-nav-container">
+
+        <div class="pure-g">
+            <div class="pure-u-1 pure-u-lg-2-3">
+                <div class="main-nav">
+                    <ul class="main-nav-list">
+                        <li class="main-nav-item"><a href="http://ingeioustechie.com/" class="pure-menu-link">Learning the hard way!</a></li>
+
+                    </ul>
+                </div>
+             </div>
+
+             <div class="pure-u-1 pure-u-lg-1-3"></div>
+        </div>
+
+    </div>
+
+
+<div class="page-container">
+    <div class="entry-content">
+        <div class="post-meta pure-g">
+            <div class="pure-u-3-4 meta-data">
+                <a href="http://ingeioustechie.com/category/article/index.html" class="category">article</a><br />
+
+                <a class="author" href="http://ingeioustechie.com/author/mukesh.html">Mukesh</a>
+                &mdash; <abbr title="2013-11-05T13:45:28+05:30">Tue 05 November 2013</abbr>
+            </div>
+        </div>
+    </div>
+
+    <div class="article-header-container">
+        <div class="background-image-container">
+
+            <div class="background-image-small">
+                <div class="title-container">
+                    <h1>mongo.php not Found (cli)</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="entry-content">
+        <p>Its common to get an error stating mongo.php not Found after installing mongo driver for php. <br />
+To get rid of the error add </p>
+<div class="highlight"><pre>extension=mongo.so
+</pre></div>
+
+
+<p>in your php.ini file </p>
+<p>If you are running mongodb via cron or cli you need to also add into </p>
+<div class="highlight"><pre>/etc/php5/cli/php.ini
+</pre></div>
+    </div>
+
+    <footer>
+        <div class="pure-g post-footer">
+            <div class="pure-u-1 pure-u-md-1-2">
+                <div class="pure-g poster-info">
+                    <div class="pure-u-3-4">
+                        <h3 class="author-name"><a href="http://ingeioustechie.com/author/mukesh.html">Mukesh</a></h3>
+                        <p class="author-description">
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+
+
+    </footer>
+
+    <div class="entry-content">
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            var disqus_shortname = 'ingenioustechie';
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+    </div>
+
+</div>
+
+
+</body>
+</html>

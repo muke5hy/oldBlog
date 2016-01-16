@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Learning the hard way!</title><link href="http://ingeioustechie.com/" rel="alternate"></link><link href="http://ingeioustechie.com/feeds/tag/solr.atom.xml" rel="self"></link><id>http://ingeioustechie.com/</id><updated>2016-01-16T00:00:00+01:00</updated><entry><title>Install Solr with Tomcat on ubuntu</title><link href="http://ingeioustechie.com/install-solr-on-ubuntu.html" rel="alternate"></link><updated>2016-01-16T00:00:00+01:00</updated><author><name>Mukesh</name></author><id>tag:ingeioustechie.com,2013-11-08:install-solr-on-ubuntu.html</id><summary type="html">&lt;p&gt;Install &amp;amp; Configure Solr on Ubuntu, the quickest way
+Note: I used the wiki page Ubuntu-10.04-lts-server as basis of this tutorial.
+More infos on the general installation at :http://wiki.apache.org/solr/SolrTomcat&lt;/p&gt;
+&lt;p&gt;One of the most efficient way to deploy a Solr server is to encapsulate it in a Java servlet, the Apache Foundation (the provider of Solr) brought to us Tomcat, a powerfull http server written in Java.&lt;/p&gt;
+&lt;p&gt;The 2 steps procedure (could be 7 if you want to customize everything)&lt;/p&gt;
+&lt;p&gt;Install Java (if not already installed)&lt;/p&gt;
+&lt;p&gt;Because tomcat and solr are Java based softwares we need the Java environment (As it is advised in the Solr wiki : prefere a full JDK to a simple JRE.)&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;sudo apt-get install openjdk-6-jdk
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Note : Working on Amazon EC2 instance, I had to upgrade temporarly my “micro” instance to “medium”, because of special memory needs during java’s installation.&lt;/p&gt;
+&lt;p&gt;Install Tomcat &amp;amp; Solr (You can’t avoid this one)&lt;/p&gt;
+&lt;p&gt;For ubuntu (tested with 10.4 LTS), there is an unique package to install, it will take care of installing both Tomcat &amp;amp; Solr, plus the integration of Solr in Tomcat.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;sudo apt-get install solr-tomcat
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;then let’s start the server
+$ sudo service tomcat6 start&lt;/p&gt;
+&lt;p&gt;Ok it is done !
+Solr server responds at http://localhost:8080/solr
+and the config &amp;amp; index will be stored at : /usr/share/solr/
+In order to use it with Sunspot you’ll have to copy conf/schema.xml &amp;amp; conf/solrconfig.xml from your application to /usr/share/solr/ or /usr/share/solr/conf (Ubuntu 12.04).
+But, indeed, you should read the tutorial further to understand why you shouldn’t use Solr directly.&lt;/p&gt;
+&lt;p&gt;For now your data are stored in a folder of your system not dedicated to a specific user or application.
+It is quite common to read that a public server should use a dedicated user account with constraint privileges. (internet is full of it)&lt;/p&gt;
+&lt;p&gt;If like me your not totaly happy with it, follow the next steps to customize the whole thing. I won’t explain you how to start Tomcat as another user (Google it), but how to choose your Solr home directory&lt;/p&gt;
+&lt;p&gt;Install tomcat management utilities (not required)&lt;/p&gt;
+&lt;p&gt;These utilities could be usefull later, it cost nothing to install them.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;sudo apt-get install tomcat6-admin
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Once installed, you’ll have to grant some user
+    $ sudo nano /etc/tomcat6/tomcat-users.xml&lt;/p&gt;
+&lt;p&gt;and paste these lines (change username and password as you whish)
+&lt;code&gt;&amp;lt;role rolename="manager"/&amp;gt;
+    &amp;lt;role rolename="admin"/&amp;gt;
+    &amp;lt;user username="tomcat" password="tomcat" roles="manager,admin"/&amp;gt;&lt;/code&gt; 
+A Quick test (not required)&lt;/p&gt;
+&lt;p&gt;At this point Solr should already be running smoothly. Try Starting tomcat server.&lt;/p&gt;
+&lt;p&gt;$ sudo service tomcat6 start&lt;/p&gt;
+&lt;p&gt;As it is installed as a service, it is quite cool to manage (you can use start|stop|restart verbs)
+Now, reach it with your web browser : http://localhost:8080/
+Tomcat should say : It works !
+And Solr should be accessible at : http://localhost:8080/solr
+if it is ok, take a look to the “Solr Admin” section.
+If you installed the management package, take a look at : http://localhost:8080/manager/html and http://localhost:8080/host-manager/html
+Configure Solr (not required)&lt;/p&gt;
+&lt;p&gt;The context&lt;/p&gt;
+&lt;p&gt;Solr is a Java software, when the server starts it create an instance of Solr, which take place in a home directory and get an single uri to access it. let’s configure them.&lt;/p&gt;
+&lt;p&gt;In the Solr web admin interface you could check on the third line the default home directory SolrHome=/usr/share/solr/
+let’s edit the config file :&lt;/p&gt;
+&lt;p&gt;$ sudo nano /var/lib/tomcat6/conf/Catalina/localhost/solr.xml&lt;/p&gt;
+&lt;p&gt;and change the fragment below :
+&lt;Environment name="solr/home" ..... value="/my-directory/solr" ....&gt;&lt;/p&gt;
+&lt;p&gt;Tomcat use the filename (minus “.xml”) as URI to access the instance. If you want to change the uri of Solr just rename the previous file.
+If you want several instances of Solr on the same server (several apps, or environments), create a new copy of the previous file
+solr-dev.xml can be reached at http://localhost:8080/solr-dev/
+solr-prod.xml can be reached at http://localhost:8080/solr-prod/
+Will give you two Solr indexes (one index in each solr/home) at two differents uri.
+This is cool !
+The home directory&lt;/p&gt;
+&lt;p&gt;We said to tomcat to point to an unexisting folder, let’s create it by copying the default solr folder.&lt;/p&gt;
+&lt;p&gt;$ sudo cp -prL /usr/share/solr/ /my-directory/&lt;/p&gt;
+&lt;p&gt;copy options are : r = recursive, p = preserve (ownership, timespamps…), L= copy symlink as real folders &amp;amp; files
+If you have a specific user running tomcat :
+sudo chown -R tomcat:tomcat /my-directory
+The directory you just copied look a bit like our solr/ folder in our app. let’s copy our application configuration files (beware of preserving the R&amp;amp;W access, do a copy/paste of the content if you are not sure) conf/schema.xml &amp;amp; conf/solrconfig.xml in it.
+Note : when I copy conf/solrconfig.xml to the new Solr instance it fails to start. But I successfuly use the default file.&lt;/p&gt;
+&lt;p&gt;The application.&lt;/p&gt;
+&lt;p&gt;It could be something like :&lt;/p&gt;
+&lt;p&gt;production:
+  solr:
+    hostname: solrserver
+    port: 8080 #tomcat defaults to port 8080
+    path: '/solr-prod' # or '/solr' (ubuntu 12.04)
+    log_level: WARNING
+development:
+  solr:
+    hostname: localhost
+    port: 8982
+    log_level: INFO
+test:
+  solr:
+    hostname: localhost
+    port: 8981
+    log_level: WARNING&lt;/p&gt;
+&lt;p&gt;This doc is directly copy pasted from &lt;a href="https://github.com/sunspot/sunspot/wiki/Configure-Solr-on-Ubuntu,-the-quickest-way"&gt;here&lt;/a&gt;&lt;/p&gt;</summary><category term="solr"></category></entry></feed>

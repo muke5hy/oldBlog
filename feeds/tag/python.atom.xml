@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Learning the hard way!</title><link href="http://ingeioustechie.com/" rel="alternate"></link><link href="http://ingeioustechie.com/feeds/tag/python.atom.xml" rel="self"></link><id>http://ingeioustechie.com/</id><updated>2016-01-16T00:00:00+01:00</updated><entry><title>Disabling Put Post Delete Django Rest Framework BrowsableAPI</title><link href="http://ingeioustechie.com/disabling-put-post-delete-Django-Rest-Framework-BrowsableAPI.html" rel="alternate"></link><updated>2016-01-16T00:00:00+01:00</updated><author><name>Mukesh</name></author><id>tag:ingeioustechie.com,2015-11-03:disabling-put-post-delete-Django-Rest-Framework-BrowsableAPI.html</id><summary type="html">&lt;div class="highlight"&gt;&lt;pre&gt;    Disabling PUT/POST/DELETE from BrowsableAPI of DRF
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;If you are building a Rest Full Service in Django then you must be familiar with Django-Rest-Framework AKA DRF. DRF helps you to build API with very less code footprint. &lt;/p&gt;
+&lt;p&gt;DRF has BrowsableAPI which gives a front-end to view API and do some test, by using this you can do GET/PUT/POST/DELETE etc in your browser. Hence you do not require script or POSTMAN/CURL to test. Although these feature is very useful on development server but for the production you really do not want the PUT/POST/DELETE actions. &lt;/p&gt;
+&lt;p&gt;To disable these action we need to extend BrowsableAPIRenderer and change the &lt;code&gt;display_edit_forms&lt;/code&gt; and &lt;code&gt;delete_form&lt;/code&gt; to False. Lets create a file &lt;code&gt;BrowsableAPIRendererGet&lt;/code&gt; some where in your project where you place common files or tools. I keep them in base.lib package, so create &lt;code&gt;base/lib/BrowsableAPIRenderer.py&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;base/lib/BrowsableAPIRenderer.py&lt;/code&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;rest_framework.renderers&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;BrowsableAPIRenderer&lt;/span&gt;
+
+&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;BrowsableAPIRendererGet&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;BrowsableAPIRenderer&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="sd"&gt;&amp;quot;&amp;quot;&amp;quot;Renders the browsable api, but excludes the forms.&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;get_context&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="n"&gt;kwargs&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="n"&gt;context&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;super&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get_context&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="n"&gt;kwargs&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="n"&gt;context&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;display_edit_forms&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;False&lt;/span&gt;
+        &lt;span class="n"&gt;context&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;delete_form&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;False&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;context&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Once you done with that call the custom renderer from your settings file hence in you settings.py add following in &lt;code&gt;DEFAULT_RENDERER_CLASSES&lt;/code&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;REST_FRAMEWORK = {
+    &amp;#39;DEFAULT_RENDERER_CLASSES&amp;#39;: (
+        &amp;#39;rest_framework.renderers.JSONRenderer&amp;#39;,
+        &amp;#39;base.lib.BrowsableAPIRenderer.BrowsableAPIRendererGet&amp;#39;,
+    )
+}
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Now all done you can brows the API but you will not be able to do PUT/POST/DELETE actions. You might want to create diffrent settings file for development and production in case you require PUT/POST/DELETE along with GET. &lt;/p&gt;</summary><category term="Django"></category><category term="DRF"></category><category term="Python"></category></entry><entry><title>! 'IOError: cannot write mode P as JPEG | IOError: decoder jpeg not available'</title><link href="http://ingeioustechie.com/ioerror-cannot-write-mode-p-as-jpeg-ioerror-decoder-jpeg-not-available.html" rel="alternate"></link><updated>2016-01-16T00:00:00+01:00</updated><author><name>mukesh</name></author><id>tag:ingeioustechie.com,2014-01-16:ioerror-cannot-write-mode-p-as-jpeg-ioerror-decoder-jpeg-not-available.html</id><summary type="html">&lt;p&gt;uninstall PIL&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;pip uninstall PIL
+
+sudo apt-get install libjpeg-dev libfreetype6-dev zlib1g-dev libpng12-dev
+
+pip install PIL --upgrade
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;If everything works &lt;/p&gt;
+&lt;p&gt;you will see &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;--------------------------------------------------------------------
+PIL 1.1.7 SETUP SUMMARY
+--------------------------------------------------------------------
+version       1.1.7
+platform     linux2 2.7.4 (default, Sep 26 2013, 03:20:26)
+              [GCC 4.7.3]
+--------------------------------------------------------------------
+*** TKINTER support not available
+*** JPEG support not available
+*** ZLIB (PNG/ZIP) support not available
+*** FREETYPE2 support not available
+*** LITTLECMS support not available
+--------------------------------------------------------------------
+To add a missing option, make sure you have the required
+library, and set the corresponding ROOT variable in the
+setup.py script.
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;If the issue does resolve &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;pip uninstall PIL
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;and install Pillow &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;pip install pillow
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;You will see something like this at once its installed. &lt;/p&gt;
+&lt;hr /&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;  PIL SETUP SUMMARY
+  --------------------------------------------------------------------
+  version      Pillow 2.3.0
+  platform     linux2 2.7.4 (default, Sep 26 2013, 03:20:26)
+               [GCC 4.7.3]
+  --------------------------------------------------------------------
+  *** TKINTER support not available
+  --- JPEG support available
+  --- ZLIB (PNG/ZIP) support available
+  --- LIBTIFF support available
+  --- FREETYPE2 support available
+  --- LITTLECMS2 support available
+  *** WEBP support not available
+  *** WEBPMUX support not available
+  --------------------------------------------------------------------
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="python"></category></entry><entry><title>Installing virtualenv in ubuntu</title><link href="http://ingeioustechie.com/installing-virtualenv-in-ubuntu.html" rel="alternate"></link><updated>2016-01-16T00:00:00+01:00</updated><author><name>Mukesh</name></author><id>tag:ingeioustechie.com,2013-12-01:installing-virtualenv-in-ubuntu.html</id><summary type="html">&lt;p&gt;Virtualenv is a tool to create isolated Python environments.&lt;/p&gt;
+&lt;p&gt;There is multiple ways to install virtualenv I'm gonna use one of the esiest way to install it. &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Installing via pip :&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;To install via pip you have to install pip &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;sudo apt-get install python-pip
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;check installed pip &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;which pip
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Then install virtualenv &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;pip install virtualenv
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Now check where virtualenv got isntalled&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;which virtualenv
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;to create a enviroment run following line&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;virtualenv ~/env/project --no-site-packages
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;env/project is a path where environment will get created. &lt;/p&gt;
+&lt;p&gt;To activate environment &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;source ~/env/tweepy/bin/activate
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="python"></category></entry></feed>
