@@ -56,22 +56,30 @@
 
     <div class="entry-content">
         <p>Often we require to check the versions of the file changes git. There are method in git to do that, but there is other better way to do that.   </p>
-<p>To view a file of a specific version, below command will show you 5th last commit of model.py
-<code>git show HEAD~5:auth/model.py</code> </p>
-<p>To get the history of changes 
-`
-git log -p auth/model.py</p>
-<h1>If you want to follow all the changes inclusing file name change you can give --follow option</h1>
-<p>git log -p --follow  auth/model.py
-` </p>
+<p>To view a file of a specific version, below command will show you 5th last commit of model.py</p>
+<div class="highlight"><pre>git show HEAD~5:auth/model.py
+</pre></div>
+
+
+<p>To get the history of changes </p>
+<div class="highlight"><pre>git log -p auth/model.py
+
+# If you want to follow all the changes inclusing file name change you can give --follow option
+git log -p --follow  auth/model.py
+</pre></div>
+
+
 <p>If you not comforatble with terminal out put, you can use <code>gitk</code> or <code>gitg</code></p>
-<p>`
-gitg auth/model.py</p>
-<h1>or with follow</h1>
-<p>gitg --follow  auth/model.py
-<code>or</code>
-gitk --follow auth/model.py
-` </p>
+<div class="highlight"><pre>gitg auth/model.py
+
+# or with follow 
+gitg --follow  auth/model.py
+</pre></div>
+
+
+<p>or </p>
+<div class="highlight"><pre>gitk --follow auth/model.py
+</pre></div>
     </div>
 
     <footer>
