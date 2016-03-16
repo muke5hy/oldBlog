@@ -5,6 +5,7 @@
 *.swp
 *.out
 *.py[cod]
+*.pid
 output
 cache
 pelican-plugins

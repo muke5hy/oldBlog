@@ -5,7 +5,7 @@ Authors: Mukesh
 Modified: 
 Category: 
 Tags: Hacks
-Status: 
+Status: draft
 Summary: 
 	Creating logo 
 
