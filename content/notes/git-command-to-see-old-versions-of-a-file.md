@@ -5,7 +5,7 @@ Tags: git, tip
 Category: Git 
 Author: Mukesh
 Lang: 
-Summary: 
+Summary: Checking a diffrence between file versions in git
 
 Often we require to check the versions of the file changes git. There are method in git to do that, but there is other better way to do that.   
 
