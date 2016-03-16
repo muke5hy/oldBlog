@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Learning the hard way!</title><link href="http://ingenioustechie.com/" rel="alternate"></link><link href="http://ingenioustechie.com/feeds/category/uncategorized.atom.xml" rel="self"></link><id>http://ingenioustechie.com/</id><updated>2010-04-23T18:35:00+02:00</updated><entry><title>How to install Django on ubuntu with apache and php?</title><link href="http://ingenioustechie.com/how-to-install-django-on-ubuntu-with-apache-and-php.html" rel="alternate"></link><updated>2010-04-23T18:35:00+02:00</updated><author><name>Mukesh</name></author><id>tag:ingenioustechie.com,2010-04-23:how-to-install-django-on-ubuntu-with-apache-and-php.html</id><summary type="html">&lt;p&gt;Was just going through python in morning and thought lets try out Django
+Framework. Django is very popular web framework for python, Its MVC
+pattern. So just wanted to give a try to django. I have lappy I have
+ubuntu 9.04 installed and as I'm PHP developer I have already installed
+apache and php.&lt;/p&gt;
+&lt;p&gt;To install on Django on your current apache2 just follow the following
+commands.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;sudo apt-get install libapache2-mod-python python-django python-django-doc
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Now open this file in vim or gedit&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;sudo vim /etc/apache2/sites-available/django-example
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;and add these lines&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nt"&gt;&amp;lt;Location&lt;/span&gt; &lt;span class="err"&gt;&amp;quot;/&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
+    SetHandler python-program
+    PythonHandler django.core.handlers.modpython
+    PythonDebug On
+    PythonPath &amp;quot;[&amp;#39;/usr/share/doc/python-django-doc&amp;#39;] + sys.path&amp;quot;
+    SetEnv DJANGO_SETTINGS_MODULE examples.settings
+&lt;span class="nt"&gt;&amp;lt;/Location&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Now disable your default setting&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;sudo a2dissite default
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Now enable Django example  and then reload the apcahe2&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;sudo a2ensite django-example
+sudo /etc/init.d/apache2 reload
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;You can toggle between PHP and Django Now to use php again&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;sudo a2dissite django-example
+sudo a2ensite default
+&lt;/pre&gt;&lt;/div&gt;</summary></entry><entry><title>Disabling adobe updater</title><link href="http://ingenioustechie.com/disabling-adobe-updater.html" rel="alternate"></link><updated>2009-08-08T16:44:00+02:00</updated><author><name>Mukesh</name></author><id>tag:ingenioustechie.com,2009-08-08:disabling-adobe-updater.html</id><summary type="html">&lt;p&gt;I love adobes photoshop, Deamvear and Acrobat reader and other
+application which are as great as these, but one thing I dont like about
+adobe that they start there auto update as soon you start there
+application. and also there updater is resource hungry.&lt;/p&gt;
+&lt;p&gt;Being in India where Bandwidth is very precious, and where you get
+charge on the usage of your bandwidth [ and I have very less  Download
+limit :(  but good speed :) ], so when I started Acrobat reader to read
+a document,  I dint notice that adobe updater also auto started. Due to
+this I lost my precious download limit and then I decided to remove the
+auto update.&lt;/p&gt;
+&lt;p&gt;After Googling  Little  I found the solution for this. here is a
+solution for this.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;h5 id="head1"&gt;&lt;strong&gt;Turn off automatic updates on Windows OS&lt;/strong&gt;&lt;/h5&gt;
+&lt;p&gt;If your computer is connected to the internet, then you can change the
+Adobe Updater preferences to not check for updates.&lt;/p&gt;
+&lt;p&gt;To Change the Adobe Updater preferences, do the following:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Start the AdobeUpdater.exe application from ...\Program
+    Files\Common Files\Adobe\Updater 5&lt;/li&gt;
+&lt;li&gt;When the update screen appears, click the Preferences button&lt;/li&gt;
+&lt;li&gt;Uncheck the Automatically Check for updates checkbox and click OK&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;If your computer does not have an internet connection, then you can
+manually edit the AdobeUpdaterPreferences.dat file.&lt;/p&gt;
+&lt;p&gt;To manually edit the AdobeUpdaterPreferences.dat file, do the
+following:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Start the AdobeUpdater.exe application from ...\Program
+    Files\Common Files\Adobe\Updater 5&lt;/li&gt;
+&lt;li&gt;When the Adobe Updater dialog appears stating that there is no
+    Internet connection, click Cancel&lt;/li&gt;
+&lt;li&gt;Navigate to ...\Documents and Settings\[username]\Local
+    Settings\Application Data\Adobe\Updater5 on Windows XP or
+    ...\[username]\AppData\Local\Adobe\Updater5 on Vista and open
+    AdobeUpdaterPrefs.dat in Notepad.&lt;/li&gt;
+&lt;li&gt;If the &lt;em&gt;\&amp;lt;AutoCheck&gt;1\&amp;lt;/AutoCheck&gt;&lt;/em&gt; tag already exists, then
+    change the value from 1 to 0. Otherwise, add the line
+    &lt;em&gt;\&amp;lt;AutoCheck&gt;0\&amp;lt;/AutoCheck&gt;&lt;/em&gt; anywhere between the
+    &lt;em&gt;\&amp;lt;AdobeUpdater&gt;\&amp;lt;/AdobeUpdater&gt;&lt;/em&gt; tags.&lt;/li&gt;
+&lt;li&gt;Close and save the AdobeUpdaterPrefs.dat file&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;and  &lt;a href="http://kb2.adobe.com/cps/402/kb402251.html"&gt;here&lt;/a&gt; is a original
+post from adobe  :) .&lt;/p&gt;</summary></entry><entry><title>Free Songs Download By using Google</title><link href="http://ingenioustechie.com/free-songs-download-by-using-google.html" rel="alternate"></link><updated>2009-04-27T17:55:00+02:00</updated><author><name>Mukesh</name></author><id>tag:ingenioustechie.com,2009-04-27:free-songs-download-by-using-google.html</id><summary type="html">&lt;p&gt;Two days back I was searching for some site through wich I can download
+some good music. Though there are many sites which allows you to
+download the music free freelly.&lt;br /&gt;
+But If you want any specific song then it is very deficult to search
+for the songs. say you wanna download DJ Tiesto tracks, just put the
+followng code in the google and it will search for you.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;intitle:"index.of" "tiesto" "parent directory" "size" "last modified" "description" (wav|mp3|wma|ogg|mp4) -inurl:(asp|jsp|php|html|htm|cf|shtml)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Ejoy your search result direct download the mp3. :)&lt;/p&gt;</summary></entry></feed>

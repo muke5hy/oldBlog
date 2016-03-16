@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Learning the hard way!</title><link href="http://ingenioustechie.com/" rel="alternate"></link><link href="http://ingenioustechie.com/feeds/tag/tip.atom.xml" rel="self"></link><id>http://ingenioustechie.com/</id><updated>2016-03-16T12:37:35+01:00</updated><entry><title>Git command to see old versions of a file.</title><link href="http://ingenioustechie.com/git-command-to-see-old-versions-of-a-file-.html" rel="alternate"></link><updated>2016-03-16T12:37:35+01:00</updated><author><name>Mukesh</name></author><id>tag:ingenioustechie.com,2016-03-16:git-command-to-see-old-versions-of-a-file-.html</id><summary type="html">&lt;p&gt;Often we require to check the versions of the file changes git. There are method in git to do that, but there is other better way to do that.   &lt;/p&gt;
+&lt;p&gt;To view a file of a specific version, below command will show you 5th last commit of model.py
+&lt;code&gt;git show HEAD~5:auth/model.py&lt;/code&gt; &lt;/p&gt;
+&lt;p&gt;To get the history of changes 
+`
+git log -p auth/model.py&lt;/p&gt;
+&lt;h1&gt;If you want to follow all the changes inclusing file name change you can give --follow option&lt;/h1&gt;
+&lt;p&gt;git log -p --follow  auth/model.py
+` &lt;/p&gt;
+&lt;p&gt;If you not comforatble with terminal out put, you can use &lt;code&gt;gitk&lt;/code&gt; or &lt;code&gt;gitg&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;`
+gitg auth/model.py&lt;/p&gt;
+&lt;h1&gt;or with follow&lt;/h1&gt;
+&lt;p&gt;gitg --follow  auth/model.py
+&lt;code&gt;or&lt;/code&gt;
+gitk --follow auth/model.py
+` &lt;/p&gt;</summary><category term="git"></category><category term="tip"></category></entry></feed>

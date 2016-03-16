@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Learning the hard way!</title><link href="http://ingenioustechie.com/" rel="alternate"></link><link href="http://ingenioustechie.com/feeds/category/apache-php-xampp.atom.xml" rel="self"></link><id>http://ingenioustechie.com/</id><updated>2009-06-09T20:10:00+02:00</updated><entry><title>XAMPP mod_rewrite , clean Url .htaccess</title><link href="http://ingenioustechie.com/xampp-mod_rewrite-clean-url-htaccess.html" rel="alternate"></link><updated>2009-06-09T20:10:00+02:00</updated><author><name>Mukesh</name></author><id>tag:ingenioustechie.com,2009-06-09:xampp-mod_rewrite-clean-url-htaccess.html</id><summary type="html">&lt;p&gt;Today every sites requirement is to have a user friendly URLs which can
+be archived by .htaccess and apache. Since I'm running PHP I used XAMPP
+. A default Xampp installation is lacking the mod_rewrite
+functionality. So to make the mod_rewrite module working, we need to do
+some tweak in Apache's httpd.conf file.&lt;/p&gt;
+&lt;p&gt;Since by default mod_rewrite module is not enabled by default so I did
+the following steps.&lt;/p&gt;
+&lt;p&gt;To enable mod_rewrite in xampp first go to the directory of
+installation \apache\conf and edit httpd.conf. Find the line which
+contains&lt;br /&gt;
+#LoadModule rewrite_module modules/mod_rewrite.so&lt;br /&gt;
+uncomment this(just remove #, should be):&lt;/p&gt;
+&lt;p&gt;LoadModule rewrite_module modules/mod_rewrite.so&lt;/p&gt;
+&lt;p&gt;Also find AllowOverride None&lt;/p&gt;
+&lt;p&gt;Should be:&lt;/p&gt;
+&lt;p&gt;AllowOverride All&lt;/p&gt;
+&lt;p&gt;I really think it appears 2 or 3 times on the configuration file.&lt;/p&gt;
+&lt;p&gt;This setting is also required to get the clean_url module to function
+in drupal.&lt;/p&gt;
+&lt;p&gt;now restart the server and you are done.&lt;/p&gt;
+&lt;p&gt;Happy xampping!&lt;/p&gt;</summary><category term=".htaccess"></category><category term="Apache"></category><category term="Xampp"></category></entry></feed>

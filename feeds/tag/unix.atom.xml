@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Learning the hard way!</title><link href="http://ingenioustechie.com/" rel="alternate"></link><link href="http://ingenioustechie.com/feeds/tag/unix.atom.xml" rel="self"></link><id>http://ingenioustechie.com/</id><updated>2016-03-16T00:00:00+01:00</updated><entry><title>Execute linux command in background or Execute Commands After You Exit From a Shell Prompt</title><link href="http://ingenioustechie.com/execute-linux-command-in-background-or-execute-commands-after-you-exit-from-a-shell-prompt.html" rel="alternate"></link><updated>2016-03-16T00:00:00+01:00</updated><author><name>Mukesh</name></author><id>tag:ingenioustechie.com,2013-12-25:execute-linux-command-in-background-or-execute-commands-after-you-exit-from-a-shell-prompt.html</id><summary type="html">&lt;p&gt;Problem: After running a command on remote server some time you need to close your terminal or pc or the command takes too much time to process and you cant wait for completion. &lt;/p&gt;
+&lt;p&gt;for such problems you would want to run the command in background to do so we have &lt;strong&gt;nohup&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;From Man page it says &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;nohup - run a command immune to hangups, with output to a non-tty
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;You use nohup &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;nohup command-name &amp;amp;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Please note &lt;strong&gt;&amp;amp;&lt;/strong&gt; it is required to run the command in background. 
+Example &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;nohup tar -cvz file.tar.gz folder1 folder2 &amp;amp;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;The above command will compress the folders in background and even if you close your local terminal the process will run in background. &lt;/p&gt;</summary><category term="unix"></category></entry><entry><title>! 'Fatal error : watch ENOSPC'</title><link href="http://ingenioustechie.com/fatal-error-watch-enospc.html" rel="alternate"></link><updated>2016-03-16T00:00:00+01:00</updated><author><name>Mukesh</name></author><id>tag:ingenioustechie.com,2013-11-20:fatal-error-watch-enospc.html</id><summary type="html">&lt;p&gt;Recently while running nodemon for the first time  I got an error which states :- &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;Error&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;watch&lt;/span&gt; &lt;span class="n"&gt;ENOSPC&lt;/span&gt;
+&lt;span class="n"&gt;at&lt;/span&gt; &lt;span class="n"&gt;errnoException&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;fs&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;js&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;1019&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;11&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;at&lt;/span&gt; &lt;span class="n"&gt;FSWatcher&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;start&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;fs&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;js&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;1051&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;11&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;at&lt;/span&gt; &lt;span class="n"&gt;Object&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;fs&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;watch&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;fs&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;js&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;1076&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;11&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;at&lt;/span&gt; &lt;span class="n"&gt;Object&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;watchFileChecker&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;check&lt;/span&gt; &lt;span class="o"&gt;(/&lt;/span&gt;&lt;span class="n"&gt;usr&lt;/span&gt;&lt;span class="sr"&gt;/lib/node_modules/nodemon/&lt;/span&gt;&lt;span class="n"&gt;nodemon&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;js&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;160&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;6&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;at&lt;/span&gt; &lt;span class="n"&gt;ready&lt;/span&gt; &lt;span class="o"&gt;(/&lt;/span&gt;&lt;span class="n"&gt;usr&lt;/span&gt;&lt;span class="sr"&gt;/lib/node_modules/nodemon/&lt;/span&gt;&lt;span class="n"&gt;nodemon&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;js&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;49&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;22&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;at&lt;/span&gt; &lt;span class="sr"&gt;/usr/lib/node_modules/nodemon/&lt;/span&gt;&lt;span class="n"&gt;nodemon&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;js&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;63&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;11&lt;/span&gt;
+&lt;span class="n"&gt;at&lt;/span&gt; &lt;span class="n"&gt;ChildProcess&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;exithandler&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;child_process&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;js&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;641&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;7&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;at&lt;/span&gt; &lt;span class="n"&gt;ChildProcess&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;EventEmitter&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;emit&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;events&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;js&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;98&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;17&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;at&lt;/span&gt; &lt;span class="n"&gt;maybeClose&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;child_process&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;js&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;735&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;16&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;at&lt;/span&gt; &lt;span class="n"&gt;Socket&lt;/span&gt;&lt;span class="o"&gt;.&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;anonymous&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;child_process&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;js&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;948&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;11&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Since Nodemon keeps a monitoring of all the files in your project, to restart the server if there is any change in files. &lt;/p&gt;
+&lt;p&gt;Since its low for my project files I changed it to 524298 &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;echo fs.inotify.max_user_watches=524298 | sudo tee -a /etc/sysctl.conf &amp;amp;&amp;amp; sudo sysctl -p
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="unix"></category></entry><entry><title>Mount disk permanently in linux. (auto-mount disk)</title><link href="http://ingenioustechie.com/mount-disk-permanently-in-linux-auto-mount-disk-2.html" rel="alternate"></link><updated>2016-03-16T00:00:00+01:00</updated><author><name>Mukesh</name></author><id>tag:ingenioustechie.com,2013-11-07:mount-disk-permanently-in-linux-auto-mount-disk-2.html</id><summary type="html">&lt;p&gt;To make the partition auto-mount.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Get your disk name &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;fdisk -l
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Find out the UUID of /dev/sda3 by doing:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;sudo blkid   
+sudo vim /etc/fstab
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Now add add a line to the bottom of that file. It should look something like this (UUID will be different):&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;UUID=03ec5dd3-45c0-4f95-a363-61ff321a09ff /works ext4 defaults  0      2
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Now to check whether its working run &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;    sudo mount -a
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="unix"></category></entry><entry><title>How to use grep command in unix/linux</title><link href="http://ingenioustechie.com/howto-use-grep-command-in-linux-unix.html" rel="alternate"></link><updated>2010-12-05T19:30:00+01:00</updated><author><name>Mukesh</name></author><id>tag:ingenioustechie.com,2010-12-03:howto-use-grep-command-in-linux-unix.html</id><summary type="html">&lt;p&gt;This is the content of my super blog post.&lt;/p&gt;</summary><category term="unix"></category><category term="linux"></category><category term="grep"></category></entry><entry><title>Another app is currently holding the yum lock; waiting for it to exit...</title><link href="http://ingenioustechie.com/another-app-is-currently-holding-the-yum-lock-waiting-for-it-to-exit.html" rel="alternate"></link><updated>2009-05-03T18:48:00+02:00</updated><author><name>Mukesh</name></author><id>tag:ingenioustechie.com,2009-05-03:another-app-is-currently-holding-the-yum-lock-waiting-for-it-to-exit.html</id><summary type="html">&lt;p&gt;From last few days trying My hands on fedora. 10, I must say its a cool
+distro. Recently I was trying to install some software through yum, but
+I constantly getting&lt;/p&gt;
+&lt;p&gt;Another app is currently holding the yum lock; waiting for it to exit...&lt;/p&gt;
+&lt;p&gt;error though I was not using yum any where else, but this crap was
+coming every time when I run the command, After googling a bit finally
+got the solution that I this error was coming coz there was something in
+the yum.pid.&lt;br /&gt;
+We can this issue by two means&lt;br /&gt;
+&lt;strong&gt;First&lt;/strong&gt;&lt;br /&gt;
+one killing the pid by doing follwing command.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;# ps aux | grep yum&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;this command will show all the process with process id which is running
+by yum. so now you can kill the process. Say process Id 31542 is using
+the yum so you can do&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;# kill -9 31542 or # kill 31542&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Second:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;If above method doesn't work for you. you can remove the yum process
+from the machine. Now the question arise where you will get the process
+file. yum process resides in /var/run folder so simply type the
+following command and hit enter.&lt;br /&gt;
+&lt;code&gt;# rm -f /var/run/yum.pid&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;N.B. To run the above command you need to be in a sudoers list or a
+root.&lt;/p&gt;</summary><category term="Linux"></category><category term="Unix"></category></entry></feed>
