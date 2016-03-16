@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Learning the hard way!</title><link href="http://ingenioustechie.com/" rel="alternate"></link><link href="http://ingenioustechie.com/feeds/tag/aws.atom.xml" rel="self"></link><id>http://ingenioustechie.com/</id><updated>2016-03-16T00:00:00+01:00</updated><entry><title>Allowing ubuntu user to access www folder amazon aws</title><link href="http://ingenioustechie.com/allowing-ubuntu-user-to-access-www-folder-amazon-aws.html" rel="alternate"></link><updated>2016-03-16T00:00:00+01:00</updated><author><name>Mukesh</name></author><id>tag:ingenioustechie.com,2013-12-11:allowing-ubuntu-user-to-access-www-folder-amazon-aws.html</id><summary type="html">&lt;p&gt;sudo apt-get install apache2&lt;/p&gt;
-&lt;p&gt;sudo a2enmod rewrite&lt;/p&gt;
-&lt;p&gt;sudo apt-get install libapache2-mod-php5&lt;/p&gt;
-&lt;p&gt;sudo /etc/init.d/apache2 restart&lt;/p&gt;
-&lt;p&gt;sudo adduser ubuntu www-data
-sudo chown -R www-data:www-data /var/www
-sudo chmod -R g+rw /var/www&lt;/p&gt;</summary><category term="aws"></category></entry></feed>
