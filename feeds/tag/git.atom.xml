@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Learning the hard way!</title><link href="http://ingenioustechie.com/" rel="alternate"></link><link href="http://ingenioustechie.com/feeds/tag/git.atom.xml" rel="self"></link><id>http://ingenioustechie.com/</id><updated>2016-03-16T12:37:35+01:00</updated><entry><title>Git command to see old versions of a file.</title><link href="http://ingenioustechie.com/git-command-to-see-old-versions-of-a-file-.html" rel="alternate"></link><updated>2016-03-16T12:37:35+01:00</updated><author><name>Mukesh</name></author><id>tag:ingenioustechie.com,2016-03-16:git-command-to-see-old-versions-of-a-file-.html</id><summary type="html">&lt;p&gt;Often we require to check the versions of the file changes git. There are method in git to do that, but there is other better way to do that.   &lt;/p&gt;
+&lt;p&gt;To view a file of a specific version, below command will show you 5th last commit of model.py
+&lt;code&gt;git show HEAD~5:auth/model.py&lt;/code&gt; &lt;/p&gt;
+&lt;p&gt;To get the history of changes 
+`
+git log -p auth/model.py&lt;/p&gt;
+&lt;h1&gt;If you want to follow all the changes inclusing file name change you can give --follow option&lt;/h1&gt;
+&lt;p&gt;git log -p --follow  auth/model.py
+` &lt;/p&gt;
+&lt;p&gt;If you not comforatble with terminal out put, you can use &lt;code&gt;gitk&lt;/code&gt; or &lt;code&gt;gitg&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;`
+gitg auth/model.py&lt;/p&gt;
+&lt;h1&gt;or with follow&lt;/h1&gt;
+&lt;p&gt;gitg --follow  auth/model.py
+&lt;code&gt;or&lt;/code&gt;
+gitk --follow auth/model.py
+` &lt;/p&gt;</summary><category term="git"></category><category term="tip"></category></entry><entry><title>Deleting git branch from local and origin</title><link href="http://ingenioustechie.com/deleting-git-branch-from-local-and-origin.html" rel="alternate"></link><updated>2016-03-16T00:00:00+01:00</updated><author><name>Mukesh</name></author><id>tag:ingenioustechie.com,2015-11-20:deleting-git-branch-from-local-and-origin.html</id><summary type="html">&lt;h2&gt;How to delete git branch from local and remote&lt;/h2&gt;
+&lt;p&gt;for long running projects and projects which has continuous changes gets many unused branch over the period of time, 
+and if you do not clean up your branches they keep on increasing some time more than 50+ or may be 100+&lt;/p&gt;
+&lt;p&gt;When you checkout a branch from remote (origin), it makes a copy locally and points it to the remote Branch. When you want to delete a branch it becomes necessary to remove it from both places as well as from other machine too. &lt;/p&gt;
+&lt;p&gt;If you want to delete a branch quickfix, first checkout to the branch other than the branch to be deleted.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;git checkout other_than_branch_to_be_deleted
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Deleting the local branch:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;git branch -D quickfix
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Deleting the remote branch:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;git push origin --delete quickfix
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;at this stage you have deleted branch from your local as well from remote. If you repository is being used on other machine you need to update their too.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;git remote prune &amp;lt;remote_name&amp;gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;If your &lt;remote_name&gt; is origin then &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;git remote prune origin
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="git"></category></entry><entry><title>Work on remote branch in Git</title><link href="http://ingenioustechie.com/work-on-remote-branch-in-git.html" rel="alternate"></link><updated>2016-03-16T00:00:00+01:00</updated><author><name>Mukesh</name></author><id>tag:ingenioustechie.com,2014-01-28:work-on-remote-branch-in-git.html</id><summary type="html">&lt;p&gt;Branching is too helpfull for a development. If some of your coworker has pushed a his local branch to remote branch and you want to make some changes to it you can do it by checkout. &lt;/p&gt;
+&lt;p&gt;To check out his/her branch on your local machine you need to follow these&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Get the remote branch in your machine &lt;div class="highlight"&gt;&lt;pre&gt;git fetch origin
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Where &lt;strong&gt;origin&lt;/strong&gt; is a &lt;strong&gt;remote&lt;/strong&gt; server. Now when you will do &lt;code&gt;git branch -r&lt;/code&gt; you can see all the branches which has been pushed to remote. &lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Since you can not work someone else branch you have to checkout his branch to your local and then do modification. To do so you have to checkout his branch in your local branch.&lt;div class="highlight"&gt;&lt;pre&gt;git checkout -b test origin/test
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Above command will checkout test branch from &lt;code&gt;origin&lt;/code&gt; remote and will create test branch in your local branch. &lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Now you can commit and push to the remote branch. &lt;/p&gt;
+&lt;p&gt;Happy pushing&lt;/p&gt;</summary><category term="git"></category></entry><entry><title>Ignoring files in git (.gitignore)</title><link href="http://ingenioustechie.com/ignoring-files-in-git-gitignore.html" rel="alternate"></link><updated>2016-03-16T00:00:00+01:00</updated><author><name>Mukesh</name></author><id>tag:ingenioustechie.com,2013-11-09:ignoring-files-in-git-gitignore.html</id><summary type="html">&lt;p&gt;&lt;strong&gt;Problem&lt;/strong&gt;: You want to ignore few folders or files from your git repository&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Solution&lt;/strong&gt;: Add a .gitignore file in your root project folder(even you can add this to your spesific folder too).&lt;/p&gt;
+&lt;p&gt;To ignore .htaccess in your repository, add .htaccess in your &lt;strong&gt;.gitignore&lt;/strong&gt; file.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="na"&gt;.htaccess&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;To ignore all uploaded files from upload folder but not the upload folder add&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;uploads/*
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Suppose you have images folder in your upload directory and you want to add this to revision. your .gitignore file will look like &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="sx"&gt;!uploads/images&lt;/span&gt;
+&lt;span class="n"&gt;uploads&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;images&lt;/span&gt;&lt;span class="o"&gt;/*&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Second line in above code will ignore all the images file in images folder. &lt;/p&gt;
+&lt;p&gt;To exclude index.html and .htaccess add folowing line &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="sx"&gt;!uploads/images/index.html&lt;/span&gt;
+&lt;span class="sx"&gt;!uploads/images/.htaccess&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Now your .gitignore file will look like &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="na"&gt;.htaccess&lt;/span&gt;
+&lt;span class="nf"&gt;uploads&lt;/span&gt;&lt;span class="err"&gt;/&lt;/span&gt;&lt;span class="p"&gt;*&lt;/span&gt;
+&lt;span class="err"&gt;!&lt;/span&gt;&lt;span class="nf"&gt;uploads&lt;/span&gt;&lt;span class="err"&gt;/&lt;/span&gt;&lt;span class="no"&gt;images&lt;/span&gt;
+&lt;span class="nf"&gt;uploads&lt;/span&gt;&lt;span class="err"&gt;/&lt;/span&gt;&lt;span class="no"&gt;images&lt;/span&gt;&lt;span class="err"&gt;/&lt;/span&gt;&lt;span class="p"&gt;*&lt;/span&gt;
+&lt;span class="err"&gt;!&lt;/span&gt;&lt;span class="nf"&gt;uploads&lt;/span&gt;&lt;span class="err"&gt;/&lt;/span&gt;&lt;span class="no"&gt;images&lt;/span&gt;&lt;span class="err"&gt;/&lt;/span&gt;&lt;span class="no"&gt;index.html&lt;/span&gt;
+&lt;span class="err"&gt;!&lt;/span&gt;&lt;span class="nf"&gt;uploads&lt;/span&gt;&lt;span class="err"&gt;/&lt;/span&gt;&lt;span class="no"&gt;images&lt;/span&gt;&lt;span class="err"&gt;/&lt;/span&gt;&lt;span class="no"&gt;.htaccess&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;strong&gt;NOTE:&lt;/strong&gt; If your file or folder is already indexes you have to remove them first &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;git rm -r --cached config/config.js # this this remove config file form git 
+git rm -r --cached . # this will remove all the index files and folder
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="git"></category></entry></feed>

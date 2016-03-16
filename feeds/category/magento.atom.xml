@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Learning the hard way!</title><link href="http://ingenioustechie.com/" rel="alternate"></link><link href="http://ingenioustechie.com/feeds/category/magento.atom.xml" rel="self"></link><id>http://ingenioustechie.com/</id><updated>2009-03-25T19:38:00+01:00</updated><entry><title>not able to login in magento?</title><link href="http://ingenioustechie.com/not-able-to-login-in-magento.html" rel="alternate"></link><updated>2009-03-25T19:38:00+01:00</updated><author><name>Mukesh</name></author><id>tag:ingenioustechie.com,2009-03-25:not-able-to-login-in-magento.html</id><summary type="html">&lt;h2&gt;I have moved my blog to &lt;a href="http://www.makdotgnu.com/" title="makdotgnu"&gt;makdotgnu.com&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;A simple tweak&lt;/strong&gt;&lt;br /&gt;
+This is a question I was asking every here and there on forums, from
+last 2 days but finally got the solution.&lt;br /&gt;
+Magneto has a Good security.&lt;br /&gt;
+According to this some url are block for admin, so if you are using any
+domain name or http://localhost/ then just use the IP address of that
+server, in case of localhost just use 127.0.0.1 instead of localhost,
+Now your Url will look like on Local&lt;br /&gt;
+http://127.0.0.1/magnetofolder/index.php/admin&lt;br /&gt;
+and on your server.&lt;br /&gt;
+http://server_IP/index.php/admin&lt;/p&gt;</summary><category term="Magento"></category><category term="php"></category></entry></feed>
