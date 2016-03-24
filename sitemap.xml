@@ -5,21 +5,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://ingenioustechie.com/archives.html</loc>
-<lastmod>2016-03-16T13:10:43-00:00</lastmod>
+<lastmod>2016-03-24T13:18:44-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://ingenioustechie.com/tags.html</loc>
-<lastmod>2016-03-16T13:10:43-00:00</lastmod>
+<lastmod>2016-03-24T13:18:44-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://ingenioustechie.com/categories.html</loc>
-<lastmod>2016-03-16T13:10:43-00:00</lastmod>
+<lastmod>2016-03-24T13:18:44-00:00</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://ingenioustechie.com/system-program-problem-detected-on-each-startup-ubuntu-.html</loc>
+<lastmod>2016-03-24T11:43:17+01:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -33,42 +40,42 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://ingenioustechie.com/deleting-git-branch-from-local-and-origin.html</loc>
-<lastmod>2016-03-16T00:00:00+01:00</lastmod>
+<lastmod>2016-03-24T00:00:00+01:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://ingenioustechie.com/optimization-of-mongo-query-making-ursor-iteration-fast.html</loc>
-<lastmod>2016-03-16T00:00:00+01:00</lastmod>
+<lastmod>2016-03-24T00:00:00+01:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://ingenioustechie.com/formating-string-date-to-isodate-or-object-date-in-mongodb.html</loc>
-<lastmod>2016-03-16T00:00:00+01:00</lastmod>
+<lastmod>2016-03-24T00:00:00+01:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://ingenioustechie.com/updating-data-in-query-with-forEach.html</loc>
-<lastmod>2016-03-16T00:00:00+01:00</lastmod>
+<lastmod>2016-03-24T00:00:00+01:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://ingenioustechie.com/disabling-put-post-delete-Django-Rest-Framework-BrowsableAPI.html</loc>
-<lastmod>2016-03-16T00:00:00+01:00</lastmod>
+<lastmod>2016-03-24T00:00:00+01:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://ingenioustechie.com/Install-latest-Redis-3.0.2-in-ubuntu.html</loc>
-<lastmod>2016-03-16T00:00:00+01:00</lastmod>
+<lastmod>2016-03-24T00:00:00+01:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -82,70 +89,70 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://ingenioustechie.com/work-on-remote-branch-in-git.html</loc>
-<lastmod>2016-03-16T00:00:00+01:00</lastmod>
+<lastmod>2016-03-24T00:00:00+01:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://ingenioustechie.com/ioerror-cannot-write-mode-p-as-jpeg-ioerror-decoder-jpeg-not-available.html</loc>
-<lastmod>2016-03-16T00:00:00+01:00</lastmod>
+<lastmod>2016-03-24T00:00:00+01:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://ingenioustechie.com/execute-linux-command-in-background-or-execute-commands-after-you-exit-from-a-shell-prompt.html</loc>
-<lastmod>2016-03-16T00:00:00+01:00</lastmod>
+<lastmod>2016-03-24T00:00:00+01:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://ingenioustechie.com/allowing-ubuntu-user-to-access-www-folder-amazon-aws.html</loc>
-<lastmod>2016-03-16T00:00:00+01:00</lastmod>
+<lastmod>2016-03-24T00:00:00+01:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://ingenioustechie.com/installing-virtualenv-in-ubuntu.html</loc>
-<lastmod>2016-03-16T00:00:00+01:00</lastmod>
+<lastmod>2016-03-24T00:00:00+01:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://ingenioustechie.com/fatal-error-watch-enospc.html</loc>
-<lastmod>2016-03-16T00:00:00+01:00</lastmod>
+<lastmod>2016-03-24T00:00:00+01:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://ingenioustechie.com/ignoring-files-in-git-gitignore.html</loc>
-<lastmod>2016-03-16T00:00:00+01:00</lastmod>
+<lastmod>2016-03-24T00:00:00+01:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://ingenioustechie.com/install-solr-on-ubuntu.html</loc>
-<lastmod>2016-03-16T00:00:00+01:00</lastmod>
+<lastmod>2016-03-24T00:00:00+01:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://ingenioustechie.com/mount-disk-permanently-in-linux-auto-mount-disk-2.html</loc>
-<lastmod>2016-03-16T00:00:00+01:00</lastmod>
+<lastmod>2016-03-24T00:00:00+01:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://ingenioustechie.com/delete-all-lines-from-vim-select-all-delete.html</loc>
-<lastmod>2016-03-16T00:00:00+01:00</lastmod>
+<lastmod>2016-03-24T00:00:00+01:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>

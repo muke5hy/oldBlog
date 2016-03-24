@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <title>"System program problem detected" on each startup Ubuntu</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="http://ingenioustechie.com/theme/css/main.css" />
+        <link href="http://ingenioustechie.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Learning the hard way! Full Atom Feed" />
+        <link href="http://ingenioustechie.com/feeds/category/ubuntu.atom.xml" type="application/atom+xml" rel="alternate" title="Learning the hard way! Categories Atom Feed" />
+</head>
+<body>
+
+    <div class="main-nav-container">
+
+        <div class="pure-g">
+            <div class="pure-u-1 pure-u-lg-2-3">
+                <div class="main-nav">
+                    <ul class="main-nav-list">
+                        <li class="main-nav-item"><a href="http://ingenioustechie.com/" class="pure-menu-link">Learning the hard way!</a></li>
+
+                    </ul>
+                </div>
+             </div>
+
+             <div class="pure-u-1 pure-u-lg-1-3"></div>
+        </div>
+
+    </div>
+
+
+<div class="page-container">
+    <div class="entry-content">
+        <div class="post-meta pure-g">
+            <div class="pure-u-3-4 meta-data">
+                <a href="http://ingenioustechie.com/category/ubuntu/index.html" class="category">ubuntu</a><br />
+
+                <a class="author" href="http://ingenioustechie.com/author/mukesh.html">Mukesh</a>
+                &mdash; <abbr title="2016-03-24T11:43:17+01:00">Thu 24 March 2016</abbr>
+            </div>
+        </div>
+    </div>
+
+    <div class="article-header-container">
+        <div class="background-image-container">
+
+            <div class="background-image-small">
+                <div class="title-container">
+                    <h1>"System program problem detected" on each startup Ubuntu</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="entry-content">
+        <p>After using ubuntu for a while, and if you keep on updating or upgrading your ubuntu. There are chances that you will face "System program problem detected" popup message on startup. <br />
+It's very annoying to see the popups everytime you start your machine. Here is a solution to get rid of them. </p>
+<p>Before getting rid of the problem its better to find out cause of the error. To check it you can do by following, for me following are the issues. </p>
+<div class="highlight"><pre><span class="nv">$ </span>sudo ls -ltrh /var/crash/
+total 3.8M
+-rw-r----- <span class="m">1</span> mongodb whoopsie 1.6M Mar <span class="m">18</span> 20:31 _usr_bin_mongod.120.crash
+-rw-r----- <span class="m">1</span> root    whoopsie 469K Mar <span class="m">19</span> 21:34 susres.2016-03-19_21:34:39.781436.crash
+-rw-r----- <span class="m">1</span> root    whoopsie 603K Mar <span class="m">23</span> 11:27 susres.2016-03-23_11:27:55.376655.crash
+-rw------- <span class="m">1</span> root    whoopsie 209K Mar <span class="m">23</span> 11:40 mysql-server-5.6.0.crash
+-rw------- <span class="m">1</span> root    whoopsie 275K Mar <span class="m">23</span> 12:03 mysql-server-5.5.0.crash
+-rw-r----- <span class="m">1</span> root    whoopsie 634K Mar <span class="m">24</span> 11:34 susres.2016-03-24_11:34:14.141978.crash
+</pre></div>
+
+
+<p>As you can see in the crash folder older issues are also there hence they also get poped up whenever system gets startup.   </p>
+<p>We can simply remove the all the files and good to go. Once the files are remove you will get popup for new crashes. </p>
+<div class="highlight"><pre><span class="nv">$ </span>sudo rm /var/crash/*
+</pre></div>
+
+
+<p>If you want to remove all the popups in current session only with command you can do. </p>
+<div class="highlight"><pre><span class="nv">$ </span>killall system-crash-notification
+</pre></div>
+
+
+<h2>Getting rid of popups forever,</h2>
+<p>Apport system which does reporting for the crashes. Its not advisable to disable the Apport but even still you want to do it, here is how you can do.</p>
+<div class="highlight"><pre><span class="nv">$ </span>sudo vim /etc/default/apport
+</pre></div>
+
+
+<p>Change <code>enabled=1</code> to <code>enabled=0</code> , then save and exit.</p>
+<div class="highlight"><pre><span class="nv">$ </span>sudo restart apport
+</pre></div>
+    </div>
+
+    <footer>
+        <div class="tags">
+            <a href="http://ingenioustechie.com/tag/Ubuntu/index.html">Ubuntu</a>
+        </div>
+        <div class="pure-g post-footer">
+            <div class="pure-u-1 pure-u-md-1-2">
+                <div class="pure-g poster-info">
+                    <div class="pure-u-3-4">
+                        <h3 class="author-name"><a href="http://ingenioustechie.com/author/mukesh.html">Mukesh</a></h3>
+                        <p class="author-description">
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+
+
+    </footer>
+
+    <div class="entry-content">
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            var disqus_shortname = 'ingenioustechie';
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+    </div>
+
+</div>
+
+
+</body>
+</html>
