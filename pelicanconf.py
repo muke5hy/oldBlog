@@ -76,7 +76,7 @@ SOCIAL = (
 )
 COVER_IMG_URL = "https://pbs.twimg.com/profile_banners/16581688/1428780057/web_retina"
 PROFILE_IMG_URL = "https://pbs.twimg.com/profile_images/616609810369368064/NPSrjbIh_bigger.jpg"
-DISQUS_SITENAME = 'muke5hy'
+DISQUS_SITENAME = 'ingenioustechie'
 DISQUS_ON_PAGES = True
 
 DISPLAY_CATEGORIES_ON_MENU = False
