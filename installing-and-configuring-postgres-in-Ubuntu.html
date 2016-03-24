@@ -12,6 +12,11 @@
         <link href="http://www.mukeshyadav.com/feeds/category/notes.atom.xml" type="application/atom+xml" rel="alternate" title="Learning the hard way! Categories Atom Feed" />
 </head>
 <body>
+    <script>
+      if (window.location.href.indexOf('ingenioustechie.com') > 0) {
+        window.location.href = window.location.href.replace('ingenioustechie.com', "mukeshyadav.com")
+      }
+    </script>
 
     <div class="main-nav-container">
 
@@ -113,7 +118,7 @@ sudo -i -u user_test
     <div class="entry-content">
         <div id="disqus_thread"></div>
         <script type="text/javascript">
-            var disqus_shortname = 'ingenioustechie';
+            var disqus_shortname = 'muke5hy';
             (function() {
                 var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
                 dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
