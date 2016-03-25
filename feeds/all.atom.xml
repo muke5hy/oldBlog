@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Learning the hard way!</title><link href="http://www.mukeshyadav.com/" rel="alternate"></link><link href="http://www.mukeshyadav.com/feeds/all.atom.xml" rel="self"></link><id>http://www.mukeshyadav.com/</id><updated>2016-03-24T11:43:17+01:00</updated><entry><title>"System program problem detected" on each startup Ubuntu</title><link href="http://www.mukeshyadav.com/system-program-problem-detected-on-each-startup-ubuntu-.html" rel="alternate"></link><updated>2016-03-24T11:43:17+01:00</updated><author><name>Mukesh</name></author><id>tag:www.mukeshyadav.com,2016-03-24:system-program-problem-detected-on-each-startup-ubuntu-.html</id><summary type="html">&lt;p&gt;After using ubuntu for a while, and if you keep on updating or upgrading your ubuntu. There are chances that you will face "System program problem detected" popup message on startup. &lt;br /&gt;
-It's very annoying to see the popups everytime you start your machine. Here is a solution to get rid of them. &lt;/p&gt;
-&lt;p&gt;Before getting rid of the problem its better to find out cause of the error. To check it you can do by following, for me following are the issues. &lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Learning the hard way!</title><link href="http://www.mukeshyadav.com/" rel="alternate"></link><link href="http://www.mukeshyadav.com/feeds/all.atom.xml" rel="self"></link><id>http://www.mukeshyadav.com/</id><updated>2016-03-25T00:00:00+01:00</updated><entry><title>"System program problem detected" on each startup Ubuntu</title><link href="http://www.mukeshyadav.com/system-program-problem-detected-on-each-startup-ubuntu-.html" rel="alternate"></link><updated>2016-03-24T11:43:17+01:00</updated><author><name>Mukesh</name></author><id>tag:www.mukeshyadav.com,2016-03-24:system-program-problem-detected-on-each-startup-ubuntu-.html</id><summary type="html">&lt;p&gt;After using ubuntu for a while, and if you keep on updating or upgrading your ubuntu. There are chances that you will face “System program problem detected” popup message on startup. 
+ It’s very annoying to see the popups everytime you start your machine. Here is a solution to get rid of them.&lt;/p&gt;
+&lt;h3&gt;Finding out programmes which are responsible for popups&lt;/h3&gt;
+&lt;p&gt;Before getting rid of the problem its better to find out cause of the error. To check it you can do sudo ls -ltrh /var/crash/ , for me following are the issues.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;sudo ls -ltrh /var/crash/
 total 3.8M
 -rw-r----- &lt;span class="m"&gt;1&lt;/span&gt; mongodb whoopsie 1.6M Mar &lt;span class="m"&gt;18&lt;/span&gt; 20:31 _usr_bin_mongod.120.crash
@@ -13,8 +14,9 @@ total 3.8M
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;As you can see in the crash folder older issues are also there hence they also get poped up whenever system gets startup.   &lt;/p&gt;
-&lt;p&gt;We can simply remove the all the files and good to go. Once the files are remove you will get popup for new crashes. &lt;/p&gt;
+&lt;p&gt;As you can see in the result older crash files are also present. Hence they also poped up whenever system gets startup.&lt;/p&gt;
+&lt;h3&gt;Removing all the crash files,&lt;/h3&gt;
+&lt;p&gt;We can simply remove all the files and then good to go. And after removing you might get popup if new crash happens. &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;sudo rm /var/crash/*
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -24,7 +26,7 @@ total 3.8M
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;h2&gt;Getting rid of popups forever,&lt;/h2&gt;
+&lt;h3&gt;Getting rid of popups forever,&lt;/h3&gt;
 &lt;p&gt;Apport system which does reporting for the crashes. Its not advisable to disable the Apport but even still you want to do it, here is how you can do.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;sudo vim /etc/default/apport
 &lt;/pre&gt;&lt;/div&gt;
@@ -56,7 +58,7 @@ gitg --follow  auth/model.py
 
 &lt;p&gt;or &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;gitk --follow auth/model.py
-&lt;/pre&gt;&lt;/div&gt;</summary><category term="git"></category><category term="tip"></category></entry><entry><title>Deleting git branch from local and origin</title><link href="http://www.mukeshyadav.com/deleting-git-branch-from-local-and-origin.html" rel="alternate"></link><updated>2016-03-24T00:00:00+01:00</updated><author><name>Mukesh</name></author><id>tag:www.mukeshyadav.com,2015-11-20:deleting-git-branch-from-local-and-origin.html</id><summary type="html">&lt;h2&gt;How to delete git branch from local and remote&lt;/h2&gt;
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="git"></category><category term="tip"></category></entry><entry><title>Deleting git branch from local and origin</title><link href="http://www.mukeshyadav.com/deleting-git-branch-from-local-and-origin.html" rel="alternate"></link><updated>2016-03-25T00:00:00+01:00</updated><author><name>Mukesh</name></author><id>tag:www.mukeshyadav.com,2015-11-20:deleting-git-branch-from-local-and-origin.html</id><summary type="html">&lt;h2&gt;How to delete git branch from local and remote&lt;/h2&gt;
 &lt;p&gt;for long running projects and projects which has continuous changes gets many unused branch over the period of time, 
 and if you do not clean up your branches they keep on increasing some time more than 50+ or may be 100+&lt;/p&gt;
 &lt;p&gt;When you checkout a branch from remote (origin), it makes a copy locally and points it to the remote Branch. When you want to delete a branch it becomes necessary to remove it from both places as well as from other machine too. &lt;/p&gt;
@@ -82,7 +84,7 @@ and if you do not clean up your branches they keep on increasing some time more 
 
 &lt;p&gt;If your &lt;remote_name&gt; is origin then &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;git remote prune origin
-&lt;/pre&gt;&lt;/div&gt;</summary><category term="git"></category></entry><entry><title>Optimization of Mongo query, making cursor iteration fast.</title><link href="http://www.mukeshyadav.com/optimization-of-mongo-query-making-ursor-iteration-fast.html" rel="alternate"></link><updated>2016-03-24T00:00:00+01:00</updated><author><name>Mukesh</name></author><id>tag:www.mukeshyadav.com,2015-11-20:optimization-of-mongo-query-making-ursor-iteration-fast.html</id><summary type="html">&lt;p&gt;If you using a mongo, I'm sure you must have come across a situation where you want to do a iteration for .find() command in mongo. 
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="git"></category></entry><entry><title>Optimization of Mongo query, making cursor iteration fast.</title><link href="http://www.mukeshyadav.com/optimization-of-mongo-query-making-ursor-iteration-fast.html" rel="alternate"></link><updated>2016-03-25T00:00:00+01:00</updated><author><name>Mukesh</name></author><id>tag:www.mukeshyadav.com,2015-11-20:optimization-of-mongo-query-making-ursor-iteration-fast.html</id><summary type="html">&lt;p&gt;If you using a mongo, I'm sure you must have come across a situation where you want to do a iteration for .find() command in mongo. 
 Querying a Mongo collection for few records will give you faster results, but if you data is more than than 20K-30K or millions and you want to do iteration over it its hell lot of time. &lt;/p&gt;
 &lt;p&gt;Lets take an example say you have 1 Million records in your users collection and about 98% users a active, to get the result you will do 
   active_users = db.users.find({active:True})
@@ -99,7 +101,7 @@ for user in active_users:
 &lt;p&gt;By default it has 4MB of document size, Maximum of 16MB data mongo can fetch from DB. &lt;/p&gt;
 &lt;p&gt;to optimize our query we can do &lt;/p&gt;
 &lt;p&gt;active_users = db.users.find({active:True}).batch_size(2000)&lt;/p&gt;
-&lt;p&gt;Now again iterate over the active_users and see the magic happen.&lt;/p&gt;</summary><category term="MongoDB"></category><category term="Query Optimization"></category></entry><entry><title>Formating String date to ISOdate or Object Date in MongoDB</title><link href="http://www.mukeshyadav.com/formating-string-date-to-isodate-or-object-date-in-mongodb.html" rel="alternate"></link><updated>2016-03-24T00:00:00+01:00</updated><author><name>Mukesh</name></author><id>tag:www.mukeshyadav.com,2015-11-05:formating-string-date-to-isodate-or-object-date-in-mongodb.html</id><summary type="html">&lt;p&gt;MongoDB stores the date in ISODate format which is nothing but a wrapper for the Date object of Javascript. If some how your database has stored to string date, you can convert them to ISO by running following query directly in mongo terminal&lt;/p&gt;
+&lt;p&gt;Now again iterate over the active_users and see the magic happen.&lt;/p&gt;</summary><category term="MongoDB"></category><category term="Query Optimization"></category></entry><entry><title>Formating String date to ISOdate or Object Date in MongoDB</title><link href="http://www.mukeshyadav.com/formating-string-date-to-isodate-or-object-date-in-mongodb.html" rel="alternate"></link><updated>2016-03-25T00:00:00+01:00</updated><author><name>Mukesh</name></author><id>tag:www.mukeshyadav.com,2015-11-05:formating-string-date-to-isodate-or-object-date-in-mongodb.html</id><summary type="html">&lt;p&gt;MongoDB stores the date in ISODate format which is nothing but a wrapper for the Date object of Javascript. If some how your database has stored to string date, you can convert them to ISO by running following query directly in mongo terminal&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nx"&gt;db&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;collection&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;find&lt;/span&gt;&lt;span class="p"&gt;({&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;date_updated&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="nx"&gt;$type&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;}})&lt;/span&gt;    
     &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;forEach&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;item&lt;/span&gt;&lt;span class="p"&gt;){&lt;/span&gt;
 
@@ -110,7 +112,7 @@ for user in active_users:
     &lt;span class="p"&gt;}&lt;/span&gt;
 
 &lt;span class="p"&gt;})&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;</summary><category term="MongoDB"></category></entry><entry><title>Updating data in query with forEach</title><link href="http://www.mukeshyadav.com/updating-data-in-query-with-forEach.html" rel="alternate"></link><updated>2016-03-24T00:00:00+01:00</updated><author><name>Mukesh</name></author><id>tag:www.mukeshyadav.com,2015-11-04:updating-data-in-query-with-forEach.html</id><summary type="html">&lt;div class="highlight"&gt;&lt;pre&gt;    Updating data in query with forEach
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="MongoDB"></category></entry><entry><title>Updating data in query with forEach</title><link href="http://www.mukeshyadav.com/updating-data-in-query-with-forEach.html" rel="alternate"></link><updated>2016-03-25T00:00:00+01:00</updated><author><name>Mukesh</name></author><id>tag:www.mukeshyadav.com,2015-11-04:updating-data-in-query-with-forEach.html</id><summary type="html">&lt;div class="highlight"&gt;&lt;pre&gt;    Updating data in query with forEach
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -126,7 +128,7 @@ While developing some of the project I faced this issue as well. &lt;/p&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;The above code is self explanatory. Bottom line is if we want to edit in forEach we should create complete document and save it. &lt;/p&gt;</summary><category term="MongoDB"></category></entry><entry><title>Disabling Put Post Delete Django Rest Framework BrowsableAPI</title><link href="http://www.mukeshyadav.com/disabling-put-post-delete-Django-Rest-Framework-BrowsableAPI.html" rel="alternate"></link><updated>2016-03-24T00:00:00+01:00</updated><author><name>Mukesh</name></author><id>tag:www.mukeshyadav.com,2015-11-03:disabling-put-post-delete-Django-Rest-Framework-BrowsableAPI.html</id><summary type="html">&lt;div class="highlight"&gt;&lt;pre&gt;    Disabling PUT/POST/DELETE from BrowsableAPI of DRF
+&lt;p&gt;The above code is self explanatory. Bottom line is if we want to edit in forEach we should create complete document and save it. &lt;/p&gt;</summary><category term="MongoDB"></category></entry><entry><title>Disabling Put Post Delete Django Rest Framework BrowsableAPI</title><link href="http://www.mukeshyadav.com/disabling-put-post-delete-Django-Rest-Framework-BrowsableAPI.html" rel="alternate"></link><updated>2016-03-25T00:00:00+01:00</updated><author><name>Mukesh</name></author><id>tag:www.mukeshyadav.com,2015-11-03:disabling-put-post-delete-Django-Rest-Framework-BrowsableAPI.html</id><summary type="html">&lt;div class="highlight"&gt;&lt;pre&gt;    Disabling PUT/POST/DELETE from BrowsableAPI of DRF
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -157,7 +159,7 @@ While developing some of the project I faced this issue as well. &lt;/p&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;Now all done you can brows the API but you will not be able to do PUT/POST/DELETE actions. You might want to create diffrent settings file for development and production in case you require PUT/POST/DELETE along with GET. &lt;/p&gt;</summary><category term="Django"></category><category term="DRF"></category><category term="Python"></category></entry><entry><title>Install latest Redis (3.0.2) in ubuntu</title><link href="http://www.mukeshyadav.com/Install-latest-Redis-3.0.2-in-ubuntu.html" rel="alternate"></link><updated>2016-03-24T00:00:00+01:00</updated><author><name>Mukesh</name></author><id>tag:www.mukeshyadav.com,2015-07-03:Install-latest-Redis-3.0.2-in-ubuntu.html</id><summary type="html">&lt;div class="highlight"&gt;&lt;pre&gt;    Installing Redis
+&lt;p&gt;Now all done you can brows the API but you will not be able to do PUT/POST/DELETE actions. You might want to create diffrent settings file for development and production in case you require PUT/POST/DELETE along with GET. &lt;/p&gt;</summary><category term="Django"></category><category term="DRF"></category><category term="Python"></category></entry><entry><title>Install latest Redis (3.0.2) in ubuntu</title><link href="http://www.mukeshyadav.com/Install-latest-Redis-3.0.2-in-ubuntu.html" rel="alternate"></link><updated>2016-03-25T00:00:00+01:00</updated><author><name>Mukesh</name></author><id>tag:www.mukeshyadav.com,2015-07-03:Install-latest-Redis-3.0.2-in-ubuntu.html</id><summary type="html">&lt;div class="highlight"&gt;&lt;pre&gt;    Installing Redis
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -218,7 +220,7 @@ sudo -i -u user_test
 
 &lt;p&gt;Changing a password via postgres user&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;ALTER USER postgres PASSWORD &amp;#39;newPassword&amp;#39;;
-&lt;/pre&gt;&lt;/div&gt;</summary></entry><entry><title>Work on remote branch in Git</title><link href="http://www.mukeshyadav.com/work-on-remote-branch-in-git.html" rel="alternate"></link><updated>2016-03-24T00:00:00+01:00</updated><author><name>Mukesh</name></author><id>tag:www.mukeshyadav.com,2014-01-28:work-on-remote-branch-in-git.html</id><summary type="html">&lt;p&gt;Branching is too helpfull for a development. If some of your coworker has pushed a his local branch to remote branch and you want to make some changes to it you can do it by checkout. &lt;/p&gt;
+&lt;/pre&gt;&lt;/div&gt;</summary></entry><entry><title>Work on remote branch in Git</title><link href="http://www.mukeshyadav.com/work-on-remote-branch-in-git.html" rel="alternate"></link><updated>2016-03-25T00:00:00+01:00</updated><author><name>Mukesh</name></author><id>tag:www.mukeshyadav.com,2014-01-28:work-on-remote-branch-in-git.html</id><summary type="html">&lt;p&gt;Branching is too helpfull for a development. If some of your coworker has pushed a his local branch to remote branch and you want to make some changes to it you can do it by checkout. &lt;/p&gt;
 &lt;p&gt;To check out his/her branch on your local machine you need to follow these&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Get the remote branch in your machine &lt;div class="highlight"&gt;&lt;pre&gt;git fetch origin
@@ -237,7 +239,7 @@ sudo -i -u user_test
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;Now you can commit and push to the remote branch. &lt;/p&gt;
-&lt;p&gt;Happy pushing&lt;/p&gt;</summary><category term="git"></category></entry><entry><title>! 'IOError: cannot write mode P as JPEG | IOError: decoder jpeg not available'</title><link href="http://www.mukeshyadav.com/ioerror-cannot-write-mode-p-as-jpeg-ioerror-decoder-jpeg-not-available.html" rel="alternate"></link><updated>2016-03-24T00:00:00+01:00</updated><author><name>mukesh</name></author><id>tag:www.mukeshyadav.com,2014-01-16:ioerror-cannot-write-mode-p-as-jpeg-ioerror-decoder-jpeg-not-available.html</id><summary type="html">&lt;p&gt;uninstall PIL&lt;/p&gt;
+&lt;p&gt;Happy pushing&lt;/p&gt;</summary><category term="git"></category></entry><entry><title>! 'IOError: cannot write mode P as JPEG | IOError: decoder jpeg not available'</title><link href="http://www.mukeshyadav.com/ioerror-cannot-write-mode-p-as-jpeg-ioerror-decoder-jpeg-not-available.html" rel="alternate"></link><updated>2016-03-25T00:00:00+01:00</updated><author><name>mukesh</name></author><id>tag:www.mukeshyadav.com,2014-01-16:ioerror-cannot-write-mode-p-as-jpeg-ioerror-decoder-jpeg-not-available.html</id><summary type="html">&lt;p&gt;uninstall PIL&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;pip uninstall PIL
 
 sudo apt-get install libjpeg-dev libfreetype6-dev zlib1g-dev libpng12-dev
@@ -294,7 +296,7 @@ setup.py script.
   *** WEBP support not available
   *** WEBPMUX support not available
   --------------------------------------------------------------------
-&lt;/pre&gt;&lt;/div&gt;</summary><category term="python"></category></entry><entry><title>Execute linux command in background or Execute Commands After You Exit From a Shell Prompt</title><link href="http://www.mukeshyadav.com/execute-linux-command-in-background-or-execute-commands-after-you-exit-from-a-shell-prompt.html" rel="alternate"></link><updated>2016-03-24T00:00:00+01:00</updated><author><name>Mukesh</name></author><id>tag:www.mukeshyadav.com,2013-12-25:execute-linux-command-in-background-or-execute-commands-after-you-exit-from-a-shell-prompt.html</id><summary type="html">&lt;p&gt;Problem: After running a command on remote server some time you need to close your terminal or pc or the command takes too much time to process and you cant wait for completion. &lt;/p&gt;
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="python"></category></entry><entry><title>Execute linux command in background or Execute Commands After You Exit From a Shell Prompt</title><link href="http://www.mukeshyadav.com/execute-linux-command-in-background-or-execute-commands-after-you-exit-from-a-shell-prompt.html" rel="alternate"></link><updated>2016-03-25T00:00:00+01:00</updated><author><name>Mukesh</name></author><id>tag:www.mukeshyadav.com,2013-12-25:execute-linux-command-in-background-or-execute-commands-after-you-exit-from-a-shell-prompt.html</id><summary type="html">&lt;p&gt;Problem: After running a command on remote server some time you need to close your terminal or pc or the command takes too much time to process and you cant wait for completion. &lt;/p&gt;
 &lt;p&gt;for such problems you would want to run the command in background to do so we have &lt;strong&gt;nohup&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;From Man page it says &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;nohup - run a command immune to hangups, with output to a non-tty
@@ -312,13 +314,13 @@ Example &lt;/p&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;The above command will compress the folders in background and even if you close your local terminal the process will run in background. &lt;/p&gt;</summary><category term="unix"></category></entry><entry><title>Allowing ubuntu user to access www folder amazon aws</title><link href="http://www.mukeshyadav.com/allowing-ubuntu-user-to-access-www-folder-amazon-aws.html" rel="alternate"></link><updated>2016-03-24T00:00:00+01:00</updated><author><name>Mukesh</name></author><id>tag:www.mukeshyadav.com,2013-12-11:allowing-ubuntu-user-to-access-www-folder-amazon-aws.html</id><summary type="html">&lt;p&gt;sudo apt-get install apache2&lt;/p&gt;
+&lt;p&gt;The above command will compress the folders in background and even if you close your local terminal the process will run in background. &lt;/p&gt;</summary><category term="unix"></category></entry><entry><title>Allowing ubuntu user to access www folder amazon aws</title><link href="http://www.mukeshyadav.com/allowing-ubuntu-user-to-access-www-folder-amazon-aws.html" rel="alternate"></link><updated>2016-03-25T00:00:00+01:00</updated><author><name>Mukesh</name></author><id>tag:www.mukeshyadav.com,2013-12-11:allowing-ubuntu-user-to-access-www-folder-amazon-aws.html</id><summary type="html">&lt;p&gt;sudo apt-get install apache2&lt;/p&gt;
 &lt;p&gt;sudo a2enmod rewrite&lt;/p&gt;
 &lt;p&gt;sudo apt-get install libapache2-mod-php5&lt;/p&gt;
 &lt;p&gt;sudo /etc/init.d/apache2 restart&lt;/p&gt;
 &lt;p&gt;sudo adduser ubuntu www-data
 sudo chown -R www-data:www-data /var/www
-sudo chmod -R g+rw /var/www&lt;/p&gt;</summary><category term="aws"></category></entry><entry><title>Installing virtualenv in ubuntu</title><link href="http://www.mukeshyadav.com/installing-virtualenv-in-ubuntu.html" rel="alternate"></link><updated>2016-03-24T00:00:00+01:00</updated><author><name>Mukesh</name></author><id>tag:www.mukeshyadav.com,2013-12-01:installing-virtualenv-in-ubuntu.html</id><summary type="html">&lt;p&gt;Virtualenv is a tool to create isolated Python environments.&lt;/p&gt;
+sudo chmod -R g+rw /var/www&lt;/p&gt;</summary><category term="aws"></category></entry><entry><title>Installing virtualenv in ubuntu</title><link href="http://www.mukeshyadav.com/installing-virtualenv-in-ubuntu.html" rel="alternate"></link><updated>2016-03-25T00:00:00+01:00</updated><author><name>Mukesh</name></author><id>tag:www.mukeshyadav.com,2013-12-01:installing-virtualenv-in-ubuntu.html</id><summary type="html">&lt;p&gt;Virtualenv is a tool to create isolated Python environments.&lt;/p&gt;
 &lt;p&gt;There is multiple ways to install virtualenv I'm gonna use one of the esiest way to install it. &lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Installing via pip :&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;To install via pip you have to install pip &lt;/p&gt;
@@ -349,7 +351,7 @@ sudo chmod -R g+rw /var/www&lt;/p&gt;</summary><category term="aws"></category><
 &lt;p&gt;env/project is a path where environment will get created. &lt;/p&gt;
 &lt;p&gt;To activate environment &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;source ~/env/tweepy/bin/activate
-&lt;/pre&gt;&lt;/div&gt;</summary><category term="python"></category></entry><entry><title>! 'Fatal error : watch ENOSPC'</title><link href="http://www.mukeshyadav.com/fatal-error-watch-enospc.html" rel="alternate"></link><updated>2016-03-24T00:00:00+01:00</updated><author><name>Mukesh</name></author><id>tag:www.mukeshyadav.com,2013-11-20:fatal-error-watch-enospc.html</id><summary type="html">&lt;p&gt;Recently while running nodemon for the first time  I got an error which states :- &lt;/p&gt;
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="python"></category></entry><entry><title>! 'Fatal error : watch ENOSPC'</title><link href="http://www.mukeshyadav.com/fatal-error-watch-enospc.html" rel="alternate"></link><updated>2016-03-25T00:00:00+01:00</updated><author><name>Mukesh</name></author><id>tag:www.mukeshyadav.com,2013-11-20:fatal-error-watch-enospc.html</id><summary type="html">&lt;p&gt;Recently while running nodemon for the first time  I got an error which states :- &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;Error&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;watch&lt;/span&gt; &lt;span class="n"&gt;ENOSPC&lt;/span&gt;
 &lt;span class="n"&gt;at&lt;/span&gt; &lt;span class="n"&gt;errnoException&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;fs&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;js&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;1019&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;11&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
 &lt;span class="n"&gt;at&lt;/span&gt; &lt;span class="n"&gt;FSWatcher&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;start&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;fs&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;js&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;1051&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;11&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
@@ -367,7 +369,7 @@ sudo chmod -R g+rw /var/www&lt;/p&gt;</summary><category term="aws"></category><
 &lt;p&gt;Since Nodemon keeps a monitoring of all the files in your project, to restart the server if there is any change in files. &lt;/p&gt;
 &lt;p&gt;Since its low for my project files I changed it to 524298 &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;echo fs.inotify.max_user_watches=524298 | sudo tee -a /etc/sysctl.conf &amp;amp;&amp;amp; sudo sysctl -p
-&lt;/pre&gt;&lt;/div&gt;</summary><category term="unix"></category></entry><entry><title>Ignoring files in git (.gitignore)</title><link href="http://www.mukeshyadav.com/ignoring-files-in-git-gitignore.html" rel="alternate"></link><updated>2016-03-24T00:00:00+01:00</updated><author><name>Mukesh</name></author><id>tag:www.mukeshyadav.com,2013-11-09:ignoring-files-in-git-gitignore.html</id><summary type="html">&lt;p&gt;&lt;strong&gt;Problem&lt;/strong&gt;: You want to ignore few folders or files from your git repository&lt;/p&gt;
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="unix"></category></entry><entry><title>Ignoring files in git (.gitignore)</title><link href="http://www.mukeshyadav.com/ignoring-files-in-git-gitignore.html" rel="alternate"></link><updated>2016-03-25T00:00:00+01:00</updated><author><name>Mukesh</name></author><id>tag:www.mukeshyadav.com,2013-11-09:ignoring-files-in-git-gitignore.html</id><summary type="html">&lt;p&gt;&lt;strong&gt;Problem&lt;/strong&gt;: You want to ignore few folders or files from your git repository&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Solution&lt;/strong&gt;: Add a .gitignore file in your root project folder(even you can add this to your spesific folder too).&lt;/p&gt;
 &lt;p&gt;To ignore .htaccess in your repository, add .htaccess in your &lt;strong&gt;.gitignore&lt;/strong&gt; file.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="na"&gt;.htaccess&lt;/span&gt;
@@ -405,7 +407,7 @@ sudo chmod -R g+rw /var/www&lt;/p&gt;</summary><category term="aws"></category><
 &lt;p&gt;&lt;strong&gt;NOTE:&lt;/strong&gt; If your file or folder is already indexes you have to remove them first &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;git rm -r --cached config/config.js # this this remove config file form git 
 git rm -r --cached . # this will remove all the index files and folder
-&lt;/pre&gt;&lt;/div&gt;</summary><category term="git"></category></entry><entry><title>Install Solr with Tomcat on ubuntu</title><link href="http://www.mukeshyadav.com/install-solr-on-ubuntu.html" rel="alternate"></link><updated>2016-03-24T00:00:00+01:00</updated><author><name>Mukesh</name></author><id>tag:www.mukeshyadav.com,2013-11-08:install-solr-on-ubuntu.html</id><summary type="html">&lt;p&gt;Install &amp;amp; Configure Solr on Ubuntu, the quickest way
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="git"></category></entry><entry><title>Install Solr with Tomcat on ubuntu</title><link href="http://www.mukeshyadav.com/install-solr-on-ubuntu.html" rel="alternate"></link><updated>2016-03-25T00:00:00+01:00</updated><author><name>Mukesh</name></author><id>tag:www.mukeshyadav.com,2013-11-08:install-solr-on-ubuntu.html</id><summary type="html">&lt;p&gt;Install &amp;amp; Configure Solr on Ubuntu, the quickest way
 Note: I used the wiki page Ubuntu-10.04-lts-server as basis of this tutorial.
 More infos on the general installation at :http://wiki.apache.org/solr/SolrTomcat&lt;/p&gt;
 &lt;p&gt;One of the most efficient way to deploy a Solr server is to encapsulate it in a Java servlet, the Apache Foundation (the provider of Solr) brought to us Tomcat, a powerfull http server written in Java.&lt;/p&gt;
@@ -494,7 +496,7 @@ test:
     hostname: localhost
     port: 8981
     log_level: WARNING&lt;/p&gt;
-&lt;p&gt;This doc is directly copy pasted from &lt;a href="https://github.com/sunspot/sunspot/wiki/Configure-Solr-on-Ubuntu,-the-quickest-way"&gt;here&lt;/a&gt;&lt;/p&gt;</summary><category term="solr"></category></entry><entry><title>Mount disk permanently in linux. (auto-mount disk)</title><link href="http://www.mukeshyadav.com/mount-disk-permanently-in-linux-auto-mount-disk-2.html" rel="alternate"></link><updated>2016-03-24T00:00:00+01:00</updated><author><name>Mukesh</name></author><id>tag:www.mukeshyadav.com,2013-11-07:mount-disk-permanently-in-linux-auto-mount-disk-2.html</id><summary type="html">&lt;p&gt;To make the partition auto-mount.&lt;/p&gt;
+&lt;p&gt;This doc is directly copy pasted from &lt;a href="https://github.com/sunspot/sunspot/wiki/Configure-Solr-on-Ubuntu,-the-quickest-way"&gt;here&lt;/a&gt;&lt;/p&gt;</summary><category term="solr"></category></entry><entry><title>Mount disk permanently in linux. (auto-mount disk)</title><link href="http://www.mukeshyadav.com/mount-disk-permanently-in-linux-auto-mount-disk-2.html" rel="alternate"></link><updated>2016-03-25T00:00:00+01:00</updated><author><name>Mukesh</name></author><id>tag:www.mukeshyadav.com,2013-11-07:mount-disk-permanently-in-linux-auto-mount-disk-2.html</id><summary type="html">&lt;p&gt;To make the partition auto-mount.&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;Get your disk name &lt;/p&gt;
@@ -521,7 +523,7 @@ sudo vim /etc/fstab
 &lt;/ol&gt;
 &lt;p&gt;Now to check whether its working run &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;    sudo mount -a
-&lt;/pre&gt;&lt;/div&gt;</summary><category term="unix"></category></entry><entry><title>Delete all lines from vim (Select all delete)</title><link href="http://www.mukeshyadav.com/delete-all-lines-from-vim-select-all-delete.html" rel="alternate"></link><updated>2016-03-24T00:00:00+01:00</updated><author><name>Mukesh</name></author><id>tag:www.mukeshyadav.com,2013-11-07:delete-all-lines-from-vim-select-all-delete.html</id><summary type="html">&lt;p&gt;There are many ways to delete all the lines from a file in vim &lt;/p&gt;
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="unix"></category></entry><entry><title>Delete all lines from vim (Select all delete)</title><link href="http://www.mukeshyadav.com/delete-all-lines-from-vim-select-all-delete.html" rel="alternate"></link><updated>2016-03-25T00:00:00+01:00</updated><author><name>Mukesh</name></author><id>tag:www.mukeshyadav.com,2013-11-07:delete-all-lines-from-vim-select-all-delete.html</id><summary type="html">&lt;p&gt;There are many ways to delete all the lines from a file in vim &lt;/p&gt;
 &lt;p&gt;My favorite is &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;:%d
 &lt;/pre&gt;&lt;/div&gt;</summary><category term="vim"></category></entry><entry><title>mongo.php not Found (cli)</title><link href="http://www.mukeshyadav.com/mongo-php-not-found-cli.html" rel="alternate"></link><updated>2013-11-05T13:45:28+05:30</updated><author><name>Mukesh</name></author><id>tag:www.mukeshyadav.com,2013-11-05:mongo-php-not-found-cli.html</id><summary type="html">&lt;p&gt;Its common to get an error stating mongo.php not Found after installing mongo driver for php. &lt;br /&gt;

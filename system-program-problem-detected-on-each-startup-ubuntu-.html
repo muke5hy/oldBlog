@@ -61,9 +61,10 @@
     </div>
 
     <div class="entry-content">
-        <p>After using ubuntu for a while, and if you keep on updating or upgrading your ubuntu. There are chances that you will face "System program problem detected" popup message on startup. <br />
-It's very annoying to see the popups everytime you start your machine. Here is a solution to get rid of them. </p>
-<p>Before getting rid of the problem its better to find out cause of the error. To check it you can do by following, for me following are the issues. </p>
+        <p>After using ubuntu for a while, and if you keep on updating or upgrading your ubuntu. There are chances that you will face “System program problem detected” popup message on startup. 
+ It’s very annoying to see the popups everytime you start your machine. Here is a solution to get rid of them.</p>
+<h3>Finding out programmes which are responsible for popups</h3>
+<p>Before getting rid of the problem its better to find out cause of the error. To check it you can do sudo ls -ltrh /var/crash/ , for me following are the issues.</p>
 <div class="highlight"><pre><span class="nv">$ </span>sudo ls -ltrh /var/crash/
 total 3.8M
 -rw-r----- <span class="m">1</span> mongodb whoopsie 1.6M Mar <span class="m">18</span> 20:31 _usr_bin_mongod.120.crash
@@ -75,8 +76,9 @@ total 3.8M
 </pre></div>
 
 
-<p>As you can see in the crash folder older issues are also there hence they also get poped up whenever system gets startup.   </p>
-<p>We can simply remove the all the files and good to go. Once the files are remove you will get popup for new crashes. </p>
+<p>As you can see in the result older crash files are also present. Hence they also poped up whenever system gets startup.</p>
+<h3>Removing all the crash files,</h3>
+<p>We can simply remove all the files and then good to go. And after removing you might get popup if new crash happens. </p>
 <div class="highlight"><pre><span class="nv">$ </span>sudo rm /var/crash/*
 </pre></div>
 
@@ -86,7 +88,7 @@ total 3.8M
 </pre></div>
 
 
-<h2>Getting rid of popups forever,</h2>
+<h3>Getting rid of popups forever,</h3>
 <p>Apport system which does reporting for the crashes. Its not advisable to disable the Apport but even still you want to do it, here is how you can do.</p>
 <div class="highlight"><pre><span class="nv">$ </span>sudo vim /etc/default/apport
 </pre></div>

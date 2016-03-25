@@ -5,21 +5,21 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://www.mukeshyadav.com/archives.html</loc>
-<lastmod>2016-03-24T15:06:59-00:00</lastmod>
+<lastmod>2016-03-25T13:08:13-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://www.mukeshyadav.com/tags.html</loc>
-<lastmod>2016-03-24T15:06:59-00:00</lastmod>
+<lastmod>2016-03-25T13:08:13-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://www.mukeshyadav.com/categories.html</loc>
-<lastmod>2016-03-24T15:06:59-00:00</lastmod>
+<lastmod>2016-03-25T13:08:13-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -47,42 +47,42 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://www.mukeshyadav.com/deleting-git-branch-from-local-and-origin.html</loc>
-<lastmod>2016-03-24T00:00:00+01:00</lastmod>
+<lastmod>2016-03-25T00:00:00+01:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://www.mukeshyadav.com/optimization-of-mongo-query-making-ursor-iteration-fast.html</loc>
-<lastmod>2016-03-24T00:00:00+01:00</lastmod>
+<lastmod>2016-03-25T00:00:00+01:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://www.mukeshyadav.com/formating-string-date-to-isodate-or-object-date-in-mongodb.html</loc>
-<lastmod>2016-03-24T00:00:00+01:00</lastmod>
+<lastmod>2016-03-25T00:00:00+01:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://www.mukeshyadav.com/updating-data-in-query-with-forEach.html</loc>
-<lastmod>2016-03-24T00:00:00+01:00</lastmod>
+<lastmod>2016-03-25T00:00:00+01:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://www.mukeshyadav.com/disabling-put-post-delete-Django-Rest-Framework-BrowsableAPI.html</loc>
-<lastmod>2016-03-24T00:00:00+01:00</lastmod>
+<lastmod>2016-03-25T00:00:00+01:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://www.mukeshyadav.com/Install-latest-Redis-3.0.2-in-ubuntu.html</loc>
-<lastmod>2016-03-24T00:00:00+01:00</lastmod>
+<lastmod>2016-03-25T00:00:00+01:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -96,70 +96,70 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://www.mukeshyadav.com/work-on-remote-branch-in-git.html</loc>
-<lastmod>2016-03-24T00:00:00+01:00</lastmod>
+<lastmod>2016-03-25T00:00:00+01:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://www.mukeshyadav.com/ioerror-cannot-write-mode-p-as-jpeg-ioerror-decoder-jpeg-not-available.html</loc>
-<lastmod>2016-03-24T00:00:00+01:00</lastmod>
+<lastmod>2016-03-25T00:00:00+01:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://www.mukeshyadav.com/execute-linux-command-in-background-or-execute-commands-after-you-exit-from-a-shell-prompt.html</loc>
-<lastmod>2016-03-24T00:00:00+01:00</lastmod>
+<lastmod>2016-03-25T00:00:00+01:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://www.mukeshyadav.com/allowing-ubuntu-user-to-access-www-folder-amazon-aws.html</loc>
-<lastmod>2016-03-24T00:00:00+01:00</lastmod>
+<lastmod>2016-03-25T00:00:00+01:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://www.mukeshyadav.com/installing-virtualenv-in-ubuntu.html</loc>
-<lastmod>2016-03-24T00:00:00+01:00</lastmod>
+<lastmod>2016-03-25T00:00:00+01:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://www.mukeshyadav.com/fatal-error-watch-enospc.html</loc>
-<lastmod>2016-03-24T00:00:00+01:00</lastmod>
+<lastmod>2016-03-25T00:00:00+01:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://www.mukeshyadav.com/ignoring-files-in-git-gitignore.html</loc>
-<lastmod>2016-03-24T00:00:00+01:00</lastmod>
+<lastmod>2016-03-25T00:00:00+01:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://www.mukeshyadav.com/install-solr-on-ubuntu.html</loc>
-<lastmod>2016-03-24T00:00:00+01:00</lastmod>
+<lastmod>2016-03-25T00:00:00+01:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://www.mukeshyadav.com/mount-disk-permanently-in-linux-auto-mount-disk-2.html</loc>
-<lastmod>2016-03-24T00:00:00+01:00</lastmod>
+<lastmod>2016-03-25T00:00:00+01:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://www.mukeshyadav.com/delete-all-lines-from-vim-select-all-delete.html</loc>
-<lastmod>2016-03-24T00:00:00+01:00</lastmod>
+<lastmod>2016-03-25T00:00:00+01:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
