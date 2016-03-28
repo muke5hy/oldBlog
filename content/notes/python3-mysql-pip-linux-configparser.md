@@ -1,7 +1,8 @@
 Title: python3 mysql pip linux configparser
 Date: 2015-2-25 00:22:12.000000000 +05:30
 Slug: python3-mysql-pip-linux-configparser
-Authors: Mukesh
+Authors: mukesh
+Category: programming
 Summary: 
 Status: draft
 

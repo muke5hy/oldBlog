@@ -1,8 +1,8 @@
 Title: Debugging "An illegal choice has been detected. Please contact the site administrator."
 Date: 2009-06-13 21:18
 Author: Mukesh
-Category: Drupal, php
-Tags: Drupal, php
+Category: drupal
+Tags: drupal, php
 Slug: debugging-an-illegal-choice-has-been-detected-please-contact-the-site-administrator
 Status: published
 

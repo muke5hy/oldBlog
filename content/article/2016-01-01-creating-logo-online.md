@@ -3,8 +3,8 @@ Date: 2015-11-20 13:36:12.000000000 +05:30
 Slug: creating-logo-online
 Authors: Mukesh
 Modified: 
-Category: 
-Tags: Hacks
+Category: jugad
+Tags: jugad
 Status: draft
 Summary: 
 	Creating logo 

@@ -3,8 +3,8 @@ Date: 2015-11-03 10:30:12.000000000 +05:30
 Slug: disabling-put-post-delete-Django-Rest-Framework-BrowsableAPI
 Authors: Mukesh
 Modified: 
-Category: 
-Tags: Django, DRF, Python
+Category: programming
+Tags: django, drf, python
 Status: 
 Summary: 
 

@@ -4,7 +4,7 @@ Modified:
 Category: git
 Tags: git, 
 Slug: work-on-remote-branch-in-git
-Authors: Mukesh
+Authors: mukesh
 Summary: 
 
 Branching is too helpfull for a development. If some of your coworker has pushed a his local branch to remote branch and you want to make some changes to it you can do it by checkout. 

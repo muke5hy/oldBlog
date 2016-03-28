@@ -1,10 +1,10 @@
 Title: Install latest Redis (3.0.2) in ubuntu 
 Date: 2015-07-03 21:42:13.000000000 +05:30
 Modified: 
-Category: 
+Category: redis
 Tags: ubuntu, redis
 Slug: Install-latest-Redis-3.0.2-in-ubuntu 
-Authors: Mukesh
+Authors: mukesh
 Summary: 
 
         Installing Redis

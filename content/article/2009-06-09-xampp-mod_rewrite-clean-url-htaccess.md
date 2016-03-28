@@ -1,8 +1,8 @@
 Title: XAMPP mod_rewrite , clean Url .htaccess 
 Date: 2009-06-09 20:10
 Author: Mukesh
-Category: Apache, php, Xampp
-Tags: .htaccess, Apache, Xampp
+Category: apache
+Tags: .htaccess, apache, xampp
 Slug: xampp-mod_rewrite-clean-url-htaccess
 Status: published
 

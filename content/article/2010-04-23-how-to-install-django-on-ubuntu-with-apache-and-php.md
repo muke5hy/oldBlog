@@ -1,7 +1,7 @@
 Title: How to install Django on ubuntu with apache and php?
 Date: 2010-04-23 18:35
 Author: Mukesh
-Category: Uncategorized
+Category: uncategorized
 Slug: how-to-install-django-on-ubuntu-with-apache-and-php
 Status: published
 

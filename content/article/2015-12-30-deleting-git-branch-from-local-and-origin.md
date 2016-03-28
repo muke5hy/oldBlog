@@ -3,7 +3,7 @@ Date: 2015-11-20 13:36:12.000000000 +05:30
 Slug: deleting-git-branch-from-local-and-origin 
 Authors: Mukesh
 Modified: 
-Category: Git
+Category: programming
 Tags: git
 Status: 
 Summary: 

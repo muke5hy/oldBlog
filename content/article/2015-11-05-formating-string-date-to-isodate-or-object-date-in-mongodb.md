@@ -3,8 +3,8 @@ Date: 2015-11-05 13:36:12.000000000 +05:30
 Slug: formating-string-date-to-isodate-or-object-date-in-mongodb
 Authors: Mukesh
 Modified: 
-Category: 
-Tags: MongoDB
+Category: programming
+Tags: mongodb
 Status: 
 Summary: 
         Formating String date to ISOdate or Object Date in MongoDB

@@ -1,7 +1,8 @@
 Title: Tmuxinator does not run pre command in panes
 Date: 2014-2-25 10:22:12.000000000 +05:30
 Slug: tmuxinator-does-not-run-pre-command-in-panes
-Authors: Mukesh
+Authors: mukesh
+Category: programming
 Summary: 
 Status: draft
 

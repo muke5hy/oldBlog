@@ -2,8 +2,8 @@ Title: Git command to see old versions of a file.
 Slug: git-command-to-see-old-versions-of-a-file
 Date: 2016-03-16 12:37:35
 Tags: git, tip
-Category: Git 
-Author: Mukesh
+Category: programming
+Author: mukesh
 Lang: 
 Summary: Checking a diffrence between file versions in git
 

@@ -3,8 +3,8 @@ Date: 2015-12-02 13:36:12.000000000 +05:30
 Slug: how-to-create-email-address-for-free-on-custom-domain
 Authors: Mukesh
 Modified: 
-Category: Jugad
-Tags: Jugad, email, mailgun, cloudflare 
+Category: jugad
+Tags: jugad, email, mailgun, cloudflare 
 Status: Draft
 Summary: 
 

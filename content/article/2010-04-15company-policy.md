@@ -1,7 +1,7 @@
 Title: Company policy
 Date: 2010-04-15 01:49
 Author: Mukesh
-Category: Random
+Category: random
 Tags: policy
 Slug: company-policy
 Status: published

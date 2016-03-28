@@ -4,7 +4,7 @@ Modified:
 Category: git
 Tags: python,  
 Slug: list-behaviar-in-function-as-default-parameter
-Authors: Mukesh
+Authors: mukesh
 Summary: 
 Status: draft
 

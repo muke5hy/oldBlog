@@ -1,9 +1,9 @@
 Title: Social Networking Abuse by RodinHood
 Date: 2015-10-09 10:30:12.000000000 +05:30
 Slug: social-network-abuse-rodinhood
-Authors: Mukesh
+Authors: mukesh
 Modified: 
-Category: 
+Category: social
 Tags: twitter, social
 Status: draft
 Summary: 

@@ -3,8 +3,8 @@ Date: 2015-11-20 13:36:12.000000000 +05:30
 Slug: python-interview-questions-and-answer-with-links.
 Authors: Mukesh
 Modified: 
-Category: Interview
-Tags: Python, Interview
+Category: interview
+Tags: python, interview
 Status: draft
 Summary: 
 

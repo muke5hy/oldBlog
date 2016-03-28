@@ -1,7 +1,7 @@
 Title: Disabling adobe updater
 Date: 2009-08-08 16:44
 Author: Mukesh
-Category: Uncategorized
+Category: uncategorized
 Slug: disabling-adobe-updater
 Status: published
 

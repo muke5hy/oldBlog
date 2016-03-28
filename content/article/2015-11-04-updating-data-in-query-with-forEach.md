@@ -3,8 +3,8 @@ Date: 2015-11-04 17:36:12.000000000 +05:30
 Slug: updating-data-in-query-with-forEach
 Authors: Mukesh
 Modified: 
-Category: 
-Tags: MongoDB
+Category: programming
+Tags: mongodb
 Status: 
 Summary: 
 

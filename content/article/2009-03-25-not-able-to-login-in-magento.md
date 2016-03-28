@@ -1,8 +1,8 @@
 Title: not able to login in magento? 
 Date: 2009-03-25 19:38
 Author: Mukesh
-Category: Magento
-Tags: Magento, php
+Category: magento
+Tags: magento, php
 Slug: not-able-to-login-in-magento
 Status: published
 

@@ -2,8 +2,8 @@ Title: "System program problem detected" on each startup Ubuntu
 Slug: system-program-problem-detected-on-each-startup-ubuntu
 Date: 2016-03-24 11:43:17
 Tags: Ubuntu
-Category: ubuntu 
-Author: Mukesh
+Category: programming 
+Author: mukesh
 Lang: 
 Summary: "System program problem detected" on each startup Ubuntu    
 

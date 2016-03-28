@@ -1,8 +1,8 @@
 Title: Googles Task is awesome 
 Date: 2009-07-22 18:19
 Author: Mukesh
-Category: Google
-Tags: Google
+Category: google
+Tags: google
 Slug: googles-task-is-awesome
 Status: published
 

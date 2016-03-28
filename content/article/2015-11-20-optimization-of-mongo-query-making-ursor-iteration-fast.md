@@ -3,8 +3,8 @@ Date: 2015-11-20 13:36:12.000000000 +05:30
 Slug: optimization-of-mongo-query-making-ursor-iteration-fast
 Authors: Mukesh
 Modified: 
-Category: optimization
-Tags: MongoDB, Query Optimization 
+Category: programming
+Tags: mongodb, query Optimization 
 Status: 
 Summary: 
         

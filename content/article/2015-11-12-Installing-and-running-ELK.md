@@ -1,10 +1,11 @@
 Title: Installing and configuring ELK Stack
 Date: 2015-11-18 00:10:12 +05:30
 Slug: installing-and-configuring-ELK-stack
-Authors: Mukesh
+Authors: mukesh
 Summary:
 Tag: postgres 
 Status: draft
+Category: programming
 
 https://www.digitalocean.com/community/tutorials/how-to-use-logstash-and-kibana-to-centralize-logs-on-centos-6	
 

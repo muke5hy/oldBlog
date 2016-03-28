@@ -1,8 +1,8 @@
 Title: Another app is currently holding the yum lock; waiting for it to exit... 
 Date: 2009-05-03 18:48
 Author: Mukesh
-Category: Linux
-Tags: Linux, Unix
+Category: linux
+Tags: linux, unix
 Slug: another-app-is-currently-holding-the-yum-lock-waiting-for-it-to-exit
 Status: published
 

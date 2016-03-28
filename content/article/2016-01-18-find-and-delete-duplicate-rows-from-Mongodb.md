@@ -3,7 +3,7 @@ Date: 2016-01-18 13:36:12.000000000 +05:30
 Slug: find-and-delete-duplicate-rows-from-Mongodb
 Authors: Mukesh
 Modified: 
-Category: Notes
+Category: programming
 Tags: MongoDb 
 Status: draft
 Summary: 
