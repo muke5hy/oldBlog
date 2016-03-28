@@ -1,8 +1,8 @@
 Title: Multiple Image resize/crop in Codeigniter
 Date: 2009-03-05 08:53
 Author: Mukesh
-Category: codeIgniter
-Tags: codeIgniter, php
+Category: codeigniter
+Tags: codeigniter, php
 Slug: multiple-image-resizecrop-codeigniter
 Status: published
 
