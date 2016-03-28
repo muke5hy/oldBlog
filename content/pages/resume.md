@@ -2,10 +2,10 @@ Title: Resume
 Slug: resume
 Date: 2016-03-24 15:04:17
 Tags: 
-Category: 
-Author: 
+Category: resume
+Author: mukesh
 Lang: 
 Summary: 
 
 
-Coming Soon
+[Resume in pdf ]({filename}/docs/mukeshyadav.pdf)
