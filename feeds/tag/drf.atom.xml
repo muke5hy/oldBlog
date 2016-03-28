@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Learning the hard way!</title><link href="http://www.mukeshyadav.com/" rel="alternate"></link><link href="http://www.mukeshyadav.com/feeds/tag/drf.atom.xml" rel="self"></link><id>http://www.mukeshyadav.com/</id><updated>2016-03-25T00:00:00+01:00</updated><entry><title>Disabling Put Post Delete Django Rest Framework BrowsableAPI</title><link href="http://www.mukeshyadav.com/disabling-put-post-delete-Django-Rest-Framework-BrowsableAPI.html" rel="alternate"></link><updated>2016-03-25T00:00:00+01:00</updated><author><name>Mukesh</name></author><id>tag:www.mukeshyadav.com,2015-11-03:disabling-put-post-delete-Django-Rest-Framework-BrowsableAPI.html</id><summary type="html">&lt;div class="highlight"&gt;&lt;pre&gt;    Disabling PUT/POST/DELETE from BrowsableAPI of DRF
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Learning the hard way!</title><link href="http://www.mukeshyadav.com/" rel="alternate"></link><link href="http://www.mukeshyadav.com/feeds/tag/drf.atom.xml" rel="self"></link><id>http://www.mukeshyadav.com/</id><updated>2016-03-28T00:00:00+02:00</updated><entry><title>Disabling Put Post Delete Django Rest Framework BrowsableAPI</title><link href="http://www.mukeshyadav.com/disabling-put-post-delete-Django-Rest-Framework-BrowsableAPI.html" rel="alternate"></link><updated>2016-03-28T00:00:00+02:00</updated><author><name>Mukesh</name></author><id>tag:www.mukeshyadav.com,2015-11-03:disabling-put-post-delete-Django-Rest-Framework-BrowsableAPI.html</id><summary type="html">&lt;div class="highlight"&gt;&lt;pre&gt;    Disabling PUT/POST/DELETE from BrowsableAPI of DRF
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -30,4 +30,4 @@
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;Now all done you can brows the API but you will not be able to do PUT/POST/DELETE actions. You might want to create diffrent settings file for development and production in case you require PUT/POST/DELETE along with GET. &lt;/p&gt;</summary><category term="Django"></category><category term="DRF"></category><category term="Python"></category></entry></feed>
+&lt;p&gt;Now all done you can brows the API but you will not be able to do PUT/POST/DELETE actions. You might want to create diffrent settings file for development and production in case you require PUT/POST/DELETE along with GET. &lt;/p&gt;</summary><category term="django"></category><category term="drf"></category><category term="python"></category></entry></feed>

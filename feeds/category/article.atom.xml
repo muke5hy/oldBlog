@@ -1,91 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Learning the hard way!</title><link href="http://www.mukeshyadav.com/" rel="alternate"></link><link href="http://www.mukeshyadav.com/feeds/category/article.atom.xml" rel="self"></link><id>http://www.mukeshyadav.com/</id><updated>2016-03-25T00:00:00+01:00</updated><entry><title>Formating String date to ISOdate or Object Date in MongoDB</title><link href="http://www.mukeshyadav.com/formating-string-date-to-isodate-or-object-date-in-mongodb.html" rel="alternate"></link><updated>2016-03-25T00:00:00+01:00</updated><author><name>Mukesh</name></author><id>tag:www.mukeshyadav.com,2015-11-05:formating-string-date-to-isodate-or-object-date-in-mongodb.html</id><summary type="html">&lt;p&gt;MongoDB stores the date in ISODate format which is nothing but a wrapper for the Date object of Javascript. If some how your database has stored to string date, you can convert them to ISO by running following query directly in mongo terminal&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nx"&gt;db&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;collection&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;find&lt;/span&gt;&lt;span class="p"&gt;({&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;date_updated&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="nx"&gt;$type&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;}})&lt;/span&gt;    
-    &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;forEach&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;item&lt;/span&gt;&lt;span class="p"&gt;){&lt;/span&gt;
-
-        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;typeof&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;item&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;date_updated&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;string&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;){&lt;/span&gt;
-            &lt;span class="nx"&gt;item&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;date_updated&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="nx"&gt;ISODate&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;item&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;date_updated&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-            &lt;span class="nx"&gt;db&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;items&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;save&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;item&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-        &lt;span class="p"&gt;}&lt;/span&gt;
-    &lt;span class="p"&gt;}&lt;/span&gt;
-
-&lt;span class="p"&gt;})&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;</summary><category term="MongoDB"></category></entry><entry><title>Updating data in query with forEach</title><link href="http://www.mukeshyadav.com/updating-data-in-query-with-forEach.html" rel="alternate"></link><updated>2016-03-25T00:00:00+01:00</updated><author><name>Mukesh</name></author><id>tag:www.mukeshyadav.com,2015-11-04:updating-data-in-query-with-forEach.html</id><summary type="html">&lt;div class="highlight"&gt;&lt;pre&gt;    Updating data in query with forEach
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;Since No-SQL does not have a structure or columns fixed when we store data into it, its very common or easy we insert unwanted keys into MongoDB. 
-While developing some of the project I faced this issue as well. &lt;/p&gt;
-&lt;p&gt;To resolve such situation we can manually update each document, if the task is very small we might just write one update query and remove the key or replace the value. The problem with this is if there is conditional update we might have to write separate query and update it. &lt;/p&gt;
-&lt;p&gt;Since MongoDB uses V8 Javascript Engine we can use Javascript Language to write conditional queries. &lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nx"&gt;db&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;product&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;find&lt;/span&gt;&lt;span class="p"&gt;().&lt;/span&gt;&lt;span class="nx"&gt;forEach&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;unit&lt;/span&gt;&lt;span class="p"&gt;){&lt;/span&gt;
-    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;unit&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;expiry_date&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;=&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="nb"&gt;Date&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
-        &lt;span class="nx"&gt;unit&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;expired&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;true&lt;/span&gt;
-    &lt;span class="nx"&gt;db&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;listings&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;save&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;unit&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="p"&gt;})&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;The above code is self explanatory. Bottom line is if we want to edit in forEach we should create complete document and save it. &lt;/p&gt;</summary><category term="MongoDB"></category></entry><entry><title>Disabling Put Post Delete Django Rest Framework BrowsableAPI</title><link href="http://www.mukeshyadav.com/disabling-put-post-delete-Django-Rest-Framework-BrowsableAPI.html" rel="alternate"></link><updated>2016-03-25T00:00:00+01:00</updated><author><name>Mukesh</name></author><id>tag:www.mukeshyadav.com,2015-11-03:disabling-put-post-delete-Django-Rest-Framework-BrowsableAPI.html</id><summary type="html">&lt;div class="highlight"&gt;&lt;pre&gt;    Disabling PUT/POST/DELETE from BrowsableAPI of DRF
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;If you are building a Rest Full Service in Django then you must be familiar with Django-Rest-Framework AKA DRF. DRF helps you to build API with very less code footprint. &lt;/p&gt;
-&lt;p&gt;DRF has BrowsableAPI which gives a front-end to view API and do some test, by using this you can do GET/PUT/POST/DELETE etc in your browser. Hence you do not require script or POSTMAN/CURL to test. Although these feature is very useful on development server but for the production you really do not want the PUT/POST/DELETE actions. &lt;/p&gt;
-&lt;p&gt;To disable these action we need to extend BrowsableAPIRenderer and change the &lt;code&gt;display_edit_forms&lt;/code&gt; and &lt;code&gt;delete_form&lt;/code&gt; to False. Lets create a file &lt;code&gt;BrowsableAPIRendererGet&lt;/code&gt; some where in your project where you place common files or tools. I keep them in base.lib package, so create &lt;code&gt;base/lib/BrowsableAPIRenderer.py&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;base/lib/BrowsableAPIRenderer.py&lt;/code&gt;&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;rest_framework.renderers&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;BrowsableAPIRenderer&lt;/span&gt;
-
-&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;BrowsableAPIRendererGet&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;BrowsableAPIRenderer&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-    &lt;span class="sd"&gt;&amp;quot;&amp;quot;&amp;quot;Renders the browsable api, but excludes the forms.&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
-
-    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;get_context&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="n"&gt;kwargs&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-        &lt;span class="n"&gt;context&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;super&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get_context&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="n"&gt;kwargs&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-        &lt;span class="n"&gt;context&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;display_edit_forms&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;False&lt;/span&gt;
-        &lt;span class="n"&gt;context&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;delete_form&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;False&lt;/span&gt;
-        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;context&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;Once you done with that call the custom renderer from your settings file hence in you settings.py add following in &lt;code&gt;DEFAULT_RENDERER_CLASSES&lt;/code&gt;&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;REST_FRAMEWORK = {
-    &amp;#39;DEFAULT_RENDERER_CLASSES&amp;#39;: (
-        &amp;#39;rest_framework.renderers.JSONRenderer&amp;#39;,
-        &amp;#39;base.lib.BrowsableAPIRenderer.BrowsableAPIRendererGet&amp;#39;,
-    )
-}
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;Now all done you can brows the API but you will not be able to do PUT/POST/DELETE actions. You might want to create diffrent settings file for development and production in case you require PUT/POST/DELETE along with GET. &lt;/p&gt;</summary><category term="Django"></category><category term="DRF"></category><category term="Python"></category></entry><entry><title>Install latest Redis (3.0.2) in ubuntu</title><link href="http://www.mukeshyadav.com/Install-latest-Redis-3.0.2-in-ubuntu.html" rel="alternate"></link><updated>2016-03-25T00:00:00+01:00</updated><author><name>Mukesh</name></author><id>tag:www.mukeshyadav.com,2015-07-03:Install-latest-Redis-3.0.2-in-ubuntu.html</id><summary type="html">&lt;div class="highlight"&gt;&lt;pre&gt;    Installing Redis
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;With all of the prerequisites and dependencies downloaded to the server, we can go ahead and begin to install redis from source:&lt;/p&gt;
-&lt;p&gt;Download the latest stable release tarball from Redis.io.&lt;/p&gt;
-&lt;p&gt;wget http://download.redis.io/releases/redis-stable.tar.gz&lt;/p&gt;
-&lt;p&gt;Untar it and switch into that directory:&lt;/p&gt;
-&lt;p&gt;tar xzf redis-stable.tar.gz&lt;/p&gt;
-&lt;p&gt;cd redis-stable&lt;/p&gt;
-&lt;p&gt;Proceed to with the make command:&lt;/p&gt;
-&lt;p&gt;make&lt;/p&gt;
-&lt;p&gt;Run the recommended make test:&lt;/p&gt;
-&lt;p&gt;make test&lt;/p&gt;
-&lt;p&gt;Finish up by running make install, which installs the program system-wide.&lt;/p&gt;
-&lt;p&gt;sudo make install&lt;/p&gt;
-&lt;p&gt;Once the program has been installed, Redis comes with a built in script that sets up Redis to run as a background daemon.&lt;/p&gt;
-&lt;p&gt;To access the script move into the utils directory:&lt;/p&gt;
-&lt;p&gt;cd utils&lt;/p&gt;
-&lt;p&gt;From there, run the Ubuntu/Debian install script:&lt;/p&gt;
-&lt;p&gt;sudo ./install_server.sh&lt;/p&gt;
-&lt;p&gt;As the script runs, you can choose the default options by pressing enter. Once the script completes, the redis-server will be running in the background.&lt;/p&gt;
-&lt;p&gt;You can start and stop redis with these commands (the number depends on the port you set during the installation. 6379 is the default port setting):&lt;/p&gt;
-&lt;p&gt;sudo service redis_6379 start
-sudo service redis_6379 stop&lt;/p&gt;
-&lt;p&gt;You can then access the redis database by typing the following command:&lt;/p&gt;
-&lt;p&gt;redis-cli&lt;/p&gt;
-&lt;p&gt;You now have Redis installed and running. The prompt will look like this:&lt;/p&gt;
-&lt;p&gt;redis 127.0.0.1:6379&amp;gt; &lt;/p&gt;</summary><category term="ubuntu"></category><category term="redis"></category></entry><entry><title>! 'IOError: cannot write mode P as JPEG | IOError: decoder jpeg not available'</title><link href="http://www.mukeshyadav.com/ioerror-cannot-write-mode-p-as-jpeg-ioerror-decoder-jpeg-not-available.html" rel="alternate"></link><updated>2016-03-25T00:00:00+01:00</updated><author><name>mukesh</name></author><id>tag:www.mukeshyadav.com,2014-01-16:ioerror-cannot-write-mode-p-as-jpeg-ioerror-decoder-jpeg-not-available.html</id><summary type="html">&lt;p&gt;uninstall PIL&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Learning the hard way!</title><link href="http://www.mukeshyadav.com/" rel="alternate"></link><link href="http://www.mukeshyadav.com/feeds/category/article.atom.xml" rel="self"></link><id>http://www.mukeshyadav.com/</id><updated>2016-03-28T00:00:00+02:00</updated><entry><title>! 'IOError: cannot write mode P as JPEG | IOError: decoder jpeg not available'</title><link href="http://www.mukeshyadav.com/ioerror-cannot-write-mode-p-as-jpeg-ioerror-decoder-jpeg-not-available.html" rel="alternate"></link><updated>2016-03-28T00:00:00+02:00</updated><author><name>mukesh</name></author><id>tag:www.mukeshyadav.com,2014-01-16:ioerror-cannot-write-mode-p-as-jpeg-ioerror-decoder-jpeg-not-available.html</id><summary type="html">&lt;p&gt;uninstall PIL&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;pip uninstall PIL
 
 sudo apt-get install libjpeg-dev libfreetype6-dev zlib1g-dev libpng12-dev
@@ -142,7 +56,7 @@ setup.py script.
   *** WEBP support not available
   *** WEBPMUX support not available
   --------------------------------------------------------------------
-&lt;/pre&gt;&lt;/div&gt;</summary><category term="python"></category></entry><entry><title>Execute linux command in background or Execute Commands After You Exit From a Shell Prompt</title><link href="http://www.mukeshyadav.com/execute-linux-command-in-background-or-execute-commands-after-you-exit-from-a-shell-prompt.html" rel="alternate"></link><updated>2016-03-25T00:00:00+01:00</updated><author><name>Mukesh</name></author><id>tag:www.mukeshyadav.com,2013-12-25:execute-linux-command-in-background-or-execute-commands-after-you-exit-from-a-shell-prompt.html</id><summary type="html">&lt;p&gt;Problem: After running a command on remote server some time you need to close your terminal or pc or the command takes too much time to process and you cant wait for completion. &lt;/p&gt;
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="python"></category></entry><entry><title>Execute linux command in background or Execute Commands After You Exit From a Shell Prompt</title><link href="http://www.mukeshyadav.com/execute-linux-command-in-background-or-execute-commands-after-you-exit-from-a-shell-prompt.html" rel="alternate"></link><updated>2016-03-28T00:00:00+02:00</updated><author><name>Mukesh</name></author><id>tag:www.mukeshyadav.com,2013-12-25:execute-linux-command-in-background-or-execute-commands-after-you-exit-from-a-shell-prompt.html</id><summary type="html">&lt;p&gt;Problem: After running a command on remote server some time you need to close your terminal or pc or the command takes too much time to process and you cant wait for completion. &lt;/p&gt;
 &lt;p&gt;for such problems you would want to run the command in background to do so we have &lt;strong&gt;nohup&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;From Man page it says &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;nohup - run a command immune to hangups, with output to a non-tty
@@ -160,13 +74,13 @@ Example &lt;/p&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;The above command will compress the folders in background and even if you close your local terminal the process will run in background. &lt;/p&gt;</summary><category term="unix"></category></entry><entry><title>Allowing ubuntu user to access www folder amazon aws</title><link href="http://www.mukeshyadav.com/allowing-ubuntu-user-to-access-www-folder-amazon-aws.html" rel="alternate"></link><updated>2016-03-25T00:00:00+01:00</updated><author><name>Mukesh</name></author><id>tag:www.mukeshyadav.com,2013-12-11:allowing-ubuntu-user-to-access-www-folder-amazon-aws.html</id><summary type="html">&lt;p&gt;sudo apt-get install apache2&lt;/p&gt;
+&lt;p&gt;The above command will compress the folders in background and even if you close your local terminal the process will run in background. &lt;/p&gt;</summary><category term="unix"></category></entry><entry><title>Allowing ubuntu user to access www folder amazon aws</title><link href="http://www.mukeshyadav.com/allowing-ubuntu-user-to-access-www-folder-amazon-aws.html" rel="alternate"></link><updated>2016-03-28T00:00:00+02:00</updated><author><name>Mukesh</name></author><id>tag:www.mukeshyadav.com,2013-12-11:allowing-ubuntu-user-to-access-www-folder-amazon-aws.html</id><summary type="html">&lt;p&gt;sudo apt-get install apache2&lt;/p&gt;
 &lt;p&gt;sudo a2enmod rewrite&lt;/p&gt;
 &lt;p&gt;sudo apt-get install libapache2-mod-php5&lt;/p&gt;
 &lt;p&gt;sudo /etc/init.d/apache2 restart&lt;/p&gt;
 &lt;p&gt;sudo adduser ubuntu www-data
 sudo chown -R www-data:www-data /var/www
-sudo chmod -R g+rw /var/www&lt;/p&gt;</summary><category term="aws"></category></entry><entry><title>Installing virtualenv in ubuntu</title><link href="http://www.mukeshyadav.com/installing-virtualenv-in-ubuntu.html" rel="alternate"></link><updated>2016-03-25T00:00:00+01:00</updated><author><name>Mukesh</name></author><id>tag:www.mukeshyadav.com,2013-12-01:installing-virtualenv-in-ubuntu.html</id><summary type="html">&lt;p&gt;Virtualenv is a tool to create isolated Python environments.&lt;/p&gt;
+sudo chmod -R g+rw /var/www&lt;/p&gt;</summary><category term="aws"></category></entry><entry><title>Installing virtualenv in ubuntu</title><link href="http://www.mukeshyadav.com/installing-virtualenv-in-ubuntu.html" rel="alternate"></link><updated>2016-03-28T00:00:00+02:00</updated><author><name>Mukesh</name></author><id>tag:www.mukeshyadav.com,2013-12-01:installing-virtualenv-in-ubuntu.html</id><summary type="html">&lt;p&gt;Virtualenv is a tool to create isolated Python environments.&lt;/p&gt;
 &lt;p&gt;There is multiple ways to install virtualenv I'm gonna use one of the esiest way to install it. &lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Installing via pip :&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;To install via pip you have to install pip &lt;/p&gt;
@@ -197,7 +111,7 @@ sudo chmod -R g+rw /var/www&lt;/p&gt;</summary><category term="aws"></category><
 &lt;p&gt;env/project is a path where environment will get created. &lt;/p&gt;
 &lt;p&gt;To activate environment &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;source ~/env/tweepy/bin/activate
-&lt;/pre&gt;&lt;/div&gt;</summary><category term="python"></category></entry><entry><title>! 'Fatal error : watch ENOSPC'</title><link href="http://www.mukeshyadav.com/fatal-error-watch-enospc.html" rel="alternate"></link><updated>2016-03-25T00:00:00+01:00</updated><author><name>Mukesh</name></author><id>tag:www.mukeshyadav.com,2013-11-20:fatal-error-watch-enospc.html</id><summary type="html">&lt;p&gt;Recently while running nodemon for the first time  I got an error which states :- &lt;/p&gt;
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="python"></category></entry><entry><title>! 'Fatal error : watch ENOSPC'</title><link href="http://www.mukeshyadav.com/fatal-error-watch-enospc.html" rel="alternate"></link><updated>2016-03-28T00:00:00+02:00</updated><author><name>Mukesh</name></author><id>tag:www.mukeshyadav.com,2013-11-20:fatal-error-watch-enospc.html</id><summary type="html">&lt;p&gt;Recently while running nodemon for the first time  I got an error which states :- &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;Error&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;watch&lt;/span&gt; &lt;span class="n"&gt;ENOSPC&lt;/span&gt;
 &lt;span class="n"&gt;at&lt;/span&gt; &lt;span class="n"&gt;errnoException&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;fs&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;js&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;1019&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;11&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
 &lt;span class="n"&gt;at&lt;/span&gt; &lt;span class="n"&gt;FSWatcher&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;start&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;fs&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;js&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;1051&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;11&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
@@ -215,7 +129,7 @@ sudo chmod -R g+rw /var/www&lt;/p&gt;</summary><category term="aws"></category><
 &lt;p&gt;Since Nodemon keeps a monitoring of all the files in your project, to restart the server if there is any change in files. &lt;/p&gt;
 &lt;p&gt;Since its low for my project files I changed it to 524298 &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;echo fs.inotify.max_user_watches=524298 | sudo tee -a /etc/sysctl.conf &amp;amp;&amp;amp; sudo sysctl -p
-&lt;/pre&gt;&lt;/div&gt;</summary><category term="unix"></category></entry><entry><title>Ignoring files in git (.gitignore)</title><link href="http://www.mukeshyadav.com/ignoring-files-in-git-gitignore.html" rel="alternate"></link><updated>2016-03-25T00:00:00+01:00</updated><author><name>Mukesh</name></author><id>tag:www.mukeshyadav.com,2013-11-09:ignoring-files-in-git-gitignore.html</id><summary type="html">&lt;p&gt;&lt;strong&gt;Problem&lt;/strong&gt;: You want to ignore few folders or files from your git repository&lt;/p&gt;
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="unix"></category></entry><entry><title>Ignoring files in git (.gitignore)</title><link href="http://www.mukeshyadav.com/ignoring-files-in-git-gitignore.html" rel="alternate"></link><updated>2016-03-28T00:00:00+02:00</updated><author><name>Mukesh</name></author><id>tag:www.mukeshyadav.com,2013-11-09:ignoring-files-in-git-gitignore.html</id><summary type="html">&lt;p&gt;&lt;strong&gt;Problem&lt;/strong&gt;: You want to ignore few folders or files from your git repository&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Solution&lt;/strong&gt;: Add a .gitignore file in your root project folder(even you can add this to your spesific folder too).&lt;/p&gt;
 &lt;p&gt;To ignore .htaccess in your repository, add .htaccess in your &lt;strong&gt;.gitignore&lt;/strong&gt; file.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="na"&gt;.htaccess&lt;/span&gt;
@@ -253,7 +167,7 @@ sudo chmod -R g+rw /var/www&lt;/p&gt;</summary><category term="aws"></category><
 &lt;p&gt;&lt;strong&gt;NOTE:&lt;/strong&gt; If your file or folder is already indexes you have to remove them first &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;git rm -r --cached config/config.js # this this remove config file form git 
 git rm -r --cached . # this will remove all the index files and folder
-&lt;/pre&gt;&lt;/div&gt;</summary><category term="git"></category></entry><entry><title>Install Solr with Tomcat on ubuntu</title><link href="http://www.mukeshyadav.com/install-solr-on-ubuntu.html" rel="alternate"></link><updated>2016-03-25T00:00:00+01:00</updated><author><name>Mukesh</name></author><id>tag:www.mukeshyadav.com,2013-11-08:install-solr-on-ubuntu.html</id><summary type="html">&lt;p&gt;Install &amp;amp; Configure Solr on Ubuntu, the quickest way
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="git"></category></entry><entry><title>Install Solr with Tomcat on ubuntu</title><link href="http://www.mukeshyadav.com/install-solr-on-ubuntu.html" rel="alternate"></link><updated>2016-03-28T00:00:00+02:00</updated><author><name>Mukesh</name></author><id>tag:www.mukeshyadav.com,2013-11-08:install-solr-on-ubuntu.html</id><summary type="html">&lt;p&gt;Install &amp;amp; Configure Solr on Ubuntu, the quickest way
 Note: I used the wiki page Ubuntu-10.04-lts-server as basis of this tutorial.
 More infos on the general installation at :http://wiki.apache.org/solr/SolrTomcat&lt;/p&gt;
 &lt;p&gt;One of the most efficient way to deploy a Solr server is to encapsulate it in a Java servlet, the Apache Foundation (the provider of Solr) brought to us Tomcat, a powerfull http server written in Java.&lt;/p&gt;
@@ -342,7 +256,7 @@ test:
     hostname: localhost
     port: 8981
     log_level: WARNING&lt;/p&gt;
-&lt;p&gt;This doc is directly copy pasted from &lt;a href="https://github.com/sunspot/sunspot/wiki/Configure-Solr-on-Ubuntu,-the-quickest-way"&gt;here&lt;/a&gt;&lt;/p&gt;</summary><category term="solr"></category></entry><entry><title>Mount disk permanently in linux. (auto-mount disk)</title><link href="http://www.mukeshyadav.com/mount-disk-permanently-in-linux-auto-mount-disk-2.html" rel="alternate"></link><updated>2016-03-25T00:00:00+01:00</updated><author><name>Mukesh</name></author><id>tag:www.mukeshyadav.com,2013-11-07:mount-disk-permanently-in-linux-auto-mount-disk-2.html</id><summary type="html">&lt;p&gt;To make the partition auto-mount.&lt;/p&gt;
+&lt;p&gt;This doc is directly copy pasted from &lt;a href="https://github.com/sunspot/sunspot/wiki/Configure-Solr-on-Ubuntu,-the-quickest-way"&gt;here&lt;/a&gt;&lt;/p&gt;</summary><category term="solr"></category></entry><entry><title>Mount disk permanently in linux. (auto-mount disk)</title><link href="http://www.mukeshyadav.com/mount-disk-permanently-in-linux-auto-mount-disk-2.html" rel="alternate"></link><updated>2016-03-28T00:00:00+02:00</updated><author><name>Mukesh</name></author><id>tag:www.mukeshyadav.com,2013-11-07:mount-disk-permanently-in-linux-auto-mount-disk-2.html</id><summary type="html">&lt;p&gt;To make the partition auto-mount.&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;Get your disk name &lt;/p&gt;
@@ -369,7 +283,7 @@ sudo vim /etc/fstab
 &lt;/ol&gt;
 &lt;p&gt;Now to check whether its working run &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;    sudo mount -a
-&lt;/pre&gt;&lt;/div&gt;</summary><category term="unix"></category></entry><entry><title>Delete all lines from vim (Select all delete)</title><link href="http://www.mukeshyadav.com/delete-all-lines-from-vim-select-all-delete.html" rel="alternate"></link><updated>2016-03-25T00:00:00+01:00</updated><author><name>Mukesh</name></author><id>tag:www.mukeshyadav.com,2013-11-07:delete-all-lines-from-vim-select-all-delete.html</id><summary type="html">&lt;p&gt;There are many ways to delete all the lines from a file in vim &lt;/p&gt;
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="unix"></category></entry><entry><title>Delete all lines from vim (Select all delete)</title><link href="http://www.mukeshyadav.com/delete-all-lines-from-vim-select-all-delete.html" rel="alternate"></link><updated>2016-03-28T00:00:00+02:00</updated><author><name>Mukesh</name></author><id>tag:www.mukeshyadav.com,2013-11-07:delete-all-lines-from-vim-select-all-delete.html</id><summary type="html">&lt;p&gt;There are many ways to delete all the lines from a file in vim &lt;/p&gt;
 &lt;p&gt;My favorite is &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;:%d
 &lt;/pre&gt;&lt;/div&gt;</summary><category term="vim"></category></entry><entry><title>mongo.php not Found (cli)</title><link href="http://www.mukeshyadav.com/mongo-php-not-found-cli.html" rel="alternate"></link><updated>2013-11-05T13:45:28+05:30</updated><author><name>Mukesh</name></author><id>tag:www.mukeshyadav.com,2013-11-05:mongo-php-not-found-cli.html</id><summary type="html">&lt;p&gt;Its common to get an error stating mongo.php not Found after installing mongo driver for php. &lt;br /&gt;
@@ -388,5 +302,5 @@ ctrl + k, ctrl + b &lt;/p&gt;
 &lt;p&gt;Search anything on project 
 ctrl + p&lt;/p&gt;
 &lt;p&gt;Layout Changing 
-Shift + alt + 1 or 2 and to switch window ctrl + 2 or 1&lt;/p&gt;</summary></entry><entry><title>This is my first post on Ghost</title><link href="http://www.mukeshyadav.com/this-is-my-first-post-on-ghost.html" rel="alternate"></link><updated>2013-10-23T00:22:12+05:30</updated><author><name>Mukesh</name></author><id>tag:www.mukeshyadav.com,2013-10-23:this-is-my-first-post-on-ghost.html</id><summary type="html">&lt;p&gt;This blog is a my notepad, I'll keep on posting stuff for my refresnce, If any one finds them usefull  that would be my pleasure. &lt;/p&gt;
+Shift + alt + 1 or 2 and to switch window ctrl + 2 or 1&lt;/p&gt;</summary></entry><entry><title>This is my first post on Ghost</title><link href="http://www.mukeshyadav.com/this-is-my-first-post-on-ghost.html" rel="alternate"></link><updated>2013-10-23T00:22:12+05:30</updated><author><name>mukesh</name></author><id>tag:www.mukeshyadav.com,2013-10-23:this-is-my-first-post-on-ghost.html</id><summary type="html">&lt;p&gt;This blog is a my notepad, I'll keep on posting stuff for my refresnce, If any one finds them usefull  that would be my pleasure. &lt;/p&gt;
 &lt;p&gt;Many a time I'll copy paste solution or tricks from other sources too. &lt;/p&gt;</summary></entry></feed>

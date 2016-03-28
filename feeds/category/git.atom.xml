@@ -1,55 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Learning the hard way!</title><link href="http://www.mukeshyadav.com/" rel="alternate"></link><link href="http://www.mukeshyadav.com/feeds/category/git.atom.xml" rel="self"></link><id>http://www.mukeshyadav.com/</id><updated>2016-03-25T00:00:00+01:00</updated><entry><title>Git command to see old versions of a file.</title><link href="http://www.mukeshyadav.com/git-command-to-see-old-versions-of-a-file-.html" rel="alternate"></link><updated>2016-03-16T12:37:35+01:00</updated><author><name>Mukesh</name></author><id>tag:www.mukeshyadav.com,2016-03-16:git-command-to-see-old-versions-of-a-file-.html</id><summary type="html">&lt;p&gt;Often we require to check the versions of the file changes git. There are method in git to do that, but there is other better way to do that.   &lt;/p&gt;
-&lt;p&gt;To view a file of a specific version, below command will show you 5th last commit of model.py&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;git show HEAD~5:auth/model.py
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;To get the history of changes &lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;git log -p auth/model.py
-
-# If you want to follow all the changes inclusing file name change you can give --follow option
-git log -p --follow  auth/model.py
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;If you not comforatble with terminal out put, you can use &lt;code&gt;gitk&lt;/code&gt; or &lt;code&gt;gitg&lt;/code&gt;&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;gitg auth/model.py
-
-# or with follow 
-gitg --follow  auth/model.py
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;or &lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;gitk --follow auth/model.py
-&lt;/pre&gt;&lt;/div&gt;</summary><category term="git"></category><category term="tip"></category></entry><entry><title>Deleting git branch from local and origin</title><link href="http://www.mukeshyadav.com/deleting-git-branch-from-local-and-origin.html" rel="alternate"></link><updated>2016-03-25T00:00:00+01:00</updated><author><name>Mukesh</name></author><id>tag:www.mukeshyadav.com,2015-11-20:deleting-git-branch-from-local-and-origin.html</id><summary type="html">&lt;h2&gt;How to delete git branch from local and remote&lt;/h2&gt;
-&lt;p&gt;for long running projects and projects which has continuous changes gets many unused branch over the period of time, 
-and if you do not clean up your branches they keep on increasing some time more than 50+ or may be 100+&lt;/p&gt;
-&lt;p&gt;When you checkout a branch from remote (origin), it makes a copy locally and points it to the remote Branch. When you want to delete a branch it becomes necessary to remove it from both places as well as from other machine too. &lt;/p&gt;
-&lt;p&gt;If you want to delete a branch quickfix, first checkout to the branch other than the branch to be deleted.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;git checkout other_than_branch_to_be_deleted
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;Deleting the local branch:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;git branch -D quickfix
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;Deleting the remote branch:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;git push origin --delete quickfix
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;at this stage you have deleted branch from your local as well from remote. If you repository is being used on other machine you need to update their too.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;git remote prune &amp;lt;remote_name&amp;gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;If your &lt;remote_name&gt; is origin then &lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;git remote prune origin
-&lt;/pre&gt;&lt;/div&gt;</summary><category term="git"></category></entry><entry><title>Work on remote branch in Git</title><link href="http://www.mukeshyadav.com/work-on-remote-branch-in-git.html" rel="alternate"></link><updated>2016-03-25T00:00:00+01:00</updated><author><name>Mukesh</name></author><id>tag:www.mukeshyadav.com,2014-01-28:work-on-remote-branch-in-git.html</id><summary type="html">&lt;p&gt;Branching is too helpfull for a development. If some of your coworker has pushed a his local branch to remote branch and you want to make some changes to it you can do it by checkout. &lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Learning the hard way!</title><link href="http://www.mukeshyadav.com/" rel="alternate"></link><link href="http://www.mukeshyadav.com/feeds/category/git.atom.xml" rel="self"></link><id>http://www.mukeshyadav.com/</id><updated>2016-03-28T00:00:00+02:00</updated><entry><title>Work on remote branch in Git</title><link href="http://www.mukeshyadav.com/work-on-remote-branch-in-git.html" rel="alternate"></link><updated>2016-03-28T00:00:00+02:00</updated><author><name>mukesh</name></author><id>tag:www.mukeshyadav.com,2014-01-28:work-on-remote-branch-in-git.html</id><summary type="html">&lt;p&gt;Branching is too helpfull for a development. If some of your coworker has pushed a his local branch to remote branch and you want to make some changes to it you can do it by checkout. &lt;/p&gt;
 &lt;p&gt;To check out his/her branch on your local machine you need to follow these&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Get the remote branch in your machine &lt;div class="highlight"&gt;&lt;pre&gt;git fetch origin

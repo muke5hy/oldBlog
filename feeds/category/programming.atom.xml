@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Learning the hard way!</title><link href="http://www.mukeshyadav.com/" rel="alternate"></link><link href="http://www.mukeshyadav.com/feeds/category/programming.atom.xml" rel="self"></link><id>http://www.mukeshyadav.com/</id><updated>2016-03-28T00:00:00+02:00</updated><entry><title>"System program problem detected" on each startup Ubuntu</title><link href="http://www.mukeshyadav.com/system-program-problem-detected-on-each-startup-ubuntu-.html" rel="alternate"></link><updated>2016-03-24T11:43:17+01:00</updated><author><name>mukesh</name></author><id>tag:www.mukeshyadav.com,2016-03-24:system-program-problem-detected-on-each-startup-ubuntu-.html</id><summary type="html">&lt;p&gt;After using ubuntu for a while, and if you keep on updating or upgrading your ubuntu. There are chances that you will face “System program problem detected” popup message on startup. 
+ It’s very annoying to see the popups everytime you start your machine. Here is a solution to get rid of them.&lt;/p&gt;
+&lt;h3&gt;Finding out programmes which are responsible for popups&lt;/h3&gt;
+&lt;p&gt;Before getting rid of the problem its better to find out cause of the error. To check it you can do sudo ls -ltrh /var/crash/ , for me following are the issues.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;sudo ls -ltrh /var/crash/
+total 3.8M
+-rw-r----- &lt;span class="m"&gt;1&lt;/span&gt; mongodb whoopsie 1.6M Mar &lt;span class="m"&gt;18&lt;/span&gt; 20:31 _usr_bin_mongod.120.crash
+-rw-r----- &lt;span class="m"&gt;1&lt;/span&gt; root    whoopsie 469K Mar &lt;span class="m"&gt;19&lt;/span&gt; 21:34 susres.2016-03-19_21:34:39.781436.crash
+-rw-r----- &lt;span class="m"&gt;1&lt;/span&gt; root    whoopsie 603K Mar &lt;span class="m"&gt;23&lt;/span&gt; 11:27 susres.2016-03-23_11:27:55.376655.crash
+-rw------- &lt;span class="m"&gt;1&lt;/span&gt; root    whoopsie 209K Mar &lt;span class="m"&gt;23&lt;/span&gt; 11:40 mysql-server-5.6.0.crash
+-rw------- &lt;span class="m"&gt;1&lt;/span&gt; root    whoopsie 275K Mar &lt;span class="m"&gt;23&lt;/span&gt; 12:03 mysql-server-5.5.0.crash
+-rw-r----- &lt;span class="m"&gt;1&lt;/span&gt; root    whoopsie 634K Mar &lt;span class="m"&gt;24&lt;/span&gt; 11:34 susres.2016-03-24_11:34:14.141978.crash
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;As you can see in the result older crash files are also present. Hence they also poped up whenever system gets startup.&lt;/p&gt;
+&lt;h3&gt;Removing all the crash files,&lt;/h3&gt;
+&lt;p&gt;We can simply remove all the files and then good to go. And after removing you might get popup if new crash happens. &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;sudo rm /var/crash/*
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;If you want to remove all the popups in current session only with command you can do. &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;killall system-crash-notification
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;Getting rid of popups forever,&lt;/h3&gt;
+&lt;p&gt;Apport system which does reporting for the crashes. Its not advisable to disable the Apport but even still you want to do it, here is how you can do.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;sudo vim /etc/default/apport
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Change &lt;code&gt;enabled=1&lt;/code&gt; to &lt;code&gt;enabled=0&lt;/code&gt; , then save and exit.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;sudo restart apport
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="Ubuntu"></category></entry><entry><title>Git command to see old versions of a file.</title><link href="http://www.mukeshyadav.com/git-command-to-see-old-versions-of-a-file-.html" rel="alternate"></link><updated>2016-03-16T12:37:35+01:00</updated><author><name>mukesh</name></author><id>tag:www.mukeshyadav.com,2016-03-16:git-command-to-see-old-versions-of-a-file-.html</id><summary type="html">&lt;p&gt;Often we require to check the versions of the file changes git. There are method in git to do that, but there is other better way to do that.   &lt;/p&gt;
+&lt;p&gt;To view a file of a specific version, below command will show you 5th last commit of model.py&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;git show HEAD~5:auth/model.py
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;To get the history of changes &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;git log -p auth/model.py
+
+# If you want to follow all the changes inclusing file name change you can give --follow option
+git log -p --follow  auth/model.py
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;If you not comforatble with terminal out put, you can use &lt;code&gt;gitk&lt;/code&gt; or &lt;code&gt;gitg&lt;/code&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;gitg auth/model.py
+
+# or with follow 
+gitg --follow  auth/model.py
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;or &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;gitk --follow auth/model.py
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="git"></category><category term="tip"></category></entry><entry><title>Deleting git branch from local and origin</title><link href="http://www.mukeshyadav.com/deleting-git-branch-from-local-and-origin.html" rel="alternate"></link><updated>2016-03-28T00:00:00+02:00</updated><author><name>Mukesh</name></author><id>tag:www.mukeshyadav.com,2015-11-20:deleting-git-branch-from-local-and-origin.html</id><summary type="html">&lt;h2&gt;How to delete git branch from local and remote&lt;/h2&gt;
+&lt;p&gt;for long running projects and projects which has continuous changes gets many unused branch over the period of time, 
+and if you do not clean up your branches they keep on increasing some time more than 50+ or may be 100+&lt;/p&gt;
+&lt;p&gt;When you checkout a branch from remote (origin), it makes a copy locally and points it to the remote Branch. When you want to delete a branch it becomes necessary to remove it from both places as well as from other machine too. &lt;/p&gt;
+&lt;p&gt;If you want to delete a branch quickfix, first checkout to the branch other than the branch to be deleted.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;git checkout other_than_branch_to_be_deleted
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Deleting the local branch:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;git branch -D quickfix
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Deleting the remote branch:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;git push origin --delete quickfix
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;at this stage you have deleted branch from your local as well from remote. If you repository is being used on other machine you need to update their too.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;git remote prune &amp;lt;remote_name&amp;gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;If your &lt;remote_name&gt; is origin then &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;git remote prune origin
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="git"></category></entry><entry><title>Optimization of Mongo query, making cursor iteration fast.</title><link href="http://www.mukeshyadav.com/optimization-of-mongo-query-making-ursor-iteration-fast.html" rel="alternate"></link><updated>2016-03-28T00:00:00+02:00</updated><author><name>Mukesh</name></author><id>tag:www.mukeshyadav.com,2015-11-20:optimization-of-mongo-query-making-ursor-iteration-fast.html</id><summary type="html">&lt;p&gt;If you using a mongo, I'm sure you must have come across a situation where you want to do a iteration for .find() command in mongo. 
+Querying a Mongo collection for few records will give you faster results, but if you data is more than than 20K-30K or millions and you want to do iteration over it its hell lot of time. &lt;/p&gt;
+&lt;p&gt;Lets take an example say you have 1 Million records in your users collection and about 98% users a active, to get the result you will do 
+  active_users = db.users.find({active:True})
+Your above query will get the cursor, now here comes the problem. Mongo does not fetches records in above query it just gets the cursor. To get all the records you need iterate over it. &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;temp = []
+for user in active_users:
+    if user.get(&amp;#39;first_name&amp;#39;):
+        temp.append(user.get(&amp;#39;first_name&amp;#39;))
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;The above query will take about 12+ or around that to create temp list. 12 sec is too huge number for such an small task. (The seconds will differ depending on size of the documents you have in users collection)&lt;/p&gt;
+&lt;p&gt;Under the hood pymongo in this case is not getting all the records at once in fact it does not gets the results when you do .find() query. Once you start iterating it fetches data from Mongodb in batches. &lt;/p&gt;
+&lt;p&gt;By default it has 4MB of document size, Maximum of 16MB data mongo can fetch from DB. &lt;/p&gt;
+&lt;p&gt;to optimize our query we can do &lt;/p&gt;
+&lt;p&gt;active_users = db.users.find({active:True}).batch_size(2000)&lt;/p&gt;
+&lt;p&gt;Now again iterate over the active_users and see the magic happen.&lt;/p&gt;</summary><category term="mongodb"></category><category term="query Optimization"></category></entry><entry><title>Formating String date to ISOdate or Object Date in MongoDB</title><link href="http://www.mukeshyadav.com/formating-string-date-to-isodate-or-object-date-in-mongodb.html" rel="alternate"></link><updated>2016-03-28T00:00:00+02:00</updated><author><name>Mukesh</name></author><id>tag:www.mukeshyadav.com,2015-11-05:formating-string-date-to-isodate-or-object-date-in-mongodb.html</id><summary type="html">&lt;p&gt;MongoDB stores the date in ISODate format which is nothing but a wrapper for the Date object of Javascript. If some how your database has stored to string date, you can convert them to ISO by running following query directly in mongo terminal&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nx"&gt;db&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;collection&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;find&lt;/span&gt;&lt;span class="p"&gt;({&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;date_updated&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="nx"&gt;$type&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;}})&lt;/span&gt;    
+    &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;forEach&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;item&lt;/span&gt;&lt;span class="p"&gt;){&lt;/span&gt;
+
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;typeof&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;item&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;date_updated&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;string&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;){&lt;/span&gt;
+            &lt;span class="nx"&gt;item&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;date_updated&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="nx"&gt;ISODate&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;item&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;date_updated&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+            &lt;span class="nx"&gt;db&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;items&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;save&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;item&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="p"&gt;}&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+
+&lt;span class="p"&gt;})&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="mongodb"></category></entry><entry><title>Updating data in query with forEach</title><link href="http://www.mukeshyadav.com/updating-data-in-query-with-forEach.html" rel="alternate"></link><updated>2016-03-28T00:00:00+02:00</updated><author><name>Mukesh</name></author><id>tag:www.mukeshyadav.com,2015-11-04:updating-data-in-query-with-forEach.html</id><summary type="html">&lt;div class="highlight"&gt;&lt;pre&gt;    Updating data in query with forEach
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Since No-SQL does not have a structure or columns fixed when we store data into it, its very common or easy we insert unwanted keys into MongoDB. 
+While developing some of the project I faced this issue as well. &lt;/p&gt;
+&lt;p&gt;To resolve such situation we can manually update each document, if the task is very small we might just write one update query and remove the key or replace the value. The problem with this is if there is conditional update we might have to write separate query and update it. &lt;/p&gt;
+&lt;p&gt;Since MongoDB uses V8 Javascript Engine we can use Javascript Language to write conditional queries. &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nx"&gt;db&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;product&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;find&lt;/span&gt;&lt;span class="p"&gt;().&lt;/span&gt;&lt;span class="nx"&gt;forEach&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;unit&lt;/span&gt;&lt;span class="p"&gt;){&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;unit&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;expiry_date&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;=&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="nb"&gt;Date&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
+        &lt;span class="nx"&gt;unit&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;expired&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;true&lt;/span&gt;
+    &lt;span class="nx"&gt;db&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;listings&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;save&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;unit&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;})&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;The above code is self explanatory. Bottom line is if we want to edit in forEach we should create complete document and save it. &lt;/p&gt;</summary><category term="mongodb"></category></entry><entry><title>Disabling Put Post Delete Django Rest Framework BrowsableAPI</title><link href="http://www.mukeshyadav.com/disabling-put-post-delete-Django-Rest-Framework-BrowsableAPI.html" rel="alternate"></link><updated>2016-03-28T00:00:00+02:00</updated><author><name>Mukesh</name></author><id>tag:www.mukeshyadav.com,2015-11-03:disabling-put-post-delete-Django-Rest-Framework-BrowsableAPI.html</id><summary type="html">&lt;div class="highlight"&gt;&lt;pre&gt;    Disabling PUT/POST/DELETE from BrowsableAPI of DRF
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;If you are building a Rest Full Service in Django then you must be familiar with Django-Rest-Framework AKA DRF. DRF helps you to build API with very less code footprint. &lt;/p&gt;
+&lt;p&gt;DRF has BrowsableAPI which gives a front-end to view API and do some test, by using this you can do GET/PUT/POST/DELETE etc in your browser. Hence you do not require script or POSTMAN/CURL to test. Although these feature is very useful on development server but for the production you really do not want the PUT/POST/DELETE actions. &lt;/p&gt;
+&lt;p&gt;To disable these action we need to extend BrowsableAPIRenderer and change the &lt;code&gt;display_edit_forms&lt;/code&gt; and &lt;code&gt;delete_form&lt;/code&gt; to False. Lets create a file &lt;code&gt;BrowsableAPIRendererGet&lt;/code&gt; some where in your project where you place common files or tools. I keep them in base.lib package, so create &lt;code&gt;base/lib/BrowsableAPIRenderer.py&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;base/lib/BrowsableAPIRenderer.py&lt;/code&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;rest_framework.renderers&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;BrowsableAPIRenderer&lt;/span&gt;
+
+&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;BrowsableAPIRendererGet&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;BrowsableAPIRenderer&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="sd"&gt;&amp;quot;&amp;quot;&amp;quot;Renders the browsable api, but excludes the forms.&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;get_context&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="n"&gt;kwargs&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="n"&gt;context&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;super&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get_context&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="n"&gt;kwargs&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="n"&gt;context&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;display_edit_forms&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;False&lt;/span&gt;
+        &lt;span class="n"&gt;context&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;delete_form&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;False&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;context&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Once you done with that call the custom renderer from your settings file hence in you settings.py add following in &lt;code&gt;DEFAULT_RENDERER_CLASSES&lt;/code&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;REST_FRAMEWORK = {
+    &amp;#39;DEFAULT_RENDERER_CLASSES&amp;#39;: (
+        &amp;#39;rest_framework.renderers.JSONRenderer&amp;#39;,
+        &amp;#39;base.lib.BrowsableAPIRenderer.BrowsableAPIRendererGet&amp;#39;,
+    )
+}
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Now all done you can brows the API but you will not be able to do PUT/POST/DELETE actions. You might want to create diffrent settings file for development and production in case you require PUT/POST/DELETE along with GET. &lt;/p&gt;</summary><category term="django"></category><category term="drf"></category><category term="python"></category></entry><entry><title>Installing and configuring postgress in ubuntu</title><link href="http://www.mukeshyadav.com/installing-and-configuring-postgres-in-Ubuntu.html" rel="alternate"></link><updated>2015-02-23T00:22:12+05:30</updated><author><name>mukesh</name></author><id>tag:www.mukeshyadav.com,2015-02-23:installing-and-configuring-postgres-in-Ubuntu.html</id><summary type="html">&lt;div class="highlight"&gt;&lt;pre&gt;sudo apt-get update
+sudo apt-get install postgresql postgresql-contrib
+
+sudo -i -u postgres
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;You can get a Postgres prompt immediately by typing:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;psql
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Exit out of the PostgreSQL prompt by typing:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;\q
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;We can create a new role (user_test) by typing:
+    createuser --interactive&lt;/p&gt;
+&lt;p&gt;You can create the appropriate database by simply calling this command as the postgres user:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;createdb db_test
+sudo -i -u user_test
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;create role myapp with createdb login password 'password';&lt;/p&gt;
+&lt;p&gt;you can login as postgres user, which is generally a super user, and he can be logged in if you are sudoer or root user. &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;sudo -u postgres psql
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Changing a password via postgres user&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;ALTER USER postgres PASSWORD &amp;#39;newPassword&amp;#39;;
+&lt;/pre&gt;&lt;/div&gt;</summary></entry></feed>

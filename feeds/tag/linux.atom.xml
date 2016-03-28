@@ -22,4 +22,4 @@ file. yum process resides in /var/run folder so simply type the
 following command and hit enter.&lt;br /&gt;
 &lt;code&gt;# rm -f /var/run/yum.pid&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;N.B. To run the above command you need to be in a sudoers list or a
-root.&lt;/p&gt;</summary><category term="Linux"></category><category term="Unix"></category></entry></feed>
+root.&lt;/p&gt;</summary><category term="linux"></category><category term="unix"></category></entry></feed>
