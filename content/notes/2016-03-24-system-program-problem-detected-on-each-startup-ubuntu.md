@@ -8,10 +8,12 @@ Lang:
 Summary: "System program problem detected" on each startup Ubuntu    
 
 
-After using ubuntu for a while, and if you keep on updating or upgrading your ubuntu. There are chances that you will face "System program problem detected" popup message on startup.   
-It's very annoying to see the popups everytime you start your machine. Here is a solution to get rid of them. 
+After using ubuntu for a while, and if you keep on updating or upgrading your ubuntu. There are chances that you will face “System program problem detected” popup message on startup. 
+ It’s very annoying to see the popups everytime you start your machine. Here is a solution to get rid of them.
 
-Before getting rid of the problem its better to find out cause of the error. To check it you can do by following, for me following are the issues. 
+### Finding out programmes which are responsible for popups 
+
+Before getting rid of the problem its better to find out cause of the error. To check it you can do sudo ls -ltrh /var/crash/ , for me following are the issues.
 
     $ sudo ls -ltrh /var/crash/
     total 3.8M
@@ -22,9 +24,11 @@ Before getting rid of the problem its better to find out cause of the error. To 
     -rw------- 1 root    whoopsie 275K Mar 23 12:03 mysql-server-5.5.0.crash
     -rw-r----- 1 root    whoopsie 634K Mar 24 11:34 susres.2016-03-24_11:34:14.141978.crash
     
-As you can see in the crash folder older issues are also there hence they also get poped up whenever system gets startup.   
+As you can see in the result older crash files are also present. Hence they also poped up whenever system gets startup.
 
-We can simply remove the all the files and good to go. Once the files are remove you will get popup for new crashes. 
+### Removing all the crash files, 
+
+We can simply remove all the files and then good to go. And after removing you might get popup if new crash happens. 
 
     $ sudo rm /var/crash/*
 
@@ -32,7 +36,7 @@ If you want to remove all the popups in current session only with command you ca
 
     $ killall system-crash-notification
 
-## Getting rid of popups forever, 
+### Getting rid of popups forever, 
 
 Apport system which does reporting for the crashes. Its not advisable to disable the Apport but even still you want to do it, here is how you can do.
 
