@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <title>bytes and String</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="http://www.mukeshyadav.com/theme/css/main.css" />
+        <link href="http://www.mukeshyadav.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Learning the hard way! Full Atom Feed" />
+        <link href="http://www.mukeshyadav.com/feeds/category/programming.atom.xml" type="application/atom+xml" rel="alternate" title="Learning the hard way! Categories Atom Feed" />
+</head>
+<body>
+    <script>
+      if (window.location.href.indexOf('ingenioustechie.com') > 0) {
+        window.location.href = window.location.href.replace('ingenioustechie.com', "mukeshyadav.com")
+      }
+    </script>
+
+    <div class="main-nav-container">
+
+        <div class="pure-g">
+            <div class="pure-u-1 pure-u-lg-2-3">
+                <div class="main-nav">
+                    <ul class="main-nav-list">
+                        <li class="main-nav-item"><a href="http://www.mukeshyadav.com/" class="pure-menu-link">Learning the hard way!</a></li>
+
+                        <li class="main-nav-item"><a href="http://www.mukeshyadav.com/pages/resume-.html" class="pure-menu-link">Resume</a></li>
+                    </ul>
+                </div>
+             </div>
+
+             <div class="pure-u-1 pure-u-lg-1-3"></div>
+        </div>
+
+    </div>
+
+
+<div class="page-container">
+    <div class="entry-content">
+        <div class="post-meta pure-g">
+            <div class="pure-u-3-4 meta-data">
+                <a href="http://www.mukeshyadav.com/category/programming/index.html" class="category">programming</a><br />
+
+                <a class="author" href="http://www.mukeshyadav.com/author/mukesh.html">mukesh</a>
+                &mdash; <abbr title="2016-04-07T11:48:51+02:00">Thu 07 April 2016</abbr>
+            </div>
+        </div>
+    </div>
+
+    <div class="article-header-container">
+        <div class="background-image-container">
+
+            <div class="background-image-small">
+                <div class="title-container">
+                    <h1>bytes and String</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="entry-content">
+        <p>The only thing that a computer can store is bytes.</p>
+<p>To store anything in a computer, you must first encode it, i.e. convert it to bytes. For example:</p>
+<div class="highlight"><pre>If you want to store music, you must first encode it using MP3, WAV, etc.
+If you want to store a picture, you must first encode it using PNG, JPEG, etc.
+If you want to store text, you must first encode it using ASCII, UTF-8, etc.
+</pre></div>
+
+
+<p>MP3, WAV, PNG, JPEG, ASCII and UTF-8 are examples of encodings. An encoding is a format to represent audio, images, text, etc in bytes.</p>
+<p>In Python, a byte string is just that: a sequence of bytes. It isn't human-readable. Under the hood, everything must be converted to a byte string before it can be stored in a computer.</p>
+<p>On the other hand, a character string, often just called a "string", is a sequence of characters. It is human-readable. A character string can't be directly stored in a computer, it has to be encoded first (converted into a byte string). There are multiple encodings through which a character string can be converted into a byte string, such as ASCII and UTF-8.</p>
+<p>'I am a string'.encode('ASCII')</p>
+<p>The above Python code will encode the string 'I am a string' using the encoding ASCII. The result of the above code will be a byte string. If you print it, Python will represent it as b'I am a string'. Remember, however, that byte strings aren't human-readable, it's just that Python decodes them to ASCII when you print them. In Python, a byte string is represented by a b, followed by the byte string's ASCII representation.</p>
+<p>A byte string can be decoded back into a character string, if you know the encoding that was used to encode it.</p>
+<p>b'I am a string'.decode('ASCII')</p>
+<p>The above code will return the original string 'I am a string'.</p>
+<p>Encoding and decoding are inverse operations. Everything must be encoded before it can be written to disk, and it must be decoded before it can be read by a human.</p>
+    </div>
+
+    <footer>
+        <div class="tags">
+            <a href="http://www.mukeshyadav.com/tag/python/index.html">python</a>
+            <a href="http://www.mukeshyadav.com/tag/bytes/index.html">bytes</a>
+        </div>
+        <div class="pure-g post-footer">
+            <div class="pure-u-1 pure-u-md-1-2">
+                <div class="pure-g poster-info">
+                    <div class="pure-u-3-4">
+                        <h3 class="author-name"><a href="http://www.mukeshyadav.com/author/mukesh.html">mukesh</a></h3>
+                        <p class="author-description">
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+
+
+    </footer>
+
+    <div class="entry-content">
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            var disqus_shortname = 'ingenioustechie';
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+    </div>
+
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Learning the hard way!</title><link href="http://www.mukeshyadav.com/" rel="alternate"></link><link href="http://www.mukeshyadav.com/feeds/tag/installation.atom.xml" rel="self"></link><id>http://www.mukeshyadav.com/</id><updated>2016-04-07T12:35:55+02:00</updated><entry><title>Installing nodejs in ubuntu 14.04</title><link href="http://www.mukeshyadav.com/installing-nodejs-in-ubuntu-14-04-.html" rel="alternate"></link><updated>2016-04-07T12:35:55+02:00</updated><author><name>mukesh</name></author><id>tag:www.mukeshyadav.com,2016-04-07:installing-nodejs-in-ubuntu-14-04-.html</id><summary type="html">&lt;p&gt;There are few ways to install nodejs in Ubuntu, 
+1. apt-get, 
+2. compile it 
+3. Use PPA &lt;/p&gt;
+&lt;p&gt;I like the 3rd which is easy and it maintains latest version, I use NodeSource's PPA. To add PPA just execute the below line&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;    curl -sL https://deb.nodesource.com/setup | sudo bash -
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;After running the setup script from nodesource, you can install the Node.js package in the same way that we do in ubuntu&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;sudo apt-get install nodejs
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="nodejs"></category><category term="npm"></category><category term="installation"></category></entry></feed>
