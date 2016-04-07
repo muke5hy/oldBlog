@@ -8,4 +8,4 @@ Lang:
 Summary: 
 
 
-[Resume in pdf ]({filename}/docs/MukeshYadav.pdf)
+[Resume ](https://www.dropbox.com/s/6paxwgajkke84ie/MukeshYadav.pdf)
