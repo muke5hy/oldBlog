@@ -47,7 +47,7 @@ THEME = "pelican-themes/medius"
 # THEME = "pelican-themes/pelican-mediumfox"
 
 
-STATIC_PATHS = ['extra/CNAME']
+STATIC_PATHS = ['extra/CNAME', 'docs']
 EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'},}
 
 PLUGIN_PATHS = ['pelican-plugins']

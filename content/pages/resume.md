@@ -8,4 +8,4 @@ Lang:
 Summary: 
 
 
-[Resume in pdf ]({filename}/docs/mukeshyadav.pdf)
+[Resume in pdf ]({filename}/docs/MukeshYadav.pdf)
