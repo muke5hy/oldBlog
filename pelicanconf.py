@@ -68,7 +68,6 @@ SITEMAP = {
 }
 
 MENUITEMS = (
-    ('HOME', '/'),
     ('RESUME', 'https://www.dropbox.com/s/6paxwgajkke84ie/MukeshYadav.pdf')
 )
 
