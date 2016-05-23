@@ -4,259 +4,259 @@ xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitem
 xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
-<loc>http://www.mukeshyadav.com/archives.html</loc>
-<lastmod>2016-04-07T14:21:59-00:00</lastmod>
+<loc>https://www.mukeshyadav.com/archives.html</loc>
+<lastmod>2016-05-23T12:19:41-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://www.mukeshyadav.com/tags.html</loc>
-<lastmod>2016-04-07T14:21:59-00:00</lastmod>
+<loc>https://www.mukeshyadav.com/tags.html</loc>
+<lastmod>2016-05-23T12:19:41-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://www.mukeshyadav.com/categories.html</loc>
-<lastmod>2016-04-07T14:21:59-00:00</lastmod>
+<loc>https://www.mukeshyadav.com/categories.html</loc>
+<lastmod>2016-05-23T12:19:41-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://www.mukeshyadav.com/installing-nodejs-in-ubuntu-14-04-.html</loc>
+<loc>https://www.mukeshyadav.com/installing-nodejs-in-ubuntu-14-04-.html</loc>
 <lastmod>2016-04-07T12:35:55+02:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://www.mukeshyadav.com/system-program-problem-detected-on-each-startup-ubuntu-.html</loc>
+<loc>https://www.mukeshyadav.com/system-program-problem-detected-on-each-startup-ubuntu-.html</loc>
 <lastmod>2016-03-24T11:43:17+01:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://www.mukeshyadav.com/git-command-to-see-old-versions-of-a-file-.html</loc>
+<loc>https://www.mukeshyadav.com/git-command-to-see-old-versions-of-a-file-.html</loc>
 <lastmod>2016-03-16T12:37:35+01:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://www.mukeshyadav.com/deleting-git-branch-from-local-and-origin.html</loc>
-<lastmod>2016-04-07T00:00:00+02:00</lastmod>
+<loc>https://www.mukeshyadav.com/deleting-git-branch-from-local-and-origin.html</loc>
+<lastmod>2016-05-23T00:00:00+02:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://www.mukeshyadav.com/optimization-of-mongo-query-making-ursor-iteration-fast.html</loc>
-<lastmod>2016-04-07T00:00:00+02:00</lastmod>
+<loc>https://www.mukeshyadav.com/optimization-of-mongo-query-making-ursor-iteration-fast.html</loc>
+<lastmod>2016-05-23T00:00:00+02:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://www.mukeshyadav.com/formating-string-date-to-isodate-or-object-date-in-mongodb.html</loc>
-<lastmod>2016-04-07T00:00:00+02:00</lastmod>
+<loc>https://www.mukeshyadav.com/formating-string-date-to-isodate-or-object-date-in-mongodb.html</loc>
+<lastmod>2016-05-23T00:00:00+02:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://www.mukeshyadav.com/updating-data-in-query-with-forEach.html</loc>
-<lastmod>2016-04-07T00:00:00+02:00</lastmod>
+<loc>https://www.mukeshyadav.com/updating-data-in-query-with-forEach.html</loc>
+<lastmod>2016-05-23T00:00:00+02:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://www.mukeshyadav.com/disabling-put-post-delete-Django-Rest-Framework-BrowsableAPI.html</loc>
-<lastmod>2016-04-07T00:00:00+02:00</lastmod>
+<loc>https://www.mukeshyadav.com/disabling-put-post-delete-Django-Rest-Framework-BrowsableAPI.html</loc>
+<lastmod>2016-05-23T00:00:00+02:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://www.mukeshyadav.com/Install-latest-Redis-3.0.2-in-ubuntu.html</loc>
-<lastmod>2016-04-07T00:00:00+02:00</lastmod>
+<loc>https://www.mukeshyadav.com/Install-latest-Redis-3.0.2-in-ubuntu.html</loc>
+<lastmod>2016-05-23T00:00:00+02:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://www.mukeshyadav.com/installing-and-configuring-postgres-in-Ubuntu.html</loc>
+<loc>https://www.mukeshyadav.com/installing-and-configuring-postgres-in-Ubuntu.html</loc>
 <lastmod>2015-02-23T00:22:12+05:30</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://www.mukeshyadav.com/work-on-remote-branch-in-git.html</loc>
-<lastmod>2016-04-07T00:00:00+02:00</lastmod>
+<loc>https://www.mukeshyadav.com/work-on-remote-branch-in-git.html</loc>
+<lastmod>2016-05-23T00:00:00+02:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://www.mukeshyadav.com/ioerror-cannot-write-mode-p-as-jpeg-ioerror-decoder-jpeg-not-available.html</loc>
-<lastmod>2016-04-07T00:00:00+02:00</lastmod>
+<loc>https://www.mukeshyadav.com/ioerror-cannot-write-mode-p-as-jpeg-ioerror-decoder-jpeg-not-available.html</loc>
+<lastmod>2016-05-23T00:00:00+02:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://www.mukeshyadav.com/execute-linux-command-in-background-or-execute-commands-after-you-exit-from-a-shell-prompt.html</loc>
-<lastmod>2016-04-07T00:00:00+02:00</lastmod>
+<loc>https://www.mukeshyadav.com/execute-linux-command-in-background-or-execute-commands-after-you-exit-from-a-shell-prompt.html</loc>
+<lastmod>2016-05-23T00:00:00+02:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://www.mukeshyadav.com/allowing-ubuntu-user-to-access-www-folder-amazon-aws.html</loc>
-<lastmod>2016-04-07T00:00:00+02:00</lastmod>
+<loc>https://www.mukeshyadav.com/allowing-ubuntu-user-to-access-www-folder-amazon-aws.html</loc>
+<lastmod>2016-05-23T00:00:00+02:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://www.mukeshyadav.com/installing-virtualenv-in-ubuntu.html</loc>
-<lastmod>2016-04-07T00:00:00+02:00</lastmod>
+<loc>https://www.mukeshyadav.com/installing-virtualenv-in-ubuntu.html</loc>
+<lastmod>2016-05-23T00:00:00+02:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://www.mukeshyadav.com/fatal-error-watch-enospc.html</loc>
-<lastmod>2016-04-07T00:00:00+02:00</lastmod>
+<loc>https://www.mukeshyadav.com/fatal-error-watch-enospc.html</loc>
+<lastmod>2016-05-23T00:00:00+02:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://www.mukeshyadav.com/ignoring-files-in-git-gitignore.html</loc>
-<lastmod>2016-04-07T00:00:00+02:00</lastmod>
+<loc>https://www.mukeshyadav.com/ignoring-files-in-git-gitignore.html</loc>
+<lastmod>2016-05-23T00:00:00+02:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://www.mukeshyadav.com/install-solr-on-ubuntu.html</loc>
-<lastmod>2016-04-07T00:00:00+02:00</lastmod>
+<loc>https://www.mukeshyadav.com/install-solr-on-ubuntu.html</loc>
+<lastmod>2016-05-23T00:00:00+02:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://www.mukeshyadav.com/mount-disk-permanently-in-linux-auto-mount-disk-2.html</loc>
-<lastmod>2016-04-07T00:00:00+02:00</lastmod>
+<loc>https://www.mukeshyadav.com/mount-disk-permanently-in-linux-auto-mount-disk-2.html</loc>
+<lastmod>2016-05-23T00:00:00+02:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://www.mukeshyadav.com/delete-all-lines-from-vim-select-all-delete.html</loc>
-<lastmod>2016-04-07T00:00:00+02:00</lastmod>
+<loc>https://www.mukeshyadav.com/delete-all-lines-from-vim-select-all-delete.html</loc>
+<lastmod>2016-05-23T00:00:00+02:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://www.mukeshyadav.com/mongo-php-not-found-cli.html</loc>
+<loc>https://www.mukeshyadav.com/mongo-php-not-found-cli.html</loc>
 <lastmod>2013-11-05T13:45:28+05:30</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://www.mukeshyadav.com/My-10-favorite-sublime-shortcuts.html</loc>
+<loc>https://www.mukeshyadav.com/My-10-favorite-sublime-shortcuts.html</loc>
 <lastmod>2013-10-23T00:22:12+05:30</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://www.mukeshyadav.com/this-is-my-first-post-on-ghost.html</loc>
+<loc>https://www.mukeshyadav.com/this-is-my-first-post-on-ghost.html</loc>
 <lastmod>2013-10-23T00:22:12+05:30</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://www.mukeshyadav.com/howto-use-grep-command-in-linux-unix.html</loc>
+<loc>https://www.mukeshyadav.com/howto-use-grep-command-in-linux-unix.html</loc>
 <lastmod>2010-12-05T19:30:00+01:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://www.mukeshyadav.com/how-to-install-django-on-ubuntu-with-apache-and-php.html</loc>
+<loc>https://www.mukeshyadav.com/how-to-install-django-on-ubuntu-with-apache-and-php.html</loc>
 <lastmod>2010-04-23T18:35:00+02:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://www.mukeshyadav.com/company-policy.html</loc>
+<loc>https://www.mukeshyadav.com/company-policy.html</loc>
 <lastmod>2010-04-15T01:49:00+02:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://www.mukeshyadav.com/disabling-adobe-updater.html</loc>
+<loc>https://www.mukeshyadav.com/disabling-adobe-updater.html</loc>
 <lastmod>2009-08-08T16:44:00+02:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://www.mukeshyadav.com/googles-task-is-awesome.html</loc>
+<loc>https://www.mukeshyadav.com/googles-task-is-awesome.html</loc>
 <lastmod>2009-07-22T18:19:00+02:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://www.mukeshyadav.com/debugging-an-illegal-choice-has-been-detected-please-contact-the-site-administrator.html</loc>
+<loc>https://www.mukeshyadav.com/debugging-an-illegal-choice-has-been-detected-please-contact-the-site-administrator.html</loc>
 <lastmod>2009-06-13T21:18:00+02:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://www.mukeshyadav.com/xampp-mod_rewrite-clean-url-htaccess.html</loc>
+<loc>https://www.mukeshyadav.com/xampp-mod_rewrite-clean-url-htaccess.html</loc>
 <lastmod>2009-06-09T20:10:00+02:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://www.mukeshyadav.com/another-app-is-currently-holding-the-yum-lock-waiting-for-it-to-exit.html</loc>
+<loc>https://www.mukeshyadav.com/another-app-is-currently-holding-the-yum-lock-waiting-for-it-to-exit.html</loc>
 <lastmod>2009-05-03T18:48:00+02:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://www.mukeshyadav.com/free-songs-download-by-using-google.html</loc>
+<loc>https://www.mukeshyadav.com/free-songs-download-by-using-google.html</loc>
 <lastmod>2009-04-27T17:55:00+02:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://www.mukeshyadav.com/not-able-to-login-in-magento.html</loc>
+<loc>https://www.mukeshyadav.com/not-able-to-login-in-magento.html</loc>
 <lastmod>2009-03-25T19:38:00+01:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://www.mukeshyadav.com/multiple-image-resizecrop-codeigniter.html</loc>
+<loc>https://www.mukeshyadav.com/multiple-image-resizecrop-codeigniter.html</loc>
 <lastmod>2009-03-05T08:53:00+01:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
