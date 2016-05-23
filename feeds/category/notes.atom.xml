@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Learning the hard way!</title><link href="https://www.mukeshyadav.com/" rel="alternate"></link><link href="https://www.mukeshyadav.com/feeds/category/notes.atom.xml" rel="self"></link><id>https://www.mukeshyadav.com/</id><updated>2016-04-07T12:35:55+02:00</updated><entry><title>Installing nodejs in ubuntu 14.04</title><link href="https://www.mukeshyadav.com/installing-nodejs-in-ubuntu-14-04-.html" rel="alternate"></link><updated>2016-04-07T12:35:55+02:00</updated><author><name>mukesh</name></author><id>tag:www.mukeshyadav.com,2016-04-07:installing-nodejs-in-ubuntu-14-04-.html</id><summary type="html">&lt;p&gt;There are few ways to install nodejs in Ubuntu, 
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Learning the hard way!</title><link href="https://mukeshyadav.com/" rel="alternate"></link><link href="https://mukeshyadav.com/feeds/category/notes.atom.xml" rel="self"></link><id>https://mukeshyadav.com/</id><updated>2016-04-07T12:35:55+02:00</updated><entry><title>Installing nodejs in ubuntu 14.04</title><link href="https://mukeshyadav.com/installing-nodejs-in-ubuntu-14-04-.html" rel="alternate"></link><updated>2016-04-07T12:35:55+02:00</updated><author><name>mukesh</name></author><id>tag:mukeshyadav.com,2016-04-07:installing-nodejs-in-ubuntu-14-04-.html</id><summary type="html">&lt;p&gt;There are few ways to install nodejs in Ubuntu, 
 1. apt-get, 
 2. compile it 
 3. Use PPA &lt;/p&gt;
@@ -10,7 +10,7 @@
 
 &lt;p&gt;After running the setup script from nodesource, you can install the Node.js package in the same way that we do in ubuntu&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;sudo apt-get install nodejs
-&lt;/pre&gt;&lt;/div&gt;</summary><category term="nodejs"></category><category term="npm"></category><category term="installation"></category></entry><entry><title>Git command to see old versions of a file.</title><link href="https://www.mukeshyadav.com/git-command-to-see-old-versions-of-a-file-.html" rel="alternate"></link><updated>2016-03-16T12:37:35+01:00</updated><author><name>mukesh</name></author><id>tag:www.mukeshyadav.com,2016-03-16:git-command-to-see-old-versions-of-a-file-.html</id><summary type="html">&lt;p&gt;Often we require to check the versions of the file changes git. There are method in git to do that, but there is other better way to do that.   &lt;/p&gt;
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="nodejs"></category><category term="npm"></category><category term="installation"></category></entry><entry><title>Git command to see old versions of a file.</title><link href="https://mukeshyadav.com/git-command-to-see-old-versions-of-a-file-.html" rel="alternate"></link><updated>2016-03-16T12:37:35+01:00</updated><author><name>mukesh</name></author><id>tag:mukeshyadav.com,2016-03-16:git-command-to-see-old-versions-of-a-file-.html</id><summary type="html">&lt;p&gt;Often we require to check the versions of the file changes git. There are method in git to do that, but there is other better way to do that.   &lt;/p&gt;
 &lt;p&gt;To view a file of a specific version, below command will show you 5th last commit of model.py&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;git show HEAD~5:auth/model.py
 &lt;/pre&gt;&lt;/div&gt;
@@ -34,7 +34,7 @@ gitg --follow  auth/model.py
 
 &lt;p&gt;or &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;gitk --follow auth/model.py
-&lt;/pre&gt;&lt;/div&gt;</summary><category term="git"></category><category term="tip"></category></entry><entry><title>Installing and configuring postgress in ubuntu</title><link href="https://www.mukeshyadav.com/installing-and-configuring-postgres-in-Ubuntu.html" rel="alternate"></link><updated>2015-02-23T00:22:12+05:30</updated><author><name>mukesh</name></author><id>tag:www.mukeshyadav.com,2015-02-23:installing-and-configuring-postgres-in-Ubuntu.html</id><summary type="html">&lt;div class="highlight"&gt;&lt;pre&gt;sudo apt-get update
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="git"></category><category term="tip"></category></entry><entry><title>Installing and configuring postgress in ubuntu</title><link href="https://mukeshyadav.com/installing-and-configuring-postgres-in-Ubuntu.html" rel="alternate"></link><updated>2015-02-23T00:22:12+05:30</updated><author><name>mukesh</name></author><id>tag:mukeshyadav.com,2015-02-23:installing-and-configuring-postgres-in-Ubuntu.html</id><summary type="html">&lt;div class="highlight"&gt;&lt;pre&gt;sudo apt-get update
 sudo apt-get install postgresql postgresql-contrib
 
 sudo -i -u postgres

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Learning the hard way!</title><link href="https://www.mukeshyadav.com/" rel="alternate"></link><link href="https://www.mukeshyadav.com/feeds/category/uncategorized.atom.xml" rel="self"></link><id>https://www.mukeshyadav.com/</id><updated>2010-04-23T18:35:00+02:00</updated><entry><title>How to install Django on ubuntu with apache and php?</title><link href="https://www.mukeshyadav.com/how-to-install-django-on-ubuntu-with-apache-and-php.html" rel="alternate"></link><updated>2010-04-23T18:35:00+02:00</updated><author><name>Mukesh</name></author><id>tag:www.mukeshyadav.com,2010-04-23:how-to-install-django-on-ubuntu-with-apache-and-php.html</id><summary type="html">&lt;p&gt;Was just going through python in morning and thought lets try out Django
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Learning the hard way!</title><link href="https://mukeshyadav.com/" rel="alternate"></link><link href="https://mukeshyadav.com/feeds/category/uncategorized.atom.xml" rel="self"></link><id>https://mukeshyadav.com/</id><updated>2010-04-23T18:35:00+02:00</updated><entry><title>How to install Django on ubuntu with apache and php?</title><link href="https://mukeshyadav.com/how-to-install-django-on-ubuntu-with-apache-and-php.html" rel="alternate"></link><updated>2010-04-23T18:35:00+02:00</updated><author><name>Mukesh</name></author><id>tag:mukeshyadav.com,2010-04-23:how-to-install-django-on-ubuntu-with-apache-and-php.html</id><summary type="html">&lt;p&gt;Was just going through python in morning and thought lets try out Django
 Framework. Django is very popular web framework for python, Its MVC
 pattern. So just wanted to give a try to django. I have lappy I have
 ubuntu 9.04 installed and as I'm PHP developer I have already installed
@@ -40,7 +40,7 @@ sudo /etc/init.d/apache2 reload
 &lt;p&gt;You can toggle between PHP and Django Now to use php again&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;sudo a2dissite django-example
 sudo a2ensite default
-&lt;/pre&gt;&lt;/div&gt;</summary></entry><entry><title>Disabling adobe updater</title><link href="https://www.mukeshyadav.com/disabling-adobe-updater.html" rel="alternate"></link><updated>2009-08-08T16:44:00+02:00</updated><author><name>Mukesh</name></author><id>tag:www.mukeshyadav.com,2009-08-08:disabling-adobe-updater.html</id><summary type="html">&lt;p&gt;I love adobes photoshop, Deamvear and Acrobat reader and other
+&lt;/pre&gt;&lt;/div&gt;</summary></entry><entry><title>Disabling adobe updater</title><link href="https://mukeshyadav.com/disabling-adobe-updater.html" rel="alternate"></link><updated>2009-08-08T16:44:00+02:00</updated><author><name>Mukesh</name></author><id>tag:mukeshyadav.com,2009-08-08:disabling-adobe-updater.html</id><summary type="html">&lt;p&gt;I love adobes photoshop, Deamvear and Acrobat reader and other
 application which are as great as these, but one thing I dont like about
 adobe that they start there auto update as soon you start there
 application. and also there updater is resource hungry.&lt;/p&gt;
@@ -84,7 +84,7 @@ following:&lt;/p&gt;
 &lt;/ol&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;and  &lt;a href="http://kb2.adobe.com/cps/402/kb402251.html"&gt;here&lt;/a&gt; is a original
-post from adobe  :) .&lt;/p&gt;</summary></entry><entry><title>Free Songs Download By using Google</title><link href="https://www.mukeshyadav.com/free-songs-download-by-using-google.html" rel="alternate"></link><updated>2009-04-27T17:55:00+02:00</updated><author><name>Mukesh</name></author><id>tag:www.mukeshyadav.com,2009-04-27:free-songs-download-by-using-google.html</id><summary type="html">&lt;p&gt;Two days back I was searching for some site through wich I can download
+post from adobe  :) .&lt;/p&gt;</summary></entry><entry><title>Free Songs Download By using Google</title><link href="https://mukeshyadav.com/free-songs-download-by-using-google.html" rel="alternate"></link><updated>2009-04-27T17:55:00+02:00</updated><author><name>Mukesh</name></author><id>tag:mukeshyadav.com,2009-04-27:free-songs-download-by-using-google.html</id><summary type="html">&lt;p&gt;Two days back I was searching for some site through wich I can download
 some good music. Though there are many sites which allows you to
 download the music free freelly.&lt;br /&gt;
 But If you want any specific song then it is very deficult to search
