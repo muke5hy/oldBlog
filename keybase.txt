@@ -1,0 +1,68 @@
+==================================================================
+https://keybase.io/muke5hy
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://mukeshyadav.com
+  * I am muke5hy (https://keybase.io/muke5hy) on keybase.
+  * I have a public key with fingerprint 1A37 E839 ABFC 0DAD 7835  3DA3 08BD B824 BF63 D68D
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "01016536b6808829089e9842d6b0330fd758caac504e4b4550afc26087c7fe1ca9c90a",
+            "fingerprint": "1a37e839abfc0dad78353da308bdb824bf63d68d",
+            "host": "keybase.io",
+            "key_id": "08bdb824bf63d68d",
+            "kid": "01016536b6808829089e9842d6b0330fd758caac504e4b4550afc26087c7fe1ca9c90a",
+            "uid": "cc6598478f1622b860a334dde1af9719",
+            "username": "muke5hy"
+        },
+        "service": {
+            "hostname": "mukeshyadav.com",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1485636980,
+    "expire_in": 157680000,
+    "prev": "79f77db6de6c44b807051ca7acdb432d67d8920a58a1661f754cb70f41b8c9c0",
+    "seqno": 9,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.62
+Comment: https://keybase.io/crypto
+
+yMIrAnicrVJbbAxRGN62WtGEIqUPJGSwSDec2Zk5c2a1IZKmDy5BGpeGrHOb7vSy
+s3amZTV11zSRluiDFpEU0TYhIlVBEKriwTUl4m6DuJWiiQdB40yRSLw6LyfnP9/3
+/d//5e8enubLTFnR/fK6LydWlHLtUnOlb3l9ulstEZslpFC1VMYHL17OuOOGyywm
+hSQgAxlqCiQQAYSCBkAGN5AaZJAARQEm0zVEMaYaULlKVE0D2KRBCJBOdZPLFBvU
+AFgKSKYVLeHxWNyKukJWxorOkWJgYlLAMNORoikMKwARRlBQJSZUGERMECO24zGE
+OYIdPsOyRU08wr/s/Yv/z74rB+UohZqg68iUYTBIEARYUVTGuIxNQ5cND+jweBRX
+cIGuqCzjWiQh1QQkUayyKPdy9Qb5C+BEEpjhqhnUrhDsWNx2bWqXi8+I68ackEd2
+EzEPvZaT8G+dMLGiTCQpGFU87lh2VArJAkldyxOWVaRBBRoIBCS+LmbFedjyEJou
+YhDH68OrhKRumLrOCGQcUlUlCOhAE0PrmDKiKiIlnSEjCLCGsAyhbOqaSokOTFUm
+iBoUSN5ka6K2FDKETVwiJB2rJIrdyjiXarourhziS8n0ZaSnehvmyxw28s/eNSeH
+Dkw52tJ/dUwPoMvqszM6+rSeR4cnrx5v3z/4GX/qfPbgduB1f/LD6MSt6LTnVwom
+kY67dV+ebh1VmO9f1vs+082+/qSh0N+S96O9fe36wxOlogerNhWfT8G901/5y8dt
+sNtz0ga2nCkd2931MJkbaevcebX48ZdDU5syliZnhloTJOvEkmc3ajdfOBDcvFdu
+rDs6T+uaGtpR9zbPjwcW7tve27TfWdR6aHdBZ83cnZ0bp98NtNYPe3F2gtGWOyp5
+ZXa8eUFq9WLw5tiHy6Wn++oaK3LmnDp57wa607Dr3Z5p275++1ibPxHefHc8zd/z
+fabds/2sO6G45Ejb7ew7WW9LRzw8N7991k9vA0ax
+=8Sch
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/muke5hy
+
+==================================================================
